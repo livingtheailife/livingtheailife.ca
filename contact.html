@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Living the AI Life — send us a message or join our Facebook community.">
+  <title>Contact | Living the AI Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav-inner">
+    <a href="/index.html" class="nav-logo">
+      <span class="logo-main">Living the AI Life</span>
+      <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+      <li class="nav-item has-dropdown">
+        <a href="#" class="nav-link">The Method <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <div class="dropdown-section">
+            <span class="dropdown-label">Pillars</span>
+            <a href="/mind/index.html"><span class="icon">🧠</span> Mind</a>
+            <a href="/body/index.html"><span class="icon">🌿</span> Body</a>
+            <a href="/mindfulness/index.html"><span class="icon">🧘</span> Mindfulness</a>
+            <a href="/inputs/index.html"><span class="icon">✨</span> Inputs</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a href="/ai-tools.html" class="nav-link">AI Tools</a></li>
+      <li class="nav-item"><a href="/blog/index.html" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/community.html" class="btn btn-gold">Join Community</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mobile-section-label">Navigation</span>
+  <a href="/index.html">Home</a>
+  <a href="/ai-tools.html">AI Tools</a>
+  <a href="/blog/index.html">Blog</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
+  <hr>
+  <span class="mobile-section-label">The Method</span>
+  <a href="/mind/index.html">🧠 Mind</a>
+  <a href="/body/index.html">🌿 Body</a>
+  <a href="/mindfulness/index.html">🧘 Mindfulness</a>
+  <a href="/inputs/index.html">✨ Inputs</a>
+  <hr>
+  <a href="/community.html" class="btn btn-gold">Join Community</a>
+</nav>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Contact <span class="gradient-text">Us</span></h1>
+      <p>Have a question, collaboration idea, or just want to say hello? We read every message and respond within 2–3 business days.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:64px; align-items:flex-start;">
+
+        <!-- FORM -->
+        <div class="fade-up">
+          <h2 style="margin-bottom:8px;">Send a Message</h2>
+          <p style="margin-bottom:32px;">Fill out the form below and we'll be in touch soon.</p>
+
+          <form id="contact-form" action="https://formspree.io/your-email" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's on your mind?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you'd like to discuss — a question, a collaboration proposal, feedback, or just a hello..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send Message</button>
+          </form>
+
+          <div id="form-success" class="form-success" style="display:none;">
+            <p style="font-size:1.5rem; margin-bottom:8px;">🙏</p>
+            <strong style="color:var(--sage); font-size:1.1rem;">Message received!</strong>
+            <p style="margin-top:8px; color:var(--text-muted);">Thank you for reaching out. We'll get back to you within 2–3 business days.</p>
+          </div>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <div class="fade-up" style="display:flex; flex-direction:column; gap:24px;">
+          <div class="card">
+            <span class="card-icon">💬</span>
+            <h3>Join the Facebook Community</h3>
+            <p>The fastest way to get answers, connect with like-minded people, and access exclusive content is through our thriving Facebook group.</p>
+            <a href="/community.html" class="btn btn-gold" style="margin-top:8px;">Join the Group →</a>
+          </div>
+          <div class="card">
+            <span class="card-icon">✉️</span>
+            <h3>Response Times</h3>
+            <p>We respond to all messages within 2–3 business days. For urgent matters, the Facebook community is the fastest route to a response from our team.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🤝</span>
+            <h3>Collaborations & Partnerships</h3>
+            <p>Are you a wellness brand, AI company, or content creator interested in working together? We'd love to explore synergies. Include "Partnership" in your subject line.</p>
+          </div>
+          <div class="highlight-box">
+            <p><strong>Note:</strong> We do not provide personal medical or therapeutic advice. For mental health emergencies, please contact a qualified professional or call 988 (US Suicide &amp; Crisis Lifeline).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Living the AI Life</span>
+        <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+        <p>Bridging time-tested wisdom with the power of artificial intelligence to help you live a more vibrant, conscious life.</p>
+        <a href="/community.html" class="btn btn-gold">Join Our Community</a>
+      </div>
+      <div class="footer-col">
+        <h4>The Method</h4>
+        <ul>
+          <li><a href="/mind/index.html">Mind</a></li>
+          <li><a href="/body/index.html">Body</a></li>
+          <li><a href="/mindfulness/index.html">Mindfulness</a></li>
+          <li><a href="/inputs/index.html">Inputs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/ai-tools.html">AI Tools</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Living the AI Life. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">in</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

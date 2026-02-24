@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Positive affirmations for self-worth, abundance, health, and peace — plus an AI shuffle tool and personalization guide.">
+  <title>Positive Affirmations | Living the AI Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-main">Living the AI Life</span>
+      <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item has-dropdown">
+        <a href="#" class="nav-link active">The Method <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <div class="dropdown-section">
+            <span class="dropdown-label">Pillars</span>
+            <a href="../mind/index.html"><span class="icon">🧠</span> Mind</a>
+            <a href="../body/index.html"><span class="icon">🌿</span> Body</a>
+            <a href="../mindfulness/index.html"><span class="icon">🧘</span> Mindfulness</a>
+            <a href="../inputs/index.html"><span class="icon">✨</span> Inputs</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a href="../ai-tools.html" class="nav-link">AI Tools</a></li>
+      <li class="nav-item"><a href="../blog/index.html" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../community.html" class="btn btn-gold">Join Community</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mobile-section-label">Navigation</span>
+  <a href="../index.html">Home</a>
+  <a href="../ai-tools.html">AI Tools</a>
+  <a href="../blog/index.html">Blog</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+  <hr>
+  <span class="mobile-section-label">The Method</span>
+  <a href="../mind/index.html">🧠 Mind</a>
+  <a href="../body/index.html">🌿 Body</a>
+  <a href="../mindfulness/index.html">🧘 Mindfulness</a>
+  <a href="../inputs/index.html">✨ Inputs</a>
+  <hr>
+  <a href="../community.html" class="btn btn-gold">Join Community</a>
+</nav>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <a href="../mind/index.html" class="back-link">← Back to Mind</a>
+      <span class="eyebrow">Mind · Affirmations</span>
+      <h1>Positive <span class="gradient-text">Affirmations</span></h1>
+      <p>Curated affirmations for self-worth, abundance, vibrant health, and inner peace. Shuffle them daily for fresh inspiration. Let each one land in your heart before moving on.</p>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="text-center fade-up" style="margin-bottom:40px;">
+        <p style="margin-bottom:20px;">Click shuffle to remix the grid and find your affirmation of the day.</p>
+        <button id="shuffle-affirmations" class="btn btn-primary btn-lg">🔀 Shuffle Affirmations</button>
+      </div>
+
+      <!-- AFFIRMATION GRID -->
+      <div class="grid-3" id="affirmation-grid">
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">💎</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
+          <p>"I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🌊</span>
+          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
+          <p>"Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🌿</span>
+          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
+          <p>"My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🕊️</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
+          <p>"I release what I cannot control and find deep peace in the present moment. Stillness is my natural state."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🔥</span>
+          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
+          <p>"I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">💪</span>
+          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
+          <p>"I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🌸</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
+          <p>"I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🌙</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
+          <p>"I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">💰</span>
+          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
+          <p>"Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🧠</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
+          <p>"I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">🌺</span>
+          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
+          <p>"I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance."</p>
+        </div>
+
+        <div class="affirmation-card fade-up">
+          <span class="aff-icon">☀️</span>
+          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
+          <p>"Each morning I begin again. Yesterday's challenges do not define me. Today I choose clarity, joy, and forward movement."</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up">
+        <span class="eyebrow">How to Use Affirmations</span>
+        <h2>The Science of Effective Affirmation Practice</h2>
+        <p>Research by psychologist Claude Steele on self-affirmation theory confirms that when we reflect on our values and sense of self, we become more resilient in the face of stress and more open to uncomfortable information. But there's an art to making affirmations work.</p>
+        <h3>The Three Rules</h3>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Feel it, don't just say it.</strong> Recite affirmations slowly, pausing to feel the truth of each word. If one feels unbelievable, use a bridging statement instead.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Consistency over intensity.</strong> 2 minutes daily beats 30 minutes weekly. Connect your practice to an existing habit — morning coffee, evening skincare, post-meditation.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Write, don't just read.</strong> Handwriting affirmations activates different neural pathways than reading. Keep a dedicated affirmation journal.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>AI Tip:</strong> Ask ChatGPT to generate a personalized version of your favorite affirmation based on your specific situation and goals. A tailored affirmation always lands more powerfully than a generic one.</p>
+        </div>
+        <h3>Your AI Personalization Prompt</h3>
+      </div>
+      <div class="prompt-card fade-up" style="max-width:780px; margin:0 auto;">
+        <span class="prompt-label">Personalization Prompt</span>
+        <p>I want you to take this affirmation: "[paste affirmation]" and rewrite it in 3 different versions — one that sounds more grounded and practical, one that feels more emotionally resonant, and one that is more spiritually oriented. Adjust the language to sound like how I naturally speak. Here are some examples of my natural speaking style: [add 2-3 sentences you've written].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Free Resource</span>
+        <h2>Download Your Affirmation Starter Kit</h2>
+        <p>Get our printable 30-day affirmation calendar, journaling worksheet, and the complete ChatGPT prompt library for mindset work — free for community members.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join to Download Free</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Living the AI Life</span>
+        <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+        <p>Bridging time-tested wisdom with the power of artificial intelligence to help you live a more vibrant, conscious life.</p>
+        <a href="../community.html" class="btn btn-gold">Join Our Community</a>
+      </div>
+      <div class="footer-col">
+        <h4>The Method</h4>
+        <ul>
+          <li><a href="../mind/index.html">Mind</a></li>
+          <li><a href="../body/index.html">Body</a></li>
+          <li><a href="../mindfulness/index.html">Mindfulness</a></li>
+          <li><a href="../inputs/index.html">Inputs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../ai-tools.html">AI Tools</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Living the AI Life. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">in</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

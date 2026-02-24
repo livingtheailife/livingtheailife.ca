@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Breathing techniques — interactive breathing timer with box breathing, 4-7-8, triangle, and coherence patterns. Ancient pranayama meets modern science.">
+  <title>Breathing Techniques | Living the AI Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="logo-main">Living the AI Life</span>
+      <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item has-dropdown">
+        <a href="#" class="nav-link active">The Method <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <div class="dropdown-section">
+            <span class="dropdown-label">Pillars</span>
+            <a href="../mind/index.html"><span class="icon">🧠</span> Mind</a>
+            <a href="../body/index.html"><span class="icon">🌿</span> Body</a>
+            <a href="../mindfulness/index.html"><span class="icon">🧘</span> Mindfulness</a>
+            <a href="../inputs/index.html"><span class="icon">✨</span> Inputs</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a href="../ai-tools.html" class="nav-link">AI Tools</a></li>
+      <li class="nav-item"><a href="../blog/index.html" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../community.html" class="btn btn-gold">Join Community</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mobile-section-label">Navigation</span>
+  <a href="../index.html">Home</a>
+  <a href="../ai-tools.html">AI Tools</a>
+  <a href="../blog/index.html">Blog</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+  <hr>
+  <span class="mobile-section-label">The Method</span>
+  <a href="../mind/index.html">🧠 Mind</a>
+  <a href="../body/index.html">🌿 Body</a>
+  <a href="../mindfulness/index.html">🧘 Mindfulness</a>
+  <a href="../inputs/index.html">✨ Inputs</a>
+  <hr>
+  <a href="../community.html" class="btn btn-gold">Join Community</a>
+</nav>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <a href="../mindfulness/index.html" class="back-link">← Back to Mindfulness</a>
+      <span class="eyebrow">Mindfulness · Breathwork</span>
+      <h1>Breathing <span class="gradient-text">Techniques</span></h1>
+      <p>Your breath is the only autonomic function you can consciously control — making it the master key to your nervous system. Use the timer below to practice.</p>
+    </div>
+  </section>
+
+  <!-- BREATHING TIMER -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">Interactive Timer</span>
+        <h2>Breathing Timer</h2>
+        <p>Select a pattern, press start, and follow the animated circle. Breathe through your nose unless otherwise instructed.</p>
+      </div>
+
+      <div id="breathing-timer" class="fade-up">
+        <!-- Pattern selection -->
+        <div class="breath-patterns">
+          <button class="breath-pattern-btn" data-pattern="4-4-4">Box 4-4-4</button>
+          <button class="breath-pattern-btn" data-pattern="4-7-8">4-7-8 Calm</button>
+          <button class="breath-pattern-btn" data-pattern="4-4-4-4">Full Box 4-4-4-4</button>
+          <button class="breath-pattern-btn" data-pattern="5-5">Coherence 5-5</button>
+        </div>
+
+        <!-- Animated circle -->
+        <div class="breath-circle-wrapper">
+          <div class="breath-circle-bg"></div>
+          <div class="breath-circle-inner">
+            <span class="breath-label">Ready</span>
+            <span class="breath-count">—</span>
+            <span class="breath-phase"></span>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="breath-controls">
+          <button id="breath-start" class="btn btn-primary">▶ Start</button>
+          <button id="breath-stop" class="btn btn-outline">■ Stop</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNIQUE EXPLANATIONS -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">The Science Behind the Patterns</span>
+        <h2>Why These Techniques Work</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px; max-width:820px; margin:0 auto;">
+
+        <div class="card fade-up">
+          <h3>Box Breathing (4-4-4 or 4-4-4-4)</h3>
+          <div class="pill pill-lavender" style="margin-bottom:12px;">Inhale 4 · Hold 4 · Exhale 4 [· Hold 4]</div>
+          <p><strong>Origin:</strong> Used by US Navy SEALs for performance under stress, derived from ancient pranayama practice <em>sama vritti</em> (equal breathing).</p>
+          <p><strong>How it works:</strong> The equal rhythm of box breathing engages the parasympathetic nervous system while the breath hold builds CO2 tolerance, which counterintuitively improves oxygen delivery to tissues. This creates a state of calm alertness — neither sleepy nor anxious.</p>
+          <p><strong>Best for:</strong> Pre-performance anxiety, decision-making under pressure, before important conversations, midday reset.</p>
+          <div class="tip-box" style="margin-top:12px; margin-bottom:0;">
+            <p>Extend the box: once comfortable with 4 counts, gradually increase to 6-6-6-6 for deeper practice.</p>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <h3>4-7-8 Breathing</h3>
+          <div class="pill pill-sage" style="margin-bottom:12px;">Inhale 4 · Hold 7 · Exhale 8</div>
+          <p><strong>Origin:</strong> Popularized by Dr. Andrew Weil based on ancient pranayama techniques, particularly <em>kumbhaka</em> (breath retention).</p>
+          <p><strong>How it works:</strong> The extended exhale activates the vagus nerve and parasympathetic system. The prolonged hold builds CO2 tolerance. The ratio of exhale to inhale (2:1) is the key — it consistently lowers heart rate and blood pressure within 4 cycles.</p>
+          <p><strong>Best for:</strong> Anxiety, insomnia (practice lying in bed), panic, stress overwhelm, emotional upset. Dr. Weil calls it "the most powerful relaxation technique" he knows.</p>
+          <div class="tip-box" style="margin-top:12px; margin-bottom:0;">
+            <p>Exhale through your mouth with a gentle whooshing sound for maximum effect. This creates a slight back-pressure that further slows the heart rate.</p>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Coherence / Resonance Breathing (5-5)</h3>
+          <div class="pill pill-gold" style="margin-bottom:12px;">Inhale 5 · Exhale 5 = 6 breaths/minute</div>
+          <p><strong>Origin:</strong> Discovered by researchers studying heart rate variability (HRV), with roots in ancient rosary prayer rhythms and recitation of the Sanskrit mantra Om — both of which happen to produce approximately 6 breaths per minute.</p>
+          <p><strong>How it works:</strong> Six breaths per minute is the "resonance frequency" of the cardiovascular system. At this rate, breathing, heart rate, and blood pressure waves synchronize — maximizing HRV and creating a coherent state of calm, clear-headed presence.</p>
+          <p><strong>Best for:</strong> Daily HRV optimization, creative flow, sustained focus, emotional regulation, meditation preparation. Practice for 20 minutes daily for measurable HRV improvements within 4 weeks.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCIENT CONTEXT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block fade-up">
+        <span class="eyebrow">Ancient Wisdom</span>
+        <h2>Pranayama: The Original Breathwork</h2>
+        <p>The Sanskrit word <em>pranayama</em> means "extension of the life force" — <em>prana</em> being the vital energy carried in the breath. The ancient yogic texts, including the Hatha Yoga Pradipika (15th century CE), systematically catalogued dozens of breathing techniques, each with specific physiological and spiritual effects.</p>
+        <p>What's remarkable is how precisely modern science validates these ancient observations. The yogis described <em>nadi shodhana</em> (alternate nostril breathing) as balancing the left and right hemispheres of the brain — and neuroimaging now confirms that it regulates asymmetric brain activity. They described <em>kapalabhati</em> (rapid breath pumping) as "brain-shining" — and research shows it oxygenates the prefrontal cortex and clears CO2 rapidly.</p>
+        <div class="highlight-box">
+          <p>"When the breath wanders, the mind is unsteady. But when the breath is calmed, the mind too will be still." — Hatha Yoga Pradipika</p>
+        </div>
+        <p>The practices on this page are your entry point. Once you've established a foundation with the timer above, consider exploring the full breadth of pranayama practice — ideally with a qualified teacher who can guide you safely through the more advanced techniques.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Living the AI Life</span>
+        <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
+        <p>Bridging time-tested wisdom with the power of artificial intelligence to help you live a more vibrant, conscious life.</p>
+        <a href="../community.html" class="btn btn-gold">Join Our Community</a>
+      </div>
+      <div class="footer-col">
+        <h4>The Method</h4>
+        <ul>
+          <li><a href="../mind/index.html">Mind</a></li>
+          <li><a href="../body/index.html">Body</a></li>
+          <li><a href="../mindfulness/index.html">Mindfulness</a></li>
+          <li><a href="../inputs/index.html">Inputs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../ai-tools.html">AI Tools</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Living the AI Life. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">in</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

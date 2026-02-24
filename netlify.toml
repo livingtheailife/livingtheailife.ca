@@ -1,0 +1,55 @@
+# Netlify configuration for Living the AI Life
+
+[build]
+  publish = "."
+
+# Clean URLs: allow /mind/ to serve /mind/index.html
+[[redirects]]
+  from = "/mind"
+  to = "/mind/"
+  status = 301
+
+[[redirects]]
+  from = "/body"
+  to = "/body/"
+  status = 301
+
+[[redirects]]
+  from = "/mindfulness"
+  to = "/mindfulness/"
+  status = 301
+
+[[redirects]]
+  from = "/inputs"
+  to = "/inputs/"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-tools"
+  to = "/ai-tools/"
+  status = 301
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
