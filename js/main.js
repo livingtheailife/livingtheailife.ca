@@ -17,9 +17,8 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+})();
 
-}
-   ();
 /* ---------- Mobile nav toggle ---------- */
 (function () {
   var btn    = document.getElementById('nav-toggle');
@@ -35,7 +34,8 @@
       mobile.classList.remove('open');
     }
   });
-();
+})();
+
 /* ---------- Fade-up on scroll ---------- */
 (function () {
   var els = document.querySelectorAll('.fade-up');
@@ -261,15 +261,18 @@
     }
   });
 })();
-   })
-   // Copy prompt function for homepage AI prompt button
+
+/* ================================================================
+   COPY PROMPT BUTTON (for homepage)
+================================================================ */
 function copyPrompt(button) {
-    const promptText = button.previousElementSibling.innerText;
-    navigator.clipboard.writeText(promptText).then(() => {
-        button.textContent = 'Copied!';
-        setTimeout(() => button.textContent = 'Copy Prompt', 2000);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-        // Fallback for older browsers
-        alert('Press Ctrl+C to copy the prompt manually.');
-    });
+  const promptText = button.previousElementSibling.innerText;
+  navigator.clipboard.writeText(promptText).then(() => {
+    button.textContent = 'Copied!';
+    setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+    // Fallback for older browsers
+    alert('Press Ctrl+C to copy the prompt manually.');
+  });
+}
