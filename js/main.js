@@ -17,18 +17,7 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-})
-   // Copy prompt function for homepage AI prompt button
-function copyPrompt(button) {
-    const promptText = button.previousElementSibling.innerText;
-    navigator.clipboard.writeText(promptText).then(() => {
-        button.textContent = 'Copied!';
-        setTimeout(() => button.textContent = 'Copy Prompt', 2000);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-        // Fallback for older browsers
-        alert('Press Ctrl+C to copy the prompt manually.');
-    });
+
 }
    ();
 /* ---------- Mobile nav toggle ---------- */
@@ -46,8 +35,7 @@ function copyPrompt(button) {
       mobile.classList.remove('open');
     }
   });
-})();
-
+();
 /* ---------- Fade-up on scroll ---------- */
 (function () {
   var els = document.querySelectorAll('.fade-up');
@@ -273,3 +261,15 @@ function copyPrompt(button) {
     }
   });
 })();
+   })
+   // Copy prompt function for homepage AI prompt button
+function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+        button.textContent = 'Copied!';
+        setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+        // Fallback for older browsers
+        alert('Press Ctrl+C to copy the prompt manually.');
+    });
