@@ -1,234 +1,278 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Living the AI Life — bridging ancient wisdom with modern artificial intelligence for mind, body, and spirit optimization.">
-  <title>Living the AI Life | Ancient Wisdom, Amplified by AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+/* ============================================================
+   Living the AI Life — main.js
+   ============================================================ */
 
-<nav class="nav" id="main-nav">
-  <div class="container nav-inner">
-    <a href="/index.html" class="nav-logo">
-      <span class="logo-main">Living the AI Life</span>
-      <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
-    </a>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="/index.html" class="nav-link active">Home</a></li>
-      <li class="nav-item has-dropdown">
-        <a href="#" class="nav-link">The Method <span class="chevron">▾</span></a>
-        <div class="dropdown">
-          <div class="dropdown-section">
-            <span class="dropdown-label">Pillars</span>
-            <a href="/mind/index.html"><span class="icon">🧠</span> Mind</a>
-            <a href="/body/index.html"><span class="icon">🌿</span> Body</a>
-            <a href="/mindfulness/index.html"><span class="icon">🧘</span> Mindfulness</a>
-            <a href="/inputs/index.html"><span class="icon">✨</span> Inputs</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item"><a href="/ai-tools.html" class="nav-link">AI Tools</a></li>
-      <li class="nav-item"><a href="/blog/index.html" class="nav-link">Blog</a></li>
-      <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="/community.html" class="btn btn-gold">Join Community</a>
-    </div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<nav class="nav-mobile" id="nav-mobile">
-  <span class="mobile-section-label">Navigation</span>
-  <a href="/index.html">Home</a>
-  <a href="/ai-tools.html">AI Tools</a>
-  <a href="/blog/index.html">Blog</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
-  <hr>
-  <span class="mobile-section-label">The Method</span>
-  <a href="/mind/index.html">🧠 Mind</a>
-  <a href="/body/index.html">🌿 Body</a>
-  <a href="/mindfulness/index.html">🧘 Mindfulness</a>
-  <a href="/inputs/index.html">✨ Inputs</a>
-  <hr>
-  <a href="/community.html" class="btn btn-gold">Join Community</a>
-</nav>
+'use strict';
 
-<!-- MAIN CONTENT -->
-<main>
+/* ---------- Nav scroll effect ---------- */
+(function () {
+  var nav = document.getElementById('main-nav');
+  if (!nav) return;
+  function onScroll() {
+    if (window.scrollY > 30) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 
-  <!-- HERO SECTION -->
-  <section class="home-hero">
-    <div class="container">
-      <div class="hero-content fade-up">
-        <div class="hero-tag">✨ Where Ancient Meets Artificial</div>
-        <h1>Live Longer, Smarter, and<br><span class="gradient-text">More Vibrantly</span></h1>
-        <p>With AI by your side.</p>
-        <div class="hero-description" style="max-width:700px; margin:1.5rem auto 2rem; font-size:1.2rem; color:var(--text-secondary);">
-          Imagine having a personal wellness assistant who knows you intimately – your goals, your struggles, your biology – and who draws from the collective wisdom of ancient practices and cutting‑edge science. That's what "Living the AI Life" offers. We bridge the timeless with the futuristic to help you become the best version of yourself.
-        </div>
-        <div class="hero-btn-row">
-          <a href="/community.html" class="btn btn-gold btn-lg">Join Our Community</a>
-          <a href="/about.html" class="btn btn-outline btn-lg">Discover the Method</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>Brand New</strong>
-            <span>Community Starting Now</span>
-          </div>
-          <div class="hero-stat">
-            <strong>4</strong>
-            <span>Core Pillars</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Growing</strong>
-            <span>Daily</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+/* ---------- Mobile nav toggle ---------- */
+(function () {
+  var btn    = document.getElementById('nav-toggle');
+  var mobile = document.getElementById('nav-mobile');
+  if (!btn || !mobile) return;
+  btn.addEventListener('click', function () {
+    var open = mobile.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  // close on outside click
+  document.addEventListener('click', function (e) {
+    if (!btn.contains(e.target) && !mobile.contains(e.target)) {
+      mobile.classList.remove('open');
+    }
+  });
+})();
 
-  <!-- FOUR PILLARS -->
-  <section class="section" style="background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="eyebrow">The Four Pillars</span>
-        <h2>The Method</h2>
-        <p>Every practice, tool, and article on this site flows from one of our four core pillars. Together, they form a complete system for human optimization.</p>
-      </div>
-      <div class="grid-4">
-        <div class="pillar-card mind fade-up">
-          <span class="pillar-icon">🧠</span>
-          <h3>Mind</h3>
-          <p>Cultivate unshakable confidence, master manifestation, and rewire your thinking with AI‑powered affirmations and mental wellness tools. Your mind is the ultimate frontier – let AI help you conquer it.</p>
-          <a href="/mind/index.html" class="btn btn-outline btn-sm">Explore Mind</a>
-        </div>
-        <div class="pillar-card body fade-up">
-          <span class="pillar-icon">🌿</span>
-          <h3>Body</h3>
-          <p>From personalized yoga sequences to movement routines adapted to your body's needs, AI analyzes your progress and suggests optimizations. Move better, recover faster, feel stronger.</p>
-          <a href="/body/index.html" class="btn btn-outline btn-sm">Explore Body</a>
-        </div>
-        <div class="pillar-card mindful fade-up">
-          <span class="pillar-icon">🧘</span>
-          <h3>Mindfulness</h3>
-          <p>Breathe, meditate, and relax with guided sessions that evolve with you. AI learns what calms you and delivers the perfect practice – whether you have 2 minutes or 2 hours.</p>
-          <a href="/mindfulness/index.html" class="btn btn-outline btn-sm">Explore Mindfulness</a>
-        </div>
-        <div class="pillar-card inputs fade-up">
-          <span class="pillar-icon">✨</span>
-          <h3>Inputs</h3>
-          <p>What you consume – food, sound, music – shapes your reality. Let AI curate your nutrition, recommend healing frequencies, and build playlists that elevate your mood and focus.</p>
-          <a href="/inputs/index.html" class="btn btn-outline btn-sm">Explore Inputs</a>
-        </div>
-      </div>
-    </div>
-  </section>
+/* ---------- Fade-up on scroll ---------- */
+(function () {
+  var els = document.querySelectorAll('.fade-up');
+  if (!els.length) return;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
 
-  <!-- FEATURED AI PROMPT OF THE WEEK -->
-  <section class="section">
-    <div class="container">
-      <div class="content-block text-center fade-up" style="max-width:800px; margin:0 auto;">
-        <span class="eyebrow">Try This Now</span>
-        <h2>Featured AI Prompt of the Week</h2>
-        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
-          <p style="font-size:1.3rem; font-style:italic; color:var(--lavender);">“Act as a holistic health coach. Based on my goals [insert your goal], what three daily habits would have the biggest impact on my energy and focus?”</p>
-          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
-        </div>
-        <p class="text-secondary">Use this prompt with ChatGPT, Claude, or any AI assistant to get personalized wellness advice in seconds.</p>
-      </div>
-    </div>
-  </section>
+/* ---------- Contact form ---------- */
+(function () {
+  var form    = document.getElementById('contact-form');
+  var success = document.getElementById('form-success');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        if (success) {
+          success.style.display = 'block';
+          success.classList.add('visible');
+        }
+      } else {
+        alert('There was an issue. Please try again.');
+      }
+    })
+    .catch(function () {
+      alert('Network error. Please try again.');
+    });
+  });
+})();
 
-  <!-- BUILDING TRUST: HONEST MESSAGE ABOUT BEING NEW -->
-  <section class="section-sm" style="background:var(--surface);">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="eyebrow">Just Getting Started</span>
-        <h2>Your Stories Will Go Here</h2>
-        <p style="max-width:700px; margin:0 auto;">Living the AI Life is brand new – and that's exciting. You have the opportunity to be among the first to explore, practice, and share your journey. Real stories from real people like you will soon fill this space.</p>
-      </div>
-      <div style="text-align:center; padding:3rem; background:var(--background); border-radius:24px; border:1px dashed var(--border); max-width:600px; margin:2rem auto 0;">
-        <span style="font-size:3rem; display:block; margin-bottom:1rem;">✨</span>
-        <h3>Be the First</h3>
-        <p style="margin-bottom:1.5rem;">Join our community and share your experience. The first testimonial could be yours.</p>
-        <a href="/community.html" class="btn btn-gold">Join the Community</a>
-      </div>
-    </div>
-  </section>
+/* ---------- Affirmation Shuffle ---------- */
+(function () {
+  var btn  = document.getElementById('shuffle-affirmations');
+  var grid = document.getElementById('affirmation-grid');
+  if (!btn || !grid) return;
+  btn.addEventListener('click', function () {
+    var cards = Array.from(grid.children);
+    for (var i = cards.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      grid.appendChild(cards[j]);
+      cards.splice(j, 1);
+    }
+    // re-append remaining
+    cards.forEach(function (c) { grid.appendChild(c); });
+  });
+})();
 
-  <!-- COMMUNITY CTA -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="cta-section fade-up">
-        <span class="eyebrow">Facebook Community</span>
-        <h2>Be Part of Something New</h2>
-        <p>We're building a global tribe of conscious optimizers who are using ancient wisdom and cutting-edge AI to transform their lives. Be there from the beginning – shape the conversation, share your discoveries, and grow with us.</p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="/community.html" class="btn btn-gold btn-lg">Join Our Facebook Group</a>
-          <a href="/about.html" class="btn btn-outline btn-lg">Learn More</a>
-        </div>
-        <p style="margin-top:20px; font-size:0.82rem;">Free to join. No spam. Just transformation.</p>
-      </div>
-    </div>
-  </section>
+/* ================================================================
+   BREATHING TIMER
+================================================================ */
+(function () {
+  var timerEl   = document.getElementById('breathing-timer');
+  if (!timerEl) return;
 
-</main>
+  var startBtn  = document.getElementById('breath-start');
+  var stopBtn   = document.getElementById('breath-stop');
+  var countEl   = timerEl.querySelector('.breath-count');
+  var phaseEl   = timerEl.querySelector('.breath-phase');
+  var labelEl   = timerEl.querySelector('.breath-label');
+  var circleBg  = timerEl.querySelector('.breath-circle-bg');
+  var patBtns   = timerEl.querySelectorAll('.breath-pattern-btn');
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo-main">Living the AI Life</span>
-        <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
-        <p>Bridging time-tested wisdom with the power of artificial intelligence to help you live a more vibrant, conscious life.</p>
-        <a href="/community.html" class="btn btn-gold">Join Our Community</a>
-      </div>
-      <div class="footer-col">
-        <h4>The Method</h4>
-        <ul>
-          <li><a href="/mind/index.html">Mind</a></li>
-          <li><a href="/body/index.html">Body</a></li>
-          <li><a href="/mindfulness/index.html">Mindfulness</a></li>
-          <li><a href="/inputs/index.html">Inputs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="/ai-tools.html">AI Tools</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms of Use</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Living the AI Life. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">in</a>
-        <a href="#" aria-label="YouTube">▶</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  if (!startBtn || !stopBtn || !countEl || !phaseEl || !circleBg) return;
 
-<script src="/js/main.js"></script>
-</body>
-</html>
+  /* patterns: array of [phaseName, seconds] */
+  var patterns = {
+    '4-4-4':   [['Inhale',4],['Hold',4],['Exhale',4]],
+    '4-7-8':   [['Inhale',4],['Hold',7],['Exhale',8]],
+    '4-4-4-4': [['Inhale',4],['Hold',4],['Exhale',4],['Hold',4]],
+    '5-5':     [['Inhale',5],['Exhale',5]]
+  };
+
+  var currentPattern = '4-4-4';
+  var timer = null;
+  var phaseIndex = 0;
+  var secondsLeft = 0;
+
+  /* select pattern buttons */
+  patBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (timer) return; // don't change while running
+      patBtns.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      currentPattern = b.dataset.pattern;
+    });
+  });
+  if (patBtns.length) patBtns[0].classList.add('active');
+
+  function getPhases() { return patterns[currentPattern] || patterns['4-4-4']; }
+
+  function applyPhase(name, duration) {
+    if (phaseEl) phaseEl.textContent = name;
+    if (labelEl) labelEl.textContent = name === 'Inhale' ? 'Breathe In' : name === 'Exhale' ? 'Breathe Out' : 'Hold';
+    // animate circle
+    if (circleBg) {
+      if (name === 'Inhale') {
+        circleBg.style.transform = 'scale(1.3)';
+        circleBg.style.background = 'radial-gradient(ellipse at center, rgba(157,141,241,0.22) 0%, transparent 70%)';
+        circleBg.style.borderColor = 'rgba(157,141,241,0.6)';
+        circleBg.style.transition  = 'all ' + duration + 's ease';
+      } else if (name === 'Exhale') {
+        circleBg.style.transform = 'scale(0.85)';
+        circleBg.style.background = 'radial-gradient(ellipse at center, rgba(143,185,168,0.12) 0%, transparent 70%)';
+        circleBg.style.borderColor = 'rgba(143,185,168,0.5)';
+        circleBg.style.transition  = 'all ' + duration + 's ease';
+      } else {
+        circleBg.style.transition = 'none';
+      }
+    }
+  }
+
+  function tick() {
+    var phases = getPhases();
+    var phase  = phases[phaseIndex];
+    applyPhase(phase[0], phase[1]);
+    secondsLeft = phase[1];
+    if (countEl) countEl.textContent = secondsLeft;
+
+    timer = setInterval(function () {
+      secondsLeft--;
+      if (countEl) countEl.textContent = secondsLeft;
+      if (secondsLeft <= 0) {
+        clearInterval(timer);
+        timer = null;
+        phaseIndex = (phaseIndex + 1) % phases.length;
+        tick();
+      }
+    }, 1000);
+  }
+
+  startBtn.addEventListener('click', function () {
+    if (timer) return;
+    phaseIndex = 0;
+    startBtn.style.display = 'none';
+    stopBtn.style.display  = 'inline-flex';
+    tick();
+  });
+
+  stopBtn.addEventListener('click', function () {
+    if (timer) { clearInterval(timer); timer = null; }
+    startBtn.style.display = 'inline-flex';
+    stopBtn.style.display  = 'none';
+    if (countEl) countEl.textContent = '—';
+    if (phaseEl) phaseEl.textContent = '';
+    if (labelEl) labelEl.textContent = 'Ready';
+    if (circleBg) {
+      circleBg.style.transform  = 'scale(1)';
+      circleBg.style.transition = 'all 1s ease';
+      circleBg.style.background = 'radial-gradient(ellipse at center, rgba(157,141,241,0.08) 0%, transparent 70%)';
+      circleBg.style.borderColor = 'rgba(157,141,241,0.18)';
+    }
+  });
+})();
+
+/* ================================================================
+   AUDIO PLAYERS
+================================================================ */
+(function () {
+  var cards = document.querySelectorAll('.audio-card');
+  cards.forEach(function (card) {
+    var playBtn = card.querySelector('.audio-play-btn');
+    var fill    = card.querySelector('.audio-fill');
+    var timeEl  = card.querySelector('.audio-time');
+    var audio   = card.querySelector('audio');
+    var track   = card.querySelector('.audio-track');
+    if (!playBtn || !audio) return;
+
+    var isPlaying = false;
+
+    function formatTime(s) {
+      if (isNaN(s)) return '0:00';
+      var m = Math.floor(s / 60);
+      var sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    playBtn.addEventListener('click', function () {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        audio.play().catch(function () {});
+        playBtn.innerHTML = '&#9646;&#9646;';
+      } else {
+        audio.pause();
+        playBtn.innerHTML = '&#9654;';
+      }
+    });
+
+    audio.addEventListener('timeupdate', function () {
+      if (!audio.duration) return;
+      var pct = (audio.currentTime / audio.duration) * 100;
+      if (fill) fill.style.width = pct + '%';
+      if (timeEl) timeEl.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+    });
+
+    audio.addEventListener('ended', function () {
+      isPlaying = false;
+      playBtn.innerHTML = '&#9654;';
+      if (fill) fill.style.width = '0%';
+    });
+
+    if (track) {
+      track.addEventListener('click', function (e) {
+        if (!audio.duration) return;
+        var rect = track.getBoundingClientRect();
+        var pct  = (e.clientX - rect.left) / rect.width;
+        audio.currentTime = pct * audio.duration;
+      });
+    }
+  });
+})();
+
+/* ================================================================
+   COPY PROMPT BUTTON (for homepage)
+================================================================ */
+function copyPrompt(button) {
+  const promptText = button.previousElementSibling.innerText;
+  navigator.clipboard.writeText(promptText).then(() => {
+    button.textContent = 'Copied!';
+    setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+    // Fallback for older browsers
+    alert('Press Ctrl+C to copy the prompt manually.');
+  });
+}
