@@ -63,13 +63,16 @@
 
 <main>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="home-hero">
     <div class="container">
       <div class="hero-content fade-up">
         <div class="hero-tag">✨ Where Ancient Meets Artificial</div>
-        <h1>Ancient Wisdom,<br><span class="gradient-text">Amplified by AI</span></h1>
-        <p>Harness the timeless principles of mind, body, and spirit — supercharged by modern artificial intelligence — to unlock your highest potential.</p>
+        <h1>Live Longer, Smarter, and<br><span class="gradient-text">More Vibrantly</span></h1>
+        <p>With AI by your side.</p>
+        <div class="hero-description" style="max-width:700px; margin:1.5rem auto 2rem; font-size:1.2rem; color:var(--text-secondary);">
+          Imagine having a personal wellness assistant who knows you intimately – your goals, your struggles, your biology – and who draws from the collective wisdom of ancient practices and cutting‑edge science. That's what "Living the AI Life" offers. We bridge the timeless with the futuristic to help you become the best version of yourself.
+        </div>
         <div class="hero-btn-row">
           <a href="/community.html" class="btn btn-gold btn-lg">Join Our Community</a>
           <a href="/about.html" class="btn btn-outline btn-lg">Discover the Method</a>
@@ -92,27 +95,7 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
-  <section class="section">
-    <div class="container">
-      <div class="content-block text-center fade-up">
-        <span class="eyebrow">Our Philosophy</span>
-        <h2>The Old Ways Were Onto Something</h2>
-        <p>For thousands of years, human beings thrived through practices rooted in nature, stillness, and self-awareness. Ancient Stoics, Ayurvedic healers, Zen masters, and indigenous wisdom-keepers all understood something modern science is only now confirming: the mind, body, and spirit are inseparable.</p>
-        <p>We believe AI is not the enemy of this wisdom — it's the amplifier. With the right tools, you can personalize ancient practices to your unique biology, track your progress with precision, and build habits that actually stick.</p>
-      </div>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:36px;">
-        <div class="highlight-box" style="max-width:340px; flex:1;">
-          <p><strong>Ancient Truth:</strong> Consistent breathing practices reduce cortisol and calm the nervous system — documented in Pranayama texts over 3,000 years ago.</p>
-        </div>
-        <div class="tip-box" style="max-width:340px; flex:1;">
-          <p><strong>AI Advantage:</strong> Modern biometric wearables and AI coaching apps now let you measure HRV in real time and personalize your breathwork protocol to the second.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 PILLARS -->
+  <!-- FOUR PILLARS -->
   <section class="section" style="background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
@@ -124,30 +107,95 @@
         <div class="pillar-card mind fade-up">
           <span class="pillar-icon">🧠</span>
           <h3>Mind</h3>
-          <p>Rewire limiting beliefs, build unshakeable confidence, and use AI-assisted manifestation and affirmation practices to reshape your inner world.</p>
+          <p>Cultivate unshakable confidence, master manifestation, and rewire your thinking with AI‑powered affirmations and mental wellness tools. Your mind is the ultimate frontier – let AI help you conquer it.</p>
           <a href="/mind/index.html" class="btn btn-outline btn-sm">Explore Mind</a>
         </div>
         <div class="pillar-card body fade-up">
           <span class="pillar-icon">🌿</span>
           <h3>Body</h3>
-          <p>Move with intention. Ancient yoga traditions meet AI-powered tracking to create movement practices that honor your body's wisdom.</p>
+          <p>From personalized yoga sequences to movement routines adapted to your body's needs, AI analyzes your progress and suggests optimizations. Move better, recover faster, feel stronger.</p>
           <a href="/body/index.html" class="btn btn-outline btn-sm">Explore Body</a>
         </div>
         <div class="pillar-card mindful fade-up">
           <span class="pillar-icon">🧘</span>
           <h3>Mindfulness</h3>
-          <p>From Zen breath-counting to AI-guided meditation sessions, cultivate presence and inner calm through proven mindfulness techniques.</p>
+          <p>Breathe, meditate, and relax with guided sessions that evolve with you. AI learns what calms you and delivers the perfect practice – whether you have 2 minutes or 2 hours.</p>
           <a href="/mindfulness/index.html" class="btn btn-outline btn-sm">Explore Mindfulness</a>
         </div>
         <div class="pillar-card inputs fade-up">
           <span class="pillar-icon">✨</span>
           <h3>Inputs</h3>
-          <p>You are what you consume — food, sound, information, and energy. Optimize every input with AI-driven nutrition and healing frequency guidance.</p>
+          <p>What you consume – food, sound, music – shapes your reality. Let AI curate your nutrition, recommend healing frequencies, and build playlists that elevate your mood and focus.</p>
           <a href="/inputs/index.html" class="btn btn-outline btn-sm">Explore Inputs</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- FEATURED AI PROMPT OF THE WEEK -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>Featured AI Prompt of the Week</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.3rem; font-style:italic; color:var(--lavender);">“Act as a holistic health coach. Based on my goals [insert your goal], what three daily habits would have the biggest impact on my energy and focus?”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this prompt with ChatGPT, Claude, or any AI assistant to get personalized wellness advice in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-sm" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">Real Results</span>
+        <h2>What Early Members Are Saying</h2>
+      </div>
+      <div class="grid-2" style="gap:2rem; max-width:900px; margin:0 auto;">
+        <div class="testimonial-card" style="background:var(--background); padding:2rem; border-radius:24px; border:1px solid var(--border);">
+          <p style="font-size:1.2rem; font-style:italic;">“Since using the AI‑guided meditations, my stress has dropped by half. I finally feel in control.”</p>
+          <div style="margin-top:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:2rem;">🧘</span>
+            <div>
+              <strong>Sarah K.</strong>
+              <span style="display:block; font-size:0.9rem; color:var(--text-secondary);">Mindfulness Practitioner</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" style="background:var(--background); padding:2rem; border-radius:24px; border:1px solid var(--border);">
+          <p style="font-size:1.2rem; font-style:italic;">“The personalized meal plans helped me break a year‑long plateau. I'm living vibrantly again.”</p>
+          <div style="margin-top:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:2rem;">🌿</span>
+            <div>
+              <strong>David R.</strong>
+              <span style="display:block; font-size:0.9rem; color:var(--text-secondary);">Body Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Facebook Community</span>
+        <h2>Join 12,000+ Conscious Optimizers</h2>
+        <p>Connect with a global tribe of seekers who are using ancient wisdom and cutting-edge AI to transform their lives. Share breakthroughs, get accountability, and access exclusive content.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="/community.html" class="btn btn-gold btn-lg">Join Our Facebook Group</a>
+          <a href="/about.html" class="btn btn-outline btn-lg">Learn More</a>
+        </div>
+        <p style="margin-top:20px; font-size:0.82rem;">Free to join. No spam. Just transformation.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
 
   <!-- LATEST FROM BLOG -->
   <section class="section">
