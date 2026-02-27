@@ -63,12 +63,13 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <a href="../mind/index.html" class="back-link">← Back to Mind</a>
       <span class="eyebrow">Mind · Affirmations</span>
       <h1>Positive <span class="gradient-text">Affirmations</span></h1>
-      <p>Curated affirmations for self-worth, abundance, vibrant health, and inner peace. Shuffle them daily for fresh inspiration. Let each one land in your heart before moving on.</p>
+      <p class="lead">Curated affirmations for self-worth, abundance, vibrant health, and inner peace. Shuffle them daily for fresh inspiration. Let each one land in your heart before moving on.</p>
     </div>
   </section>
 
@@ -76,8 +77,8 @@
   <section class="section-sm">
     <div class="container">
       <div class="text-center fade-up" style="margin-bottom:40px;">
-        <p style="margin-bottom:20px;">Click shuffle to remix the grid and find your affirmation of the day.</p>
-        <button id="shuffle-affirmations" class="btn btn-primary btn-lg">🔀 Shuffle Affirmations</button>
+        <p style="margin-bottom:20px; color:var(--text-secondary);">Click shuffle to remix the grid and find your affirmation of the day.</p>
+        <button id="shuffle-affirmations" class="btn btn-gold btn-lg">🔀 Shuffle Affirmations</button>
       </div>
 
       <!-- AFFIRMATION GRID -->
@@ -87,72 +88,84 @@
           <span class="aff-icon">💎</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌊</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me."</p>
+          <button class="copy-mini" onclick="copyText(this, 'Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌿</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong."</p>
+          <button class="copy-mini" onclick="copyText(this, 'My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🕊️</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"I release what I cannot control and find deep peace in the present moment. Stillness is my natural state."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I release what I cannot control and find deep peace in the present moment. Stillness is my natural state.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🔥</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">💪</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌸</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌙</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">💰</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values."</p>
+          <button class="copy-mini" onclick="copyText(this, 'Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🧠</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌺</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance."</p>
+          <button class="copy-mini" onclick="copyText(this, 'I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance.')" title="Copy affirmation">📋</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">☀️</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"Each morning I begin again. Yesterday's challenges do not define me. Today I choose clarity, joy, and forward movement."</p>
+          <button class="copy-mini" onclick="copyText(this, 'Each morning I begin again. Yesterday\'s challenges do not define me. Today I choose clarity, joy, and forward movement.')" title="Copy affirmation">📋</button>
         </div>
 
       </div>
@@ -162,24 +175,34 @@
   <!-- HOW TO USE -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="content-block fade-up">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
         <span class="eyebrow">How to Use Affirmations</span>
         <h2>The Science of Effective Affirmation Practice</h2>
-        <p>Research by psychologist Claude Steele on self-affirmation theory confirms that when we reflect on our values and sense of self, we become more resilient in the face of stress and more open to uncomfortable information. But there's an art to making affirmations work.</p>
+        <p>Research on self-affirmation theory confirms that when we reflect on our values and sense of self, we become more resilient in the face of stress and more open to growth. But there's an art to making affirmations work.</p>
         <h3>The Three Rules</h3>
         <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
           <li style="margin-bottom:12px;"><strong style="color:var(--text);">Feel it, don't just say it.</strong> Recite affirmations slowly, pausing to feel the truth of each word. If one feels unbelievable, use a bridging statement instead.</li>
           <li style="margin-bottom:12px;"><strong style="color:var(--text);">Consistency over intensity.</strong> 2 minutes daily beats 30 minutes weekly. Connect your practice to an existing habit — morning coffee, evening skincare, post-meditation.</li>
-          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Write, don't just read.</strong> Handwriting affirmations activates different neural pathways than reading. Keep a dedicated affirmation journal.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Write, don't just read.</strong> Handwriting affirmations activates different neural pathways. Keep a dedicated affirmation journal.</li>
         </ol>
-        <div class="tip-box">
-          <p><strong>AI Tip:</strong> Ask ChatGPT to generate a personalized version of your favorite affirmation based on your specific situation and goals. A tailored affirmation always lands more powerfully than a generic one.</p>
+        <div class="tip-box" style="margin-top:2rem;">
+          <p><strong>AI Tip:</strong> Ask ChatGPT to generate a personalized version of your favorite affirmation based on your specific situation. A tailored affirmation always lands more powerfully than a generic one.</p>
         </div>
-        <h3>Your AI Personalization Prompt</h3>
       </div>
-      <div class="prompt-card fade-up" style="max-width:780px; margin:0 auto;">
-        <span class="prompt-label">Personalization Prompt</span>
-        <p>I want you to take this affirmation: "[paste affirmation]" and rewrite it in 3 different versions — one that sounds more grounded and practical, one that feels more emotionally resonant, and one that is more spiritually oriented. Adjust the language to sound like how I naturally speak. Here are some examples of my natural speaking style: [add 2-3 sentences you've written].</p>
+    </div>
+  </section>
+
+  <!-- AI PERSONALIZATION PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Make It Yours</span>
+        <h2>AI Personalization Prompt</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">"Take this affirmation: '[paste affirmation]' and rewrite it in 3 versions — one grounded and practical, one emotionally resonant, and one spiritually oriented. Adjust the language to sound like how I naturally speak."</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this with ChatGPT or Claude to create affirmations that feel like they were written just for you.</p>
       </div>
     </div>
   </section>
@@ -245,5 +268,17 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+  // Mini copy function for individual affirmations
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const original = button.textContent;
+      button.textContent = '✅';
+      setTimeout(() => button.textContent = original, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+</script>
 </body>
 </html>
