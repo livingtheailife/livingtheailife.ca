@@ -9,6 +9,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    /* Mini copy button styling */
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+  </style>
 </head>
 <body>
 
@@ -88,84 +113,84 @@
           <span class="aff-icon">💎</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌊</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌿</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong."</p>
-          <button class="copy-mini" onclick="copyText(this, 'My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🕊️</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"I release what I cannot control and find deep peace in the present moment. Stillness is my natural state."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I release what I cannot control and find deep peace in the present moment. Stillness is my natural state.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I release what I cannot control and find deep peace in the present moment. Stillness is my natural state.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🔥</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">💪</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌸</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌙</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">💰</span>
           <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
           <p>"Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🧠</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
           <p>"I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">🌺</span>
           <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
           <p>"I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance.')">Copy</button>
         </div>
 
         <div class="affirmation-card fade-up">
           <span class="aff-icon">☀️</span>
           <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
           <p>"Each morning I begin again. Yesterday's challenges do not define me. Today I choose clarity, joy, and forward movement."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Each morning I begin again. Yesterday\'s challenges do not define me. Today I choose clarity, joy, and forward movement.')" title="Copy affirmation">📋</button>
+          <button class="copy-mini" onclick="copyText(this, 'Each morning I begin again. Yesterday\'s challenges do not define me. Today I choose clarity, joy, and forward movement.')">Copy</button>
         </div>
 
       </div>
@@ -269,12 +294,16 @@
 
 <script src="../js/main.js"></script>
 <script>
-  // Mini copy function for individual affirmations
+  // Mini copy function for individual affirmations (with visual feedback)
   function copyText(button, text) {
     navigator.clipboard.writeText(text).then(() => {
-      const original = button.textContent;
-      button.textContent = '✅';
-      setTimeout(() => button.textContent = original, 1500);
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
     }).catch(() => {
       alert('Press Ctrl+C to copy manually.');
     });
