@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Positive affirmations for self-worth, abundance, health, and peace — plus an AI shuffle tool and personalization guide.">
+  <meta name="description" content="Positive affirmations for self-worth, abundance, health, and peace — refresh daily for new inspiration.">
   <title>Positive Affirmations | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <style>
-    /* Mini copy button styling */
     .copy-mini {
       background: none;
       border: 1px solid var(--border, #3a3a4a);
@@ -94,7 +93,7 @@
       <a href="../mind/index.html" class="back-link">← Back to Mind</a>
       <span class="eyebrow">Mind · Affirmations</span>
       <h1>Positive <span class="gradient-text">Affirmations</span></h1>
-      <p class="lead">Curated affirmations for self-worth, abundance, vibrant health, and inner peace. Shuffle them daily for fresh inspiration. Let each one land in your heart before moving on.</p>
+      <p class="lead">A growing collection of affirmations for self-worth, abundance, health, and peace. Click refresh to see a new set each day.</p>
     </div>
   </section>
 
@@ -102,97 +101,13 @@
   <section class="section-sm">
     <div class="container">
       <div class="text-center fade-up" style="margin-bottom:40px;">
-        <p style="margin-bottom:20px; color:var(--text-secondary);">Click shuffle to remix the grid and find your affirmation of the day.</p>
-        <button id="shuffle-affirmations" class="btn btn-gold btn-lg">🔀 Shuffle Affirmations</button>
+        <p style="margin-bottom:20px; color:var(--text-secondary);">Click refresh to receive 4 new affirmations from our collection.</p>
+        <button id="shuffle-affirmations" class="btn btn-gold btn-lg">🔄 Refresh Affirmations</button>
       </div>
 
-      <!-- AFFIRMATION GRID -->
-      <div class="grid-3" id="affirmation-grid">
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">💎</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
-          <p>"I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🌊</span>
-          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
-          <p>"Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🌿</span>
-          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
-          <p>"My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong."</p>
-          <button class="copy-mini" onclick="copyText(this, 'My body is a magnificent system of intelligence. Every cell is working in perfect harmony to keep me vibrant and strong.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🕊️</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
-          <p>"I release what I cannot control and find deep peace in the present moment. Stillness is my natural state."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I release what I cannot control and find deep peace in the present moment. Stillness is my natural state.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🔥</span>
-          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
-          <p>"I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I attract opportunities, resources, and relationships that align with my highest good. My vision is becoming reality.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">💪</span>
-          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
-          <p>"I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I honor my body with nourishing food, restful sleep, and joyful movement. My energy levels grow stronger each day.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🌸</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
-          <p>"I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🌙</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
-          <p>"I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I trust the process of my life. I release urgency and anxiety, knowing everything is unfolding in perfect divine timing.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">💰</span>
-          <span class="pill pill-gold" style="margin-bottom:4px;">Abundance</span>
-          <p>"Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Money is a tool that amplifies good. I welcome financial prosperity with gratitude and use it in service of my values.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🧠</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Self-Worth</span>
-          <p>"I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">🌺</span>
-          <span class="pill pill-sage" style="margin-bottom:4px;">Health</span>
-          <p>"I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance."</p>
-          <button class="copy-mini" onclick="copyText(this, 'I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive. My body and mind are in beautiful alliance.')">Copy</button>
-        </div>
-
-        <div class="affirmation-card fade-up">
-          <span class="aff-icon">☀️</span>
-          <span class="pill pill-lavender" style="margin-bottom:4px;">Peace</span>
-          <p>"Each morning I begin again. Yesterday's challenges do not define me. Today I choose clarity, joy, and forward movement."</p>
-          <button class="copy-mini" onclick="copyText(this, 'Each morning I begin again. Yesterday\'s challenges do not define me. Today I choose clarity, joy, and forward movement.')">Copy</button>
-        </div>
-
+      <!-- AFFIRMATION GRID (4 cards) -->
+      <div class="grid-4" id="affirmation-grid">
+        <!-- Cards will be populated by JavaScript -->
       </div>
     </div>
   </section>
@@ -232,14 +147,14 @@
     </div>
   </section>
 
-  <!-- DOWNLOAD CTA -->
+  <!-- COMMUNITY CTA -->
   <section class="section-sm">
     <div class="container">
       <div class="cta-section fade-up">
-        <span class="eyebrow">Free Resource</span>
-        <h2>Download Your Affirmation Starter Kit</h2>
-        <p>Get our printable 30-day affirmation calendar, journaling worksheet, and the complete ChatGPT prompt library for mindset work — free for community members.</p>
-        <a href="../community.html" class="btn btn-gold btn-lg">Join to Download Free</a>
+        <span class="eyebrow">Join Us</span>
+        <h2>Get Daily Affirmations in Your Feed</h2>
+        <p>Our private Facebook community shares fresh affirmations, prompts, and support every day. It's free, and it's where our journey comes alive.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -294,7 +209,85 @@
 
 <script src="../js/main.js"></script>
 <script>
-  // Mini copy function for individual affirmations (with visual feedback)
+  // Master list of 24 affirmations
+  const allAffirmations = [
+    // Self-Worth (6)
+    { icon: '💎', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I am inherently worthy of love and belonging — not because of what I achieve, but because of who I am.' },
+    { icon: '🌸', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I deserve to take up space. My voice matters, my perspective has value, and I contribute something unique to this world.' },
+    { icon: '🧠', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I am enough, exactly as I am today. My growth and becoming are beautiful — and so is exactly where I stand right now.' },
+    { icon: '🌟', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I trust my own wisdom. Deep within me, I carry everything I need to navigate this life.' },
+    { icon: '💖', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I forgive myself for past mistakes. They were lessons, not life sentences.' },
+    { icon: '🌅', category: 'Self-Worth', categoryClass: 'pill-lavender', text: 'I am not defined by others\' opinions. My worth is inherent and unchanging.' },
+
+    // Abundance (6)
+    { icon: '🌊', category: 'Abundance', categoryClass: 'pill-gold', text: 'Abundance flows to me naturally and effortlessly. There is more than enough for me and everyone around me.' },
+    { icon: '🔥', category: 'Abundance', categoryClass: 'pill-gold', text: 'I attract opportunities, resources, and relationships that align with my highest good.' },
+    { icon: '💰', category: 'Abundance', categoryClass: 'pill-gold', text: 'Money is a tool that amplifies good. I welcome financial prosperity with gratitude.' },
+    { icon: '✨', category: 'Abundance', categoryClass: 'pill-gold', text: 'I am open to receiving abundance in all forms — love, joy, creativity, and material comfort.' },
+    { icon: '🌱', category: 'Abundance', categoryClass: 'pill-gold', text: 'Everything I need arrives at the right time. I trust the rhythm of life.' },
+    { icon: '🎁', category: 'Abundance', categoryClass: 'pill-gold', text: 'Gratitude multiplies what I have. Today I notice the abundance already present.' },
+
+    // Health (6)
+    { icon: '🌿', category: 'Health', categoryClass: 'pill-sage', text: 'My body is a magnificent system of intelligence. Every cell works in perfect harmony.' },
+    { icon: '💪', category: 'Health', categoryClass: 'pill-sage', text: 'I honor my body with nourishing food, restful sleep, and joyful movement.' },
+    { icon: '🌺', category: 'Health', categoryClass: 'pill-sage', text: 'I listen to the wisdom of my body. When I rest, I heal. When I move, I thrive.' },
+    { icon: '💧', category: 'Health', categoryClass: 'pill-sage', text: 'My body is resilient and strong. It carries me through life with grace.' },
+    { icon: '☀️', category: 'Health', categoryClass: 'pill-sage', text: 'Each day my body grows stronger, more flexible, and more vibrant.' },
+    { icon: '🌙', category: 'Health', categoryClass: 'pill-sage', text: 'Restorative sleep heals and renews me. I wake each morning refreshed.' },
+
+    // Peace (6)
+    { icon: '🕊️', category: 'Peace', categoryClass: 'pill-lavender', text: 'I release what I cannot control and find deep peace in the present moment.' },
+    { icon: '🌙', category: 'Peace', categoryClass: 'pill-lavender', text: 'I trust the process of my life. I release urgency and anxiety.' },
+    { icon: '☀️', category: 'Peace', categoryClass: 'pill-lavender', text: 'Each morning I begin again. Today I choose clarity, joy, and forward movement.' },
+    { icon: '🍃', category: 'Peace', categoryClass: 'pill-lavender', text: 'I breathe in calm. I breathe out tension. Peace is always available within me.' },
+    { icon: '🌄', category: 'Peace', categoryClass: 'pill-lavender', text: 'I accept what is. Resistance creates suffering; acceptance opens the door to peace.' },
+    { icon: '🕯️', category: 'Peace', categoryClass: 'pill-lavender', text: 'I create space for stillness. In the quiet, I reconnect to my true self.' }
+  ];
+
+  // Helper: get 4 random unique indices
+  function getRandomIndices(count, max) {
+    const indices = [];
+    while (indices.length < count) {
+      const randomIndex = Math.floor(Math.random() * max);
+      if (!indices.includes(randomIndex)) {
+        indices.push(randomIndex);
+      }
+    }
+    return indices;
+  }
+
+  // Render selected affirmations
+  function renderAffirmations(indices) {
+    const grid = document.getElementById('affirmation-grid');
+    grid.innerHTML = ''; // Clear current cards
+
+    indices.forEach(index => {
+      const a = allAffirmations[index];
+      const card = document.createElement('div');
+      card.className = 'affirmation-card fade-up';
+      card.innerHTML = `
+        <span class="aff-icon">${a.icon}</span>
+        <span class="pill ${a.categoryClass}" style="margin-bottom:4px;">${a.category}</span>
+        <p>"${a.text}"</p>
+        <button class="copy-mini" onclick="copyText(this, '${a.text.replace(/'/g, "\\'")}')">Copy</button>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  // Shuffle function
+  function shuffleAffirmations() {
+    const indices = getRandomIndices(4, allAffirmations.length);
+    renderAffirmations(indices);
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    shuffleAffirmations();
+    document.getElementById('shuffle-affirmations').addEventListener('click', shuffleAffirmations);
+  });
+
+  // Mini copy function with feedback
   function copyText(button, text) {
     navigator.clipboard.writeText(text).then(() => {
       const originalText = button.textContent;
