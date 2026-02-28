@@ -3,12 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mental health resources — AI tools for wellness, journaling prompts, crisis resources, and self-care strategies rooted in science and ancient wisdom.">
+  <meta name="description" content="Mental health resources, AI‑powered journaling prompts, and Canadian crisis support lines. Ancient wisdom meets modern tools for emotional wellness.">
   <title>Mental Health Resources | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+    .resource-card {
+      background: var(--surface-light);
+      border-left: 4px solid var(--lavender);
+      padding: 1.5rem;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 1rem;
+    }
+    .resource-card h4 {
+      margin-top: 0;
+      color: var(--lavender);
+    }
+    .resource-card p {
+      margin-bottom: 0.5rem;
+    }
+    .crisis-number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      margin: 0.5rem 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -63,96 +108,170 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <a href="../mind/index.html" class="back-link">← Back to Mind</a>
       <span class="eyebrow">Mind · Mental Health</span>
       <h1>Mental Health <span class="gradient-text">Resources</span></h1>
-      <p>AI tools, journaling prompts, and evidence-based self-care strategies for everyday mental wellness. Plus essential crisis resources for when you need more support.</p>
+      <p class="lead">Practical tools, AI‑powered journaling prompts, and Canadian crisis support to help you navigate the inner landscape with compassion.</p>
     </div>
   </section>
 
-  <!-- CRISIS RESOURCES — always first -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="warning-box fade-up" style="max-width:820px; margin:0 auto;">
-        <p><strong>Crisis Resources:</strong> If you are in immediate distress or danger, please reach out for professional help.</p>
-        <ul style="margin-top:12px; padding-left:20px; color:var(--text);">
-          <li><strong>USA — 988 Suicide &amp; Crisis Lifeline:</strong> Call or text 988</li>
-          <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
-          <li><strong>International Association for Suicide Prevention:</strong> https://www.iasp.info/resources/Crisis_Centres/</li>
-          <li><strong>Emergency:</strong> Call 911 (US) or your local emergency number</li>
-        </ul>
-        <p style="margin-top:12px;"><em>AI tools are not a substitute for professional mental health care. Please work with a qualified therapist or counselor if you are experiencing significant mental health challenges.</em></p>
-      </div>
-    </div>
-  </section>
-
+  <!-- INTRO -->
   <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
-        <span class="eyebrow">Daily Mental Wellness</span>
-        <h2>AI Tools for Everyday Mental Wellbeing</h2>
-        <p>Mental health exists on a spectrum. Beyond crisis intervention, there is the daily maintenance of our psychological wellbeing — the practices that keep us resilient, emotionally balanced, and mentally clear. AI is becoming a genuinely useful companion for this daily work.</p>
-
-        <h3>AI for Reflective Journaling</h3>
-        <p>Journaling is one of the most evidence-backed mental health practices available. Studies show it reduces cortisol, helps process trauma, improves emotional regulation, and enhances self-awareness. AI transforms journaling from a blank page into a guided dialogue.</p>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:16px; max-width:820px; margin:32px auto;">
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Processing Difficult Emotions</span>
-          <p>I'm feeling [emotion] and I don't fully understand why. Help me explore this feeling without judgment. Ask me questions about when it first appeared, what thoughts accompany it, what need underneath it might not be met, and what a compassionate response to myself might look like right now.</p>
-        </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Anxiety Defusion</span>
-          <p>I'm experiencing anxiety about [situation]. Using techniques from Acceptance and Commitment Therapy (ACT), help me: (1) name and acknowledge the feeling without fighting it, (2) identify the underlying fear or belief, (3) examine whether this thought is a fact or a story, and (4) reconnect with what I value so I can choose a response from my values rather than from fear.</p>
-        </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Gratitude Practice</span>
-          <p>Guide me through a deep gratitude journaling session. Don't just ask what I'm grateful for — ask me WHY each thing matters to me, how my life would be different without it, and who I want to thank. Help me feel the gratitude, not just list it.</p>
-        </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Self-Compassion Check-In</span>
-          <p>I've been self-critical about [situation]. Act as Kristin Neff's self-compassion model. First, help me acknowledge my suffering with kindness rather than judgment. Then help me recognize that struggle is part of the shared human experience. Finally, help me speak to myself as I would to a dear friend in the same situation.</p>
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Ancient Wisdom Meets Modern Science</span>
+        <h2>The Mind‑Body Connection</h2>
+        <p>Thousand‑year‑old traditions—Ayurveda, Traditional Chinese Medicine, and Stoic philosophy—all understood that mental health is inseparable from physical health, community, and purpose. Today, we have the advantage of neuroplasticity research and AI‑assisted tools to support our journey.</p>
+        <p>This page is a safe space. Here you'll find:</p>
+        <ul style="margin:1.5rem 0; padding-left:1.5rem;">
+          <li>AI prompts for self‑inquiry and emotional regulation</li>
+          <li>A daily 5‑minute mental wellness ritual</li>
+          <li>Immediate crisis resources (Canadian numbers included)</li>
+        </ul>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <p class="quote">"You, yourself, as much as anybody in the entire universe, deserve your love and affection."</p>
+          <p style="margin-top:0.5rem; color:var(--text-secondary);">— attributed to the Buddha</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="content-block fade-up" style="margin-top:48px;">
-        <h2>Self-Care Strategies: Ancient and Modern</h2>
+  <!-- AI PROMPTS FOR MENTAL WELLNESS -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Self‑Care</span>
+        <h2>Prompts for Emotional Clarity</h2>
+        <p>Use these with ChatGPT, Claude, or any AI assistant. Copy, paste, and reflect.</p>
+      </div>
+      <div class="grid-3" style="gap:24px;">
 
-        <div class="grid-3" style="margin-top:24px;">
-          <div class="value-card">
-            <span class="value-icon">😴</span>
-            <h4>Prioritize Sleep</h4>
-            <p>Sleep is when the brain's glymphatic system flushes toxic proteins linked to cognitive decline and depression. Ancient traditions marked sunset as the beginning of rest for good reason. Aim for 7–9 hours with a consistent sleep/wake time.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🚶</span>
-            <h4>Move Daily</h4>
-            <p>Walking 30 minutes daily is as effective as antidepressants for mild-to-moderate depression according to multiple studies. The Peripatetic philosophers of Ancient Greece literally walked while philosophizing. Movement and clear thinking are inseparable.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🌿</span>
-            <h4>Spend Time in Nature</h4>
-            <p>Japanese "forest bathing" (shinrin-yoku) research shows 2 hours in nature significantly reduces cortisol and blood pressure. Every ancient culture understood humans need regular contact with the natural world to remain psychologically balanced.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🤲</span>
-            <h4>Cultivate Connection</h4>
-            <p>Loneliness is as harmful as smoking 15 cigarettes per day according to the Harvard Study of Adult Development — the longest running study on happiness ever conducted. Ancient wisdom traditions placed community at the center of a good life.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">📵</span>
-            <h4>Digital Sabbath</h4>
-            <p>The ancient Jewish concept of Sabbath — one day of complete rest from labor — has never been more needed. Designating one full day per week as screen-free dramatically improves stress, sleep quality, and presence in relationships.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🧘</span>
-            <h4>Meditate Consistently</h4>
-            <p>Even 10 minutes of daily meditation measurably changes the structure of the prefrontal cortex — the brain region responsible for emotional regulation, decision-making, and compassion — within 8 weeks. Consistency beats duration.</p>
+        <div class="card fade-up">
+          <span class="card-icon">📓</span>
+          <h3>Morning Check‑In</h3>
+          <p>Start the day with intention and self‑awareness.</p>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "Act as a compassionate mental wellness coach. Ask me five gentle questions to help me check in with how I'm feeling this morning. Keep the tone warm and non‑judgmental."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'Act as a compassionate mental wellness coach. Ask me five gentle questions to help me check in with how I\'m feeling this morning. Keep the tone warm and non‑judgmental.')">Copy Prompt</button>
           </div>
         </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🌧️</span>
+          <h3>Processing Difficult Emotions</h3>
+          <p>When you feel overwhelmed, let AI help you untangle.</p>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "I'm feeling [emotion, e.g., sadness / anxiety / anger]. Help me explore this feeling with curiosity, not judgment. Ask me questions that might reveal its source and what it needs."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'I\'m feeling [emotion]. Help me explore this feeling with curiosity, not judgment. Ask me questions that might reveal its source and what it needs.')">Copy Prompt</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🧘</span>
+          <h3>Self‑Compassion Break</h3>
+          <p>A short practice for when you're being hard on yourself.</p>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "Guide me through a 3‑minute self‑compassion meditation. Include phrases like 'this is a moment of suffering,' 'suffering is part of life,' and 'may I be kind to myself.' Use a calm, gentle voice."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'Guide me through a 3‑minute self‑compassion meditation. Include phrases like \'this is a moment of suffering,\' \'suffering is part of life,\' and \'may I be kind to myself.\' Use a calm, gentle voice.')">Copy Prompt</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY RITUAL -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Practice</span>
+        <h2>5‑Minute Mental Wellness Ritual</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Pause (1 min):</strong> Take three deep breaths. Ask yourself: "How am I really doing right now?" No judgment, just observe.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Journal (2 min):</strong> Write one sentence about what you're feeling, or use an AI prompt from above.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text););">Connect (1 min):</strong> Send a kind message to someone you appreciate, or simply name one thing you're grateful for.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Breathe (1 min):</strong> Close your eyes and follow your breath. Inhale peace, exhale tension.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Consistency builds resilience.</strong> Even on hard days, this tiny ritual keeps you connected to yourself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANADIAN CRISIS RESOURCES -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Immediate Help</span>
+        <h2>Canadian Crisis Lines</h2>
+        <p>If you or someone you know needs support right now, please reach out. These services are free, confidential, and available 24/7.</p>
+
+        <div class="resource-card">
+          <h4>📞 Talk Suicide Canada</h4>
+          <p>Nationwide crisis line for people thinking about suicide or those worried about someone.</p>
+          <span class="crisis-number">1‑833‑456‑4566</span>
+          <p>Text: 45645 (4 p.m. – midnight ET) | <a href="https://talksuicide.ca" target="_blank">talksuicide.ca</a></p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🍁 Kids Help Phone</h4>
+          <p>Canada’s only 24/7, national support service for youth 5‑29. Professional counselling, information, and referrals.</p>
+          <span class="crisis-number">1‑800‑668‑6868</span>
+          <p>Text: 686868 | <a href="https://kidshelpphone.ca" target="_blank">kidshelpphone.ca</a></p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🏳️‍🌈 Trans Lifeline</h4>
+          <p>Peer support for trans and questioning individuals.</p>
+          <span class="crisis-number">1‑877‑330‑6366</span>
+          <p>Available 10 a.m. – 4 a.m. ET | <a href="https://translifeline.org" target="_blank">translifeline.org</a></p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🌱 First Nations and Inuit Hope for Wellness Help Line</h4>
+          <p>Immediate, culturally sensitive telephone support 24/7. Available in Cree, Ojibway, Inuktut, English, and French.</p>
+          <span class="crisis-number">1‑855‑242‑3310</span>
+          <p>Online chat at <a href="https://hopeforwellness.ca" target="_blank">hopeforwellness.ca</a></p>
+        </div>
+
+        <p style="margin-top:2rem; font-size:0.9rem;">If you are in immediate danger, call <strong>911</strong> or go to your nearest emergency room.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for When You Feel Alone</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">"I'm feeling lonely and disconnected. Act as a gentle friend. Help me remember that I am not alone, and offer me three small ways I can reach out or reconnect with myself today."</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this whenever you need a reminder that you belong.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">You Are Not Alone</span>
+        <h2>Join a Community That Cares</h2>
+        <p>Our private Facebook group is a judgment‑free space where members share struggles, celebrate small wins, and remind each other that mental health is a journey, not a destination.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -206,5 +325,21 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+  // Copy function for mini buttons
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+</script>
 </body>
 </html>
