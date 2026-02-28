@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mental health resources, AI‑powered journaling prompts, and Canadian crisis support lines. Ancient wisdom meets modern tools for emotional wellness.">
+  <meta name="description" content="Mental health resources, AI‑powered journaling prompts, and crisis support lines – Canada, US, UK, Australia, and global directories. Ancient wisdom meets modern tools for emotional wellness.">
   <title>Mental Health Resources | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +52,16 @@
       color: var(--gold);
       display: block;
       margin: 0.5rem 0;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -114,7 +124,7 @@
       <a href="../mind/index.html" class="back-link">← Back to Mind</a>
       <span class="eyebrow">Mind · Mental Health</span>
       <h1>Mental Health <span class="gradient-text">Resources</span></h1>
-      <p class="lead">Practical tools, AI‑powered journaling prompts, and Canadian crisis support to help you navigate the inner landscape with compassion.</p>
+      <p class="lead">Practical tools, AI‑powered journaling prompts, and crisis support lines – for Canada, the US, the UK, Australia, and beyond. Ancient wisdom meets modern tools for emotional wellness.</p>
     </div>
   </section>
 
@@ -129,7 +139,7 @@
         <ul style="margin:1.5rem 0; padding-left:1.5rem;">
           <li>AI prompts for self‑inquiry and emotional regulation</li>
           <li>A daily 5‑minute mental wellness ritual</li>
-          <li>Immediate crisis resources (Canadian numbers included)</li>
+          <li>Immediate crisis resources – Canadian and international</li>
         </ul>
         <div class="highlight-box" style="margin-top:2rem;">
           <p class="quote">"You, yourself, as much as anybody in the entire universe, deserve your love and affection."</p>
@@ -208,14 +218,16 @@
     </div>
   </section>
 
-  <!-- CANADIAN CRISIS RESOURCES -->
+  <!-- EXPANDED CRISIS RESOURCES (CANADA + INTERNATIONAL) -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
         <span class="eyebrow">Immediate Help</span>
-        <h2>Canadian Crisis Lines</h2>
-        <p>If you or someone you know needs support right now, please reach out. These services are free, confidential, and available 24/7.</p>
+        <h2>Crisis Support Lines – Canada & International</h2>
+        <p>If you or someone you know needs support right now, please reach out. These services are free, confidential, and available 24/7 unless otherwise noted.</p>
 
+        <!-- CANADA (existing, kept prominent) -->
+        <h3 style="margin-top:2rem; margin-bottom:1rem;">🍁 Canada</h3>
         <div class="resource-card">
           <h4>📞 Talk Suicide Canada</h4>
           <p>Nationwide crisis line for people thinking about suicide or those worried about someone.</p>
@@ -244,7 +256,32 @@
           <p>Online chat at <a href="https://hopeforwellness.ca" target="_blank">hopeforwellness.ca</a></p>
         </div>
 
-        <p style="margin-top:2rem; font-size:0.9rem;">If you are in immediate danger, call <strong>911</strong> or go to your nearest emergency room.</p>
+        <!-- INTERNATIONAL (new compact section) -->
+        <h3 style="margin-top:2rem; margin-bottom:1rem;">🌐 International Support</h3>
+        <div class="grid-2" style="gap:1rem;">
+          <div class="resource-card" style="margin-bottom:0;">
+            <h4>🇺🇸 United States</h4>
+            <span class="crisis-number">988</span>
+            <p>Suicide & Crisis Lifeline (24/7)</p>
+          </div>
+          <div class="resource-card" style="margin-bottom:0;">
+            <h4>🇬🇧 United Kingdom</h4>
+            <span class="crisis-number">111</span>
+            <p>NHS Mental Health Helpline (24/7)</p>
+          </div>
+          <div class="resource-card" style="margin-bottom:0;">
+            <h4>🇦🇺 Australia</h4>
+            <span class="crisis-number">13 11 14</span>
+            <p>Lifeline Australia (24/7)</p>
+          </div>
+          <div class="resource-card" style="margin-bottom:0;">
+            <h4>🌍 Global Directories</h4>
+            <p><a href="https://findahelpline.com" target="_blank">findahelpline.com</a> – search by country for local crisis lines worldwide.</p>
+            <p><a href="https://www.befrienders.org" target="_blank">Befrienders Worldwide</a> – emotional support centres in many countries.</p>
+          </div>
+        </div>
+
+        <p style="margin-top:2rem; font-size:0.9rem;">If your country isn't listed, visit the global directories above. If you are in immediate danger, call <strong>911</strong> (or your local emergency number) or go to your nearest emergency room.</p>
       </div>
     </div>
   </section>
