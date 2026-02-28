@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Body pillar — yoga, movement practices, and AI tracking for physical wellness rooted in ancient wisdom.">
+  <meta name="description" content="The Body pillar at Living the AI Life — explore AI-enhanced yoga, movement practices, and ancient wisdom for physical vitality and strength.">
   <title>Body | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+  </style>
 </head>
 <body>
 
@@ -63,63 +87,150 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Pillar Two</span>
       <h1>🌿 The <span class="gradient-text">Body</span></h1>
-      <p>Your body is your most ancient technology — 3.8 billion years of evolutionary wisdom encoded in flesh and bone. Honor it. Move it. Track it. Transform it.</p>
+      <p class="lead">Your body is the vessel of your soul. Explore AI‑enhanced movement practices, yoga, and ancient wisdom for physical vitality and strength.</p>
     </div>
   </section>
 
+  <!-- INTRO -->
   <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
-        <span class="eyebrow">Why the Body Is Sacred</span>
-        <h2>The Temple Principle</h2>
-        <p>Every major wisdom tradition has held the physical body as sacred — not as separate from spirit, but as its vessel and instrument. The ancient Greeks trained at the gymnasium not just for strength but for character. The yogic traditions of India developed asana practice not for flexibility but for the cultivation of <em>prana</em> — vital life force.</p>
-        <p>Modern science confirms what these traditions intuited: the body and mind are not separate systems. The gut produces 90% of the body's serotonin. Movement directly regulates mood, cognition, and emotional regulation. Sleep determines whether we consolidate memories or descend into anxiety. How we inhabit our bodies shapes who we are.</p>
-        <p>AI enters this picture as a powerful ally for body literacy — helping us track, understand, and respond to the signals our bodies are constantly sending, with a precision that was previously only available to elite athletes.</p>
-        <div class="tip-box">
-          <p><strong>AI Body Insight:</strong> Wearables like Oura Ring and Whoop track HRV (Heart Rate Variability) — a window into the autonomic nervous system. When HRV is high, your body is adaptable and ready for challenge. When low, it needs restoration. Ancient yogic practices of rest and activity cycles (<em>langhana</em> and <em>brahmana</em>) intuited this millennia before we had the data.</p>
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Why the Body Matters</span>
+        <h2>The Temple of the Spirit</h2>
+        <p>From the yogis of ancient India to the athletes of Greece, every culture understood that the body is not separate from the mind—it is its foundation. The word "yoga" itself means union. When we move, stretch, and strengthen, we are not just building muscle; we are cultivating life force (prana, qi), emotional resilience, and mental clarity.</p>
+        <p>Modern science agrees: exercise releases endorphins, reduces cortisol, and promotes neurogenesis. But ancient traditions went further—they saw the body as a map of consciousness, with energy centres (chakras, meridians) that can be awakened through intentional movement.</p>
+        <p><strong>AI can now personalize this ancient wisdom.</strong> By tracking your biometrics, suggesting poses based on your unique structure, and generating movement sequences that adapt to your energy levels, AI becomes your personal yoga teacher and movement coach—available anytime, anywhere.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <p class="quote">"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."</p>
+          <p style="margin-top:0.5rem; color:var(--text-secondary);">— Buddha</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SUB‑PAGES CARDS -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
         <span class="eyebrow">Explore the Body Pillar</span>
-        <h2>Choose Your Practice</h2>
+        <h2>Choose Your Path</h2>
+        <p>Each section dives deep into one aspect of physical practice, blending ancient teachings with practical AI‑powered tools.</p>
       </div>
-      <div class="grid-2" style="gap:24px; max-width:900px; margin:0 auto;">
-        <a href="../body/yoga.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
-            <span class="card-icon">🧘</span>
+      <div class="grid-2" style="gap:24px; max-width:800px; margin:0 auto;">
+        <a href="../body/yoga.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card" style="text-align:center;">
+            <span class="card-icon" style="font-size:3rem;">🧘</span>
             <h3>Yoga</h3>
-            <p>Six foundational yoga poses with full AI alignment guidance, beginner sequences, and the ancient philosophy behind each asana. Practice meets precision.</p>
-            <span class="btn btn-sage btn-sm mt-2" style="display:inline-flex;">Explore Yoga →</span>
+            <p>Classical yoga postures, breathwork (pranayama), and AI‑generated sequences tailored to your flexibility, goals, and daily energy.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Explore Yoga →</span>
           </div>
         </a>
-        <a href="../body/body-movements.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
-            <span class="card-icon">🏃</span>
+        <a href="../body/body-movements.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card" style="text-align:center;">
+            <span class="card-icon" style="font-size:3rem;">🏃</span>
             <h3>Body Movements</h3>
-            <p>Functional movement exercises, daily mobility routines, and AI coaching prompts for building a body that performs beautifully in everyday life.</p>
-            <span class="btn btn-sage btn-sm mt-2" style="display:inline-flex;">Explore Movement →</span>
+            <p>Functional movement, Qigong, and modern exercise science—personalized by AI to help you move better, recover faster, and prevent injury.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Explore Movements →</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- AI PROMPTS FOR BODY AWARENESS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Movement</span>
+        <h2>Prompts for Physical Wisdom</h2>
+        <p>Use these with ChatGPT, Claude, or any AI assistant to deepen your practice.</p>
+      </div>
+      <div class="grid-3" style="gap:24px;">
+
+        <div class="card fade-up">
+          <span class="card-icon">🤸</span>
+          <h3>Personalized Yoga Flow</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "I have [X minutes] and want to focus on [flexibility / strength / relaxation / energy]. My experience level is [beginner / intermediate]. Create a yoga sequence with pose names and brief instructions."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'I have [X minutes] and want to focus on [flexibility / strength / relaxation / energy]. My experience level is [beginner / intermediate]. Create a yoga sequence with pose names and brief instructions.')">Copy Prompt</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🦵</span>
+          <h3>Mobility Routine</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "I sit at a desk all day and have tight hips and shoulders. Give me a 10‑minute mobility routine I can do without equipment."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'I sit at a desk all day and have tight hips and shoulders. Give me a 10‑minute mobility routine I can do without equipment.')">Copy Prompt</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">💤</span>
+          <h3>Evening Wind‑Down</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              "Suggest a gentle evening movement sequence to help me relax and prepare for sleep. Include stretches and breathwork."
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'Suggest a gentle evening movement sequence to help me relax and prepare for sleep. Include stretches and breathwork.')">Copy Prompt</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY PRACTICE -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>10‑Minute Body Awareness Practice</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Scan (2 min):</strong> Lie down and mentally scan your body from head to toe. Notice areas of tension without judgment.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Breathe (3 min):</strong> Place one hand on your belly. Inhale deeply for 4 counts, exhale for 6. Repeat 10 times.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text););">Move (3 min):</strong> Do 3‑5 gentle stretches (cat‑cow, forward fold, spinal twist). Move with awareness.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Gratitude (2 min):</strong> Thank your body for carrying you through the day. Name one thing you appreciate about it.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Listen to your body.</strong> Never force. The goal is connection, not performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for Body Connection</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">"I feel disconnected from my body. Guide me through a 5‑minute practice to help me reconnect through gentle movement and breath awareness."</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this anytime you need to come home to your body.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
   <section class="section-sm">
     <div class="container">
       <div class="cta-section fade-up">
-        <span class="eyebrow">AI + Body Tracking</span>
-        <h2>Know Your Body with AI Tools</h2>
-        <p>Explore our reviews of the best AI-powered wearables and health tracking tools, from the Oura Ring to Whoop to continuous glucose monitors.</p>
-        <a href="../ai-tools.html" class="btn btn-gold btn-lg">Explore AI Tools</a>
+        <span class="eyebrow">Join the Movement</span>
+        <h2>Share Your Practice</h2>
+        <p>Our private Facebook group is a place to share yoga photos, ask for advice, and celebrate movement milestones together.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -173,5 +284,21 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+  // Copy function for mini buttons
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+</script>
 </body>
 </html>
