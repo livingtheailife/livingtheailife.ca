@@ -9,6 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* Ensure hero content is centered */
+    .home-hero .hero-content {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .home-hero h1 {
+      text-align: center;
+      line-height: 1.2;
+    }
+    .home-hero .hero-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .home-hero .hero-btn-row {
+      justify-content: center;
+    }
+    .home-hero .hero-stats {
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -61,17 +83,16 @@
   <a href="/community.html" class="btn btn-gold">Join Community</a>
 </nav>
 
-<!-- MAIN CONTENT -->
 <main>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (FIXED CENTERING) -->
   <section class="home-hero">
     <div class="container">
       <div class="hero-content fade-up">
         <div class="hero-tag">✨ Where Ancient Meets Artificial</div>
         <h1>Live Longer, Smarter, and<br><span class="gradient-text">More Vibrantly</span></h1>
-        <p>With AI by your side.</p>
-        <div class="hero-description" style="max-width:700px; margin:1.5rem auto 2rem; font-size:1.2rem; color:var(--text-secondary);">
+        <p class="hero-subhead">With AI by your side.</p>
+        <div class="hero-description">
           Imagine having a personal wellness assistant who knows you intimately – your goals, your struggles, your biology – and who draws from the collective wisdom of ancient practices and cutting‑edge science. That's what "Living the AI Life" offers. We bridge the timeless with the futuristic to help you become the best version of yourself.
         </div>
         <div class="hero-btn-row">
