@@ -237,53 +237,15 @@
 
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo-main">Living the AI Life</span>
-        <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
-        <p>Bridging time-tested wisdom with the power of artificial intelligence to help you live a more vibrant, conscious life.</p>
-        <a href="/community.html" class="btn btn-gold">Join Our Community</a>
-      </div>
-      <div class="footer-col">
-        <h4>The Method</h4>
-        <ul>
-          <li><a href="/mind/index.html">Mind</a></li>
-          <li><a href="/body/index.html">Body</a></li>
-          <li><a href="/mindfulness/index.html">Mindfulness</a></li>
-          <li><a href="/inputs/index.html">Inputs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="/ai-tools.html">AI Tools</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms of Use</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Living the AI Life. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/share/g/1B4ovwnHu1/" aria-label="Facebook">f</a>
-        <a href="https://www.instagram.com/livingtheailife?igsh=MXNoaXpydDJycW5xbw==" aria-label="Instagram">in</a>
-        <a href="https://youtube.com/@livingtheailife?si=cO5O4d-B6bKz5iiD" aria-label="YouTube">▶</a>
-        <!-- TikTok placeholder – replace "#" with your TikTok URL -->
-        <a href="tiktok.com/@livingailife" aria-label="TikTok">🎵</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 
 <script src="../js/main.js"></script>
 <script>
