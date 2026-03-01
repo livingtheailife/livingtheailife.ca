@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mindfulness pillar — meditation, breathing, relaxation, and self-hypnosis techniques powered by ancient wisdom and AI.">
+  <meta name="description" content="Mindfulness practices – meditation, breathing, relaxation, and self‑hypnosis – enhanced by AI. Ancient wisdom meets modern neuroscience.">
   <title>Mindfulness | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+  </style>
 </head>
 <body>
 
@@ -63,29 +87,32 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Pillar Three</span>
       <h1>🧘 <span class="gradient-text">Mindfulness</span></h1>
-      <p>Presence is the most rare and valuable thing in the modern world. Cultivate it through meditation, breathwork, relaxation, and the ancient art of self-hypnosis.</p>
+      <p class="lead">Presence is the most rare and valuable thing in the modern world. Cultivate it through meditation, breathwork, relaxation, and the ancient art of self‑hypnosis.</p>
     </div>
   </section>
 
+  <!-- FOUNDATION INTRO -->
   <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
         <span class="eyebrow">The Foundation</span>
         <h2>What Mindfulness Actually Means</h2>
-        <p>The word mindfulness comes from the Pali word <em>sati</em>, meaning awareness, attention, and remembering — not just calming down, but paying careful, sustained attention to present-moment experience without judgment.</p>
-        <p>In Zen, this is called <em>shoshin</em> — beginner's mind. In Stoicism, it's <em>prosoche</em> — self-attention. In Taoist practice, it's <em>wu wei</em> — flowing action from a place of stillness. Every tradition converges on the same truth: presence is power.</p>
-        <p>Modern neuroscience confirms that consistent mindfulness practice literally changes the brain — increasing gray matter density in the prefrontal cortex (reasoning, compassion, decision-making) while reducing amygdala reactivity (fear, stress, reactivity). AI now helps us personalize these practices, track our consistency, and deepen our results.</p>
-        <div class="highlight-box">
+        <p>The word mindfulness comes from the Pali word <em>sati</em>, meaning awareness, attention, and remembering — not just calming down, but paying careful, sustained attention to present‑moment experience without judgment.</p>
+        <p>In Zen, this is called <em>shoshin</em> — beginner's mind. In Stoicism, it's <em>prosoche</em> — self‑attention. In Taoist practice, it's <em>wu wei</em> — flowing action from a place of stillness. Every tradition converges on the same truth: presence is power.</p>
+        <p>Modern neuroscience confirms that consistent mindfulness practice literally changes the brain — increasing gray matter density in the prefrontal cortex (reasoning, compassion, decision‑making) while reducing amygdala reactivity (fear, stress, reactivity). AI now helps us personalize these practices, track our consistency, and deepen our results.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
           <p><strong>The Research:</strong> Eight weeks of mindfulness practice (as little as 10 minutes daily) produces measurable structural changes in the brain. You don't need years of monastic training — you need consistency and quality of attention.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SUB‑PAGE CARDS -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
@@ -94,38 +121,131 @@
         <p>Four paths into presence — each with its own character and benefits. Explore them all, or dive deep into one.</p>
       </div>
       <div class="grid-2" style="gap:24px;">
-        <a href="../mindfulness/meditation.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
+        <a href="../mindfulness/meditation.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card">
             <span class="card-icon">🧘</span>
             <h3>Meditation</h3>
-            <p>Guided scripts for body scan, loving-kindness, and visualization meditation. Plus AI meditation assistant prompts for creating personalized sessions.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Begin Meditating →</span>
+            <p>Guided scripts for body scan, loving‑kindness, and visualization meditation. Plus AI meditation assistant prompts for creating personalized sessions.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Begin Meditating →</span>
           </div>
         </a>
-        <a href="../mindfulness/breathing.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
+        <a href="../mindfulness/breathing.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card">
             <span class="card-icon">🌬️</span>
             <h3>Breathing Techniques</h3>
-            <p>Interactive breathing timer with 4 patterns — box breathing, 4-7-8, triangle breath, and coherence breathing. Backed by science, rooted in ancient pranayama.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Start Breathing →</span>
+            <p>Interactive breathing timer with 4 patterns — box breathing, 4‑7‑8, triangle breath, and coherence breathing. Backed by science, rooted in ancient pranayama.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Start Breathing →</span>
           </div>
         </a>
-        <a href="../mindfulness/relaxation.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
+        <a href="../mindfulness/relaxation.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card">
             <span class="card-icon">🌙</span>
             <h3>Relaxation Techniques</h3>
             <p>Progressive muscle relaxation, body scan, and guided visualization scripts. Essential tools for managing stress, improving sleep, and restoring the nervous system.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Relax Deeply →</span>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Relax Deeply →</span>
           </div>
         </a>
-        <a href="../mindfulness/self-hypnosis.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer;">
+        <a href="../mindfulness/self-hypnosis.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card">
             <span class="card-icon">💫</span>
-            <h3>Self-Hypnosis</h3>
-            <p>Introduction to evidence-based self-hypnosis, induction scripts, deepening techniques, and therapeutic suggestion templates for lasting change.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Explore Self-Hypnosis →</span>
+            <h3>Self‑Hypnosis</h3>
+            <p>Introduction to evidence‑based self‑hypnosis, induction scripts, deepening techniques, and therapeutic suggestion templates for lasting change.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Explore Self‑Hypnosis →</span>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI PROMPTS FOR MINDFULNESS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Guidance</span>
+        <h2>Prompts for Deeper Practice</h2>
+        <p>Use these with ChatGPT, Claude, or any AI assistant to personalize your mindfulness journey.</p>
+      </div>
+      <div class="grid-3" style="gap:24px;">
+
+        <div class="card fade-up">
+          <span class="card-icon">🧠</span>
+          <h3>Custom Meditation Script</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              “Act as a meditation teacher. I have [X] minutes and want to focus on [calm / focus / self‑compassion / sleep]. Write a guided meditation script for me with a gentle, warm voice. Include a brief body scan, breath awareness, and a moment of stillness.”
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'Act as a meditation teacher. I have [X] minutes and want to focus on [calm / focus / self‑compassion / sleep]. Write a guided meditation script for me with a gentle, warm voice. Include a brief body scan, breath awareness, and a moment of stillness.')">Copy Prompt</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">💭</span>
+          <h3>Working with Restlessness</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              “I feel restless when I try to meditate. Help me work with this. Suggest three things I can do before sitting (movement, breathing, intention) and three ways to work with restlessness during meditation itself (noticing, labelling, shifting).”
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'I feel restless when I try to meditate. Help me work with this. Suggest three things I can do before sitting (movement, breathing, intention) and three ways to work with restlessness during meditation itself (noticing, labelling, shifting).')">Copy Prompt</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">📊</span>
+          <h3>Mindfulness Habit Builder</h3>
+          <div style="margin-top:16px;">
+            <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem;">
+              “I want to build a daily mindfulness habit. Act as a behaviour coach. Help me design a simple 4‑week plan, starting with 2 minutes a day and gradually increasing. Include accountability strategies, ways to track progress, and how to handle missed days without guilt.”
+            </div>
+            <button class="copy-mini" style="margin-top:8px;" onclick="copyText(this, 'I want to build a daily mindfulness habit. Act as a behaviour coach. Help me design a simple 4‑week plan, starting with 2 minutes a day and gradually increasing. Include accountability strategies, ways to track progress, and how to handle missed days without guilt.')">Copy Prompt</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY RITUAL -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>5‑Minute Mindfulness Reset</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Arrive (1 min):</strong> Sit comfortably, close your eyes, take three deep breaths. Let the day fall away.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Body Scan (1 min):</strong> Bring gentle attention to your body – feel the weight of your body on the chair, the air on your skin, any obvious sensations.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Breath Anchor (2 min):</strong> Follow the natural rhythm of your breath. Notice where you feel it most clearly (nose, chest, belly). When the mind wanders, gently guide it back to the breath.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Gratitude (1 min):</strong> Silently name one thing you're grateful for right now. Let that feeling fill your awareness.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Consistency over duration.</strong> A daily 5‑minute practice builds the mindfulness muscle more effectively than a weekly hour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for a Mindful Moment</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“I have 3 minutes and need to reset. Guide me through a quick mindfulness practice that I can do at my desk without closing my eyes. Include awareness of breath, body, and surroundings.”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this with ChatGPT or Claude anytime you need a mini‑reset during a busy day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">You're Not Alone</span>
+        <h2>Join a Community of Practitioners</h2>
+        <p>Our private Facebook group is a space to share your mindfulness journey, ask questions, and stay accountable. Beginners and seasoned practitioners alike are welcome.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -135,11 +255,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons (AI prompts)
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function for the gold button
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="../js/main.js"></script>
