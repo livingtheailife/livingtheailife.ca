@@ -49,13 +49,15 @@
     </div>
   </section>
 </main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom">
-      <p>&copy; 2025 Living the AI Life. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 <script src="/js/main.js"></script>
 </body>
 </html>
