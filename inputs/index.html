@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Inputs pillar — optimize what you consume: food, sound, and music for vibrant health with AI-powered guidance.">
+  <meta name="description" content="Inputs pillar – optimize what you consume: food, sound, and music for vibrant health with AI‑powered guidance. Ancient wisdom meets modern personalization.">
   <title>Inputs | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+  </style>
 </head>
 <body>
 
@@ -63,60 +87,151 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Pillar Four</span>
       <h1>✨ <span class="gradient-text">Inputs</span></h1>
-      <p>You are the sum of everything you consume — food, sound, information, relationships, and energy. Optimize your inputs with ancient nutritional wisdom and AI-powered personalization.</p>
+      <p class="lead">You are the sum of everything you consume — food, sound, information, relationships, and energy. Optimize your inputs with ancient wisdom and AI‑powered personalization.</p>
     </div>
   </section>
 
+  <!-- PHILOSOPHY -->
   <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
         <span class="eyebrow">The Input Principle</span>
         <h2>Garbage In, Garbage Out — And Vice Versa</h2>
         <p>The ancient Ayurvedic principle of <em>ahara</em> — right nourishment — extends far beyond food. It encompasses everything that enters your body, mind, and spirit: the food you eat, the music you listen to, the conversations you have, the information you consume, and even the light and electromagnetic frequencies that surround you.</p>
-        <p>Modern systems neuroscience validates this holistic view. The gut-brain axis means your food choices directly affect neurotransmitter production. Sound frequencies measurably alter brainwave states. The information you repeatedly expose yourself to shapes your neural pathways through neuroplasticity.</p>
-        <p>AI helps us audit and optimize these inputs with unprecedented precision. From continuous glucose monitors that show exactly how your body responds to each food, to AI-curated sound environments that shift your brain into targeted states, the tools have never been more powerful.</p>
-        <div class="tip-box">
+        <p>Modern systems neuroscience validates this holistic view. The gut‑brain axis means your food choices directly affect neurotransmitter production. Sound frequencies measurably alter brainwave states. The information you repeatedly expose yourself to shapes your neural pathways through neuroplasticity.</p>
+        <p>AI helps us audit and optimize these inputs with unprecedented precision. From continuous glucose monitors that show exactly how your body responds to each food, to AI‑curated sound environments that shift your brain into targeted states, the tools have never been more powerful.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
           <p><strong>Ayurvedic Insight:</strong> Ayurveda classifies foods not just by nutritional content but by their effect on the three <em>doshas</em> (constitutional types) and their quality — <em>sattvic</em> (pure, uplifting), <em>rajasic</em> (stimulating, agitating), or <em>tamasic</em> (heavy, dulling). AI can now help you map these ancient classifications onto your modern biometric data.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- THREE PATHWAYS CARDS -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
         <span class="eyebrow">Explore Inputs</span>
         <h2>Three Pathways to Optimization</h2>
+        <p>Each sub‑page dives deep into one category of input, blending ancient traditions with modern AI tools.</p>
       </div>
-      <div class="grid-3">
-        <a href="../inputs/food.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer; text-align:center;">
+      <div class="grid-3" style="gap:24px;">
+        <a href="../inputs/food.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card" style="text-align:center; cursor:pointer;">
             <span class="card-icon">🥗</span>
-            <h3>Food &amp; Nutrition</h3>
-            <p>Anti-inflammatory eating, Ayurvedic food principles, 4 curated recipes, and AI meal planning prompts that make eating for health effortless and delicious.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Explore Food →</span>
+            <h3>Food & Nutrition</h3>
+            <p>Anti‑inflammatory eating, Ayurvedic food principles, 4 curated recipes, and AI meal planning prompts that make eating for health effortless and delicious.</p>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Explore Food →</span>
           </div>
         </a>
-        <a href="../inputs/sounds.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer; text-align:center;">
+        <a href="../inputs/sounds.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card" style="text-align:center; cursor:pointer;">
             <span class="card-icon">🎵</span>
             <h3>Healing Sounds</h3>
             <p>Solfeggio frequencies, binaural beats, nature recordings, and singing bowls — with an interactive audio player for each. Sound as medicine.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Listen Now →</span>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Listen Now →</span>
           </div>
         </a>
-        <a href="../inputs/music.html" style="text-decoration:none;" class="fade-up">
-          <div class="card" style="cursor:pointer; text-align:center;">
+        <a href="../inputs/music.html" class="card-link fade-up" style="text-decoration:none;">
+          <div class="card" style="text-align:center; cursor:pointer;">
             <span class="card-icon">🎼</span>
             <h3>Music for Wellness</h3>
             <p>Curated playlists for focus and flow, deep meditation, and energizing movement. The science of why music affects mood, cognition, and performance.</p>
-            <span class="btn btn-outline btn-sm mt-2" style="display:inline-flex;">Explore Music →</span>
+            <span class="btn btn-outline btn-sm" style="display:inline-flex;">Explore Music →</span>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI‑POWERED INPUT PROMPTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Inputs</span>
+        <h2>Prompts for Deeper Optimization</h2>
+        <p>Use these with ChatGPT, Claude, or any AI assistant to personalize your approach to food, sound, and music.</p>
+      </div>
+
+      <div class="grid-3" style="gap:24px; max-width:1100px; margin:0 auto;">
+
+        <div class="card fade-up">
+          <span class="card-icon">🎧</span>
+          <h3>Personalized Sound Journey</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I want to use sound to support [focus / deep sleep / meditation / energy]. Based on my goal, recommend specific frequencies (Solfeggio, binaural beats) and create a 15‑minute listening protocol. Explain how each frequency affects brainwave states.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I want to use sound to support [focus / deep sleep / meditation / energy]. Based on my goal, recommend specific frequencies (Solfeggio, binaural beats) and create a 15‑minute listening protocol. Explain how each frequency affects brainwave states.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🎶</span>
+          <h3>Music for Mood States</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I'm feeling [anxious / unmotivated / scattered / low energy]. Recommend 3‑5 songs or pieces of music that can help shift my state. For each, explain why it works (tempo, key, instrumentation, historical context) and suggest when to listen.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I\'m feeling [anxious / unmotivated / scattered / low energy]. Recommend 3‑5 songs or pieces of music that can help shift my state. For each, explain why it works (tempo, key, instrumentation, historical context) and suggest when to listen.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">📊</span>
+          <h3>Holistic Input Audit</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“Help me audit my daily inputs. I typically consume: [describe your typical food, media, music, and conversations]. From an Ayurvedic and modern perspective, identify which inputs might be contributing to [fatigue / brain fog / anxiety]. Suggest 3 simple swaps I can make.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Help me audit my daily inputs. I typically consume: [describe your typical food, media, music, and conversations]. From an Ayurvedic and modern perspective, identify which inputs might be contributing to [fatigue / brain fog / anxiety]. Suggest 3 simple swaps I can make.')">Copy Prompt</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY RITUAL -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>5‑Minute Digital Detox</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Unplug (1 min):</strong> Step away from all screens. Put your phone in another room.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Tune In (2 min):</strong> Sit quietly and listen to the sounds around you – distant traffic, birds, your own breath. Let your auditory sense expand.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Sip Mindfully (2 min):</strong> Prepare a warm cup of herbal tea or hot water with lemon. Hold the cup, feel its warmth, notice the aroma. Take small, slow sips with full attention.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Ancient wisdom:</strong> In Ayurveda, sipping warm water throughout the day is considered one of the most powerful detoxification practices. It gently supports digestion, elimination, and cellular hydration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for an Input Reset</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“I feel overwhelmed by my environment. Suggest three small changes I can make today to my inputs (what I eat, listen to, or look at) that will help me feel more grounded and clear.”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this with ChatGPT or Claude whenever you need an immediate reset.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Share Your Journey</span>
+        <h2>Join a Community of Conscious Consumers</h2>
+        <p>Our private Facebook group is a space to share recipes, sound discoveries, music playlists, and support each other in optimizing daily inputs.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -126,11 +241,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons (AI prompts)
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function for the gold button
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="../js/main.js"></script>
