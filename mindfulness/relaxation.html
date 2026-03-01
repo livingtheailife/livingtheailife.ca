@@ -3,12 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Relaxation techniques — progressive muscle relaxation, body scan, and visualization scripts for stress relief and deep rest.">
+  <meta name="description" content="Relaxation techniques – progressive muscle relaxation, guided visualization, and AI‑powered scripts for deep stress relief and nervous system restoration.">
   <title>Relaxation Techniques | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+    .relaxation-script {
+      font-family: var(--font-serif, 'Cormorant Garamond', serif);
+      line-height: 1.9;
+      font-size: 1.1rem;
+      font-style: italic;
+      background: var(--surface-light);
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      margin: 2rem 0;
+      color: var(--text);
+    }
+    .relaxation-script p {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -63,26 +102,26 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <a href="../mindfulness/index.html" class="back-link">← Back to Mindfulness</a>
       <span class="eyebrow">Mindfulness · Relaxation</span>
       <h1>Deep <span class="gradient-text">Relaxation</span> Techniques</h1>
-      <p>Rest is not weakness. It is one of the most productive things you can do for your body, mind, and creative capacity. These techniques are your toolkit for deep renewal.</p>
+      <p class="lead">Rest is not weakness. It is one of the most productive things you can do for your body, mind, and creative capacity. These techniques are your toolkit for deep renewal.</p>
     </div>
   </section>
 
+  <!-- PROGRESSIVE MUSCLE RELAXATION -->
   <section class="section">
     <div class="container">
-
-      <!-- PMR -->
-      <div class="content-block fade-up">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
         <span class="eyebrow">Technique 1 — 15–20 Minutes</span>
         <h2>Progressive Muscle Relaxation (PMR)</h2>
-        <p>Developed by Dr. Edmund Jacobson in the 1920s, PMR works on the principle that physical tension and psychological anxiety are inseparable — and that deliberately releasing physical tension extinguishes the stress response. It has since been validated by hundreds of clinical trials for anxiety, insomnia, chronic pain, and high blood pressure.</p>
-        <p>The practice involves systematically tensing and releasing each muscle group, moving from feet to face. The contrast between tension and release teaches the nervous system to recognize — and voluntarily produce — deep muscular relaxation.</p>
+        <p>Developed by Dr. Edmund Jacobson in the 1920s, PMR works on the principle that physical tension and psychological anxiety are inseparable – and that deliberately releasing physical tension extinguishes the stress response. It has since been validated by hundreds of clinical trials for anxiety, insomnia, chronic pain, and high blood pressure.</p>
+        <p>The practice involves systematically tensing and releasing each muscle group, moving from feet to face. The contrast between tension and release teaches the nervous system to recognize – and voluntarily produce – deep muscular relaxation.</p>
 
-        <div class="highlight-box">
+        <div class="highlight-box" style="margin-bottom:2rem;">
           <p><strong>Instructions:</strong> Lie comfortably on your back. For each muscle group, tense firmly (not painfully) for 5–7 seconds, then release completely for 20–30 seconds. Breathe normally throughout. Notice the difference between tension and release.</p>
         </div>
 
@@ -126,32 +165,121 @@
             <div class="step-num">6</div>
             <div class="step-content">
               <h4>Face</h4>
-              <p>Scrunch your entire face — close eyes tightly, wrinkle your nose, clench your jaw. Hold... release. Let your face go slack, mouth slightly open, forehead smooth.</p>
+              <p>Scrunch your entire face – close eyes tightly, wrinkle your nose, clench your jaw. Hold... release. Let your face go slack, mouth slightly open, forehead smooth.</p>
             </div>
           </div>
         </div>
-        <p style="margin-top:20px;">After completing all muscle groups, rest in total stillness for 5 full minutes. You should feel profoundly relaxed — perhaps more so than in ordinary daily life.</p>
+        <p style="margin-top:20px;">After completing all muscle groups, rest in total stillness for 5 full minutes. You should feel profoundly relaxed – perhaps more so than in ordinary daily life.</p>
       </div>
+    </div>
+  </section>
 
-      <hr class="divider">
-
-      <!-- VISUALIZATION -->
-      <div class="content-block fade-up">
+  <!-- MOUNTAIN LAKE VISUALIZATION -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
         <span class="eyebrow">Technique 2 — 10 Minutes</span>
         <h2>Healing Visualization: The Mountain Lake</h2>
         <p>Visualization activates the brain's sensory and emotional centers in ways nearly identical to real experience. This script creates a profoundly peaceful inner environment that your nervous system can return to as a "safe haven" whenever stress arises.</p>
 
-        <div class="card" style="font-style:italic; font-family:var(--font-serif); line-height:1.9; font-size:1.05rem; margin-top:24px;">
-          <p>Close your eyes and take three slow, deep breaths. With each exhale, let go of today — everything that has happened, everything still to come... [pause]</p>
-          <p>Imagine yourself at the edge of a crystal-clear mountain lake. The water is impossibly blue, reflecting the peaks above. The air is crisp and carries the scent of pine and earth and clean altitude... [pause]</p>
-          <p>Feel the sun warm on your skin — not too hot, exactly right. You find a flat, smooth rock at the water's edge and sit comfortably. Beneath you, the rock holds you with solid, ancient reliability... [pause]</p>
-          <p>Look out across the lake. The surface is perfectly still, like a mirror. In the center, a single leaf drifts slowly. You watch it without needing to go anywhere or do anything. You are just here... [pause 1 minute]</p>
-          <p>A gentle breeze passes. It touches your face like a kind hand. Ripples spread across the lake — small, rhythmic, beautiful. They reach the far shore and fade. The water returns to stillness. Just like your mind, right now... [pause]</p>
-          <p>In this place, there is nothing you need to solve. No decisions to make. You are just a human being at the edge of a beautiful lake, breathing, resting, whole... [pause 2 minutes]</p>
+        <div class="relaxation-script">
+          <p>Close your eyes and take three slow, deep breaths. With each exhale, let go of today – everything that has happened, everything still to come... <span style="color:var(--text-secondary);">[pause]</span></p>
+          <p>Imagine yourself at the edge of a crystal‑clear mountain lake. The water is impossibly blue, reflecting the peaks above. The air is crisp and carries the scent of pine and earth and clean altitude... <span style="color:var(--text-secondary);">[pause]</span></p>
+          <p>Feel the sun warm on your skin – not too hot, exactly right. You find a flat, smooth rock at the water's edge and sit comfortably. Beneath you, the rock holds you with solid, ancient reliability... <span style="color:var(--text-secondary);">[pause]</span></p>
+          <p>Look out across the lake. The surface is perfectly still, like a mirror. In the center, a single leaf drifts slowly. You watch it without needing to go anywhere or do anything. You are just here... <span style="color:var(--text-secondary);">[pause 1 minute]</span></p>
+          <p>A gentle breeze passes. It touches your face like a kind hand. Ripples spread across the lake – small, rhythmic, beautiful. They reach the far shore and fade. The water returns to stillness. Just like your mind, right now... <span style="color:var(--text-secondary);">[pause]</span></p>
+          <p>In this place, there is nothing you need to solve. No decisions to make. You are just a human being at the edge of a beautiful lake, breathing, resting, whole... <span style="color:var(--text-secondary);">[pause 2 minutes]</span></p>
           <p>When you are ready to return, take three deep breaths. Feel the weight of your body in your chair or on the floor. Gently wiggle your fingers and toes. Open your eyes slowly, and carry this stillness with you into the rest of your day.</p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- AI‑POWERED RELAXATION PROMPTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Relaxation</span>
+        <h2>Create Your Custom Script</h2>
+        <p>Use these prompts with ChatGPT, Claude, or any AI assistant to generate personalized relaxation practices tailored to your needs.</p>
+      </div>
+
+      <div class="grid-3" style="gap:24px; max-width:1100px; margin:0 auto;">
+
+        <div class="card fade-up">
+          <span class="card-icon">🌙</span>
+          <h3>Custom Sleep Visualization</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I have trouble falling asleep. Create a 15‑minute guided visualization that leads me gently from awake to asleep. Use imagery of a calm, safe, natural place. Include soft suggestions of deepening relaxation and drifting.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I have trouble falling asleep. Create a 15‑minute guided visualization that leads me gently from awake to asleep. Use imagery of a calm, safe, natural place. Include soft suggestions of deepening relaxation and drifting.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🌊</span>
+          <h3>Deep Stress Release</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I'm holding a lot of tension in my [shoulders / jaw / lower back]. Write a 10‑minute relaxation script focused on releasing that specific area. Include breath cues and imagery of melting, softening, and letting go.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I\'m holding a lot of tension in my [shoulders / jaw / lower back]. Write a 10‑minute relaxation script focused on releasing that specific area. Include breath cues and imagery of melting, softening, and letting go.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🧘</span>
+          <h3>5‑Minute Desk Reset</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I'm at my desk and feeling overwhelmed. Give me a 5‑minute relaxation practice I can do sitting in my chair, without closing my eyes. Include gentle movements, breath awareness, and a mental reset.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I\'m at my desk and feeling overwhelmed. Give me a 5‑minute relaxation practice I can do sitting in my chair, without closing my eyes. Include gentle movements, breath awareness, and a mental reset.')">Copy Prompt</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY RITUAL -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>5‑Minute Wind‑Down Practice</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Unplug (1 min):</strong> Step away from screens. Sit comfortably and take three deep sighs – inhale fully, exhale with an open mouth.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Shoulder Release (1 min):</strong> Roll your shoulders forward, then back, slowly. Notice any tightness melting.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text););">Breath (2 min):</strong> Breathe in for 4 counts, out for 6 counts. Let the exhale be longer than the inhale – this activates the parasympathetic nervous system.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Gratitude (1 min):</strong> Silently name one thing that went well today. Let that feeling of appreciation settle in your body.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Rest is productive.</strong> This short practice signals to your nervous system that the day is over and it's safe to rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for Instant Calm</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“I need to relax quickly. Guide me through a 2‑minute breathing and awareness practice I can do anywhere.”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this whenever you need an immediate moment of calm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Share Your Practice</span>
+        <h2>Rest Together</h2>
+        <p>Our private Facebook group is a space to share relaxation wins, ask for support, and remind each other that rest is essential, not optional.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
+      </div>
     </div>
   </section>
 
@@ -160,11 +288,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons (AI prompts)
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function for the gold button
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="../js/main.js"></script>
