@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yoga poses with AI alignment tips — 6 foundational asanas with difficulty levels, sequences, and AI coaching guidance for beginners.">
+  <meta name="description" content="Yoga practice enhanced by AI – foundational poses, intelligent alignment cues, and personalized sequences for every body. Ancient asana meets modern precision.">
   <title>Yoga | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+  </style>
 </head>
 <body>
 
@@ -63,110 +87,129 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <a href="../body/index.html" class="back-link">← Back to Body</a>
       <span class="eyebrow">Body · Yoga</span>
       <h1>Yoga: <span class="gradient-text">Ancient Asana, AI Precision</span></h1>
-      <p>Six foundational yoga poses with alignment cues, modifications, and AI coaching prompts. Whether you're a complete beginner or a returning practitioner, this is your guide.</p>
+      <p class="lead">Six foundational poses, each with intelligent alignment cues and AI‑generated sequences tailored to your body. Move with awareness, not guesswork.</p>
     </div>
   </section>
 
   <!-- PHILOSOPHY -->
-  <section class="section-sm">
+  <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
-        <p>The word <em>asana</em> in Sanskrit means "comfortable seat" — a position in which you can be at ease. True yoga is not about contorting into pretzel shapes for Instagram. It's about finding the edge between effort and ease, learning to breathe through discomfort, and cultivating a conscious relationship with your physical form.</p>
-        <p>AI alignment guidance takes the guesswork out of self-practice. The prompts below give you what a yoga teacher would say — adapted for your level, body type, and intention.</p>
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">The Roots</span>
+        <h2>Yoga as Conscious Union</h2>
+        <p>The Sanskrit word <em>yoga</em> means "to yoke" – to bring together body, mind, and breath. In the ancient Yoga Sutras of Patañjali, asana (posture) is described simply as <em>sthira sukham asanam</em>: a steady, comfortable seat. It was never about bending into pretzels; it was about cultivating the capacity to sit in stillness with awareness.</p>
+        <p>Today, we have tools the ancients couldn't imagine. AI can analyze your unique structure, suggest modifications in real time, and generate sequences that adapt to your energy and goals. This page honors the tradition while embracing the precision of modern technology.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <p class="quote">"Yoga is the journey of the self, through the self, to the self." – The Bhagavad Gita</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- POSE CARDS -->
+  <!-- POSE CARDS (6) -->
   <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="eyebrow">Six Foundational Poses</span>
-        <h2>Your Asana Library</h2>
+        <span class="eyebrow">Your Asana Library</span>
+        <h2>Six Foundational Poses</h2>
+        <p>Each card includes a pose, its benefits, and an AI‑generated alignment tip you can copy and take to your mat.</p>
       </div>
-      <div class="grid-3">
+      <div class="grid-3" style="gap:24px;">
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">🧘</span>
-          <h3>Tadasana — Mountain Pose</h3>
-          <div class="pose-meta">
+        <!-- Tadasana -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">🧘</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-beginner">Beginner</span>
             <span class="pill pill-sage">Foundation</span>
           </div>
-          <p>The mother of all standing poses. Stand with feet hip-width apart, ground through all four corners of each foot, lift your kneecaps, draw your navel gently in, roll shoulders back and down, crown of head reaching skyward.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> Imagine a golden thread pulling the crown of your head upward while your feet root like tree roots into the earth. Breathe into your chest — notice if you're collapsing or overarching. Find the neutral.</p>
+          <h3 style="text-align:center;">Tadasana — Mountain Pose</h3>
+          <p>Stand with feet hip‑width apart, weight balanced evenly. Engage your thighs, lift your kneecaps, draw your navel in, and roll shoulders back. Crown reaches skyward.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“Imagine a golden thread pulling the crown of your head upward while your feet root like tree roots. Breathe into your chest – notice if you're collapsing or overarching. Find neutral.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'Imagine a golden thread pulling the crown of your head upward while your feet root like tree roots. Breathe into your chest – notice if you\'re collapsing or overarching. Find neutral.')">Copy Alignment Tip</button>
         </div>
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">🌳</span>
-          <h3>Vrikshasana — Tree Pose</h3>
-          <div class="pose-meta">
+        <!-- Vrikshasana -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">🌳</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-beginner">Beginner</span>
             <span class="pill pill-lavender">Balance</span>
           </div>
-          <p>From Mountain, shift weight to your left foot. Place the right foot on the inner left thigh or calf (never on the knee). Bring hands to heart center or raise overhead. Fix your gaze on a still point. Hold for 5–8 breaths.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> If you wobble, press your foot and inner thigh firmly together — they are co-creating stability. Soften the face and jaw. Tension travels. A relaxed face = a more stable tree.</p>
+          <h3 style="text-align:center;">Vrikshasana — Tree Pose</h3>
+          <p>From Mountain, shift weight to left foot. Place right foot on inner left thigh or calf (never knee). Bring hands to heart or raise overhead. Fix gaze on a still point.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“If you wobble, press your foot and inner thigh firmly together – they co‑create stability. Soften your face. A relaxed face = a more stable tree.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'If you wobble, press your foot and inner thigh firmly together – they co‑create stability. Soften your face. A relaxed face = a more stable tree.')">Copy Alignment Tip</button>
         </div>
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">⬇️</span>
-          <h3>Adho Mukha Svanasana — Downward Dog</h3>
-          <div class="pose-meta">
+        <!-- Adho Mukha Svanasana -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">⬇️</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-beginner">Beginner</span>
             <span class="pill pill-sage">Full Body</span>
           </div>
-          <p>From hands and knees, tuck toes, lift hips high and back. Spread fingers wide, press through all fingertips. Lengthen the spine by pressing hips toward the ceiling. Bend knees if hamstrings are tight — that's perfectly fine.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> The goal is a long spine, not straight legs. Externally rotate your upper arms to keep elbows from splaying. Breathe deeply into your side ribs — you'll feel the pose deepen with each exhale.</p>
+          <h3 style="text-align:center;">Downward Dog</h3>
+          <p>From hands and knees, tuck toes, lift hips high. Spread fingers, press through fingertips. Lengthen spine by pressing hips toward ceiling. Bend knees if hamstrings are tight.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“The goal is a long spine, not straight legs. Externally rotate upper arms to keep elbows from splaying. Breathe deeply into your side ribs.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'The goal is a long spine, not straight legs. Externally rotate upper arms to keep elbows from splaying. Breathe deeply into your side ribs.')">Copy Alignment Tip</button>
         </div>
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">⚔️</span>
-          <h3>Virabhadrasana I — Warrior One</h3>
-          <div class="pose-meta">
+        <!-- Virabhadrasana I -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">⚔️</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-intermediate">Intermediate</span>
             <span class="pill pill-gold">Strength</span>
           </div>
-          <p>Step right foot forward between hands, spin left heel down at 45°. Bend front knee to 90° (knee over ankle, not beyond). Rise up, raising arms overhead. Square hips toward the front. Lift your chest and gaze forward with intention.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> Warrior One is about the hips — they want to open sideways, but the pose demands they face forward. Think of drawing your back hip forward and front hip back. Feel the difference. That engagement is the pose.</p>
+          <h3 style="text-align:center;">Warrior One</h3>
+          <p>Step right foot forward, spin left heel down. Bend front knee to 90°, arms rise overhead. Square hips forward. Lift chest, gaze forward with intention.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“Think of drawing your back hip forward and front hip back. That engagement is the pose. Feel the difference in your hip flexors.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'Think of drawing your back hip forward and front hip back. That engagement is the pose. Feel the difference in your hip flexors.')">Copy Alignment Tip</button>
         </div>
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">🐍</span>
-          <h3>Bhujangasana — Cobra Pose</h3>
-          <div class="pose-meta">
+        <!-- Bhujangasana -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">🐍</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-beginner">Beginner</span>
             <span class="pill pill-sage">Backbend</span>
           </div>
-          <p>Lie face down, place palms under shoulders. Press the tops of your feet into the mat. On an inhale, peel the chest off the floor, using your back muscles more than your arms. Elbows can be slightly bent. Lengthen through the crown.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> If you feel pinching in the lower back, you've gone too high. Come down until you find a comfortable depth. The cobra should feel like opening, not compressing. Broaden through your collarbones.</p>
+          <h3 style="text-align:center;">Cobra Pose</h3>
+          <p>Lie face down, palms under shoulders. On inhale, lift chest using back muscles more than arms. Elbows slightly bent. Broaden collarbones.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“If you feel pinching in the lower back, you've gone too high. Come down until comfortable. The cobra should feel like opening, not compression.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'If you feel pinching in the lower back, you\'ve gone too high. Come down until comfortable. The cobra should feel like opening, not compression.')">Copy Alignment Tip</button>
         </div>
 
-        <div class="pose-card fade-up">
-          <span class="pose-emoji">🧎</span>
-          <h3>Balasana — Child's Pose</h3>
-          <div class="pose-meta">
+        <!-- Balasana -->
+        <div class="card fade-up">
+          <span style="font-size:3rem; display:block; text-align:center;">🧎</span>
+          <div style="display:flex; gap:8px; justify-content:center; margin:8px 0;">
             <span class="pill pill-beginner">Beginner</span>
             <span class="pill pill-lavender">Restoration</span>
           </div>
-          <p>From kneeling, bring big toes together, knees wide as hips or wider. Fold forward, extending arms overhead or resting them alongside your body. Let your forehead rest on the mat. This is your resting place — return here whenever needed.</p>
-          <div class="tip-box" style="margin:12px 0 0;">
-            <p><strong>AI Alignment Tip:</strong> Child's Pose is not failure — it is wisdom. Practice staying here for 2 full minutes with intentional diaphragmatic breathing. Feel your lower back rise and fall with each breath. Let the floor hold you completely.</p>
+          <h3 style="text-align:center;">Child's Pose</h3>
+          <p>From kneeling, big toes together, knees wide. Fold forward, arms extended or by sides. Forehead rests on mat. Breathe deeply into the back.</p>
+          <div class="tip-box" style="margin:12px 0;">
+            <p><em>“Child's Pose is not failure – it's wisdom. Stay here for 2 full minutes with intentional diaphragmatic breathing. Let the floor hold you completely.”</em></p>
           </div>
+          <button class="copy-mini" onclick="copyText(this, 'Child\'s Pose is not failure – it\'s wisdom. Stay here for 2 full minutes with intentional diaphragmatic breathing. Let the floor hold you completely.')">Copy Alignment Tip</button>
         </div>
 
       </div>
@@ -176,58 +219,81 @@
   <!-- BEGINNER SEQUENCE -->
   <section class="section">
     <div class="container">
-      <div class="content-block fade-up">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
         <span class="eyebrow">For Beginners</span>
-        <h2>Your First 20-Minute Sequence</h2>
-        <p>This sequence flows through all six poses in a way that warms the body progressively, builds strength, and ends in restoration. Perfect for morning practice or a midday reset.</p>
+        <h2>Your First 20‑Minute Sequence</h2>
+        <p>This gentle flow incorporates the six poses above, building warmth, strength, and relaxation. Move slowly, breathe consciously, and honor your edge.</p>
         <div class="step-list">
           <div class="step-item">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h4>Mountain Pose — 8 breaths</h4>
-              <p>Ground, center, set your intention for the practice. Feel your feet. Become present.</p>
+              <h4>Mountain Pose – 8 breaths</h4>
+              <p>Ground, center, set an intention. Feel your feet and the earth beneath.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
             <div class="step-content">
-              <h4>Tree Pose — 5 breaths each side</h4>
-              <p>Build balance and single-leg strength. Use a wall if needed.</p>
+              <h4>Tree Pose – 5 breaths each side</h4>
+              <p>Build balance; use a wall if needed. Keep a soft focus.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
             <div class="step-content">
-              <h4>Downward Dog — 10 breaths</h4>
-              <p>Lengthen the spine, stretch hamstrings, build shoulder stability.</p>
+              <h4>Downward Dog – 10 breaths</h4>
+              <p>Pedal the feet gently. Lengthen the spine with each exhale.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">4</div>
             <div class="step-content">
-              <h4>Warrior One — 6 breaths each side</h4>
-              <p>Build strength, open the hip flexors, cultivate warrior energy.</p>
+              <h4>Warrior One – 6 breaths each side</h4>
+              <p>Keep the back heel grounded. Lift your chest and breathe into the hips.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">5</div>
             <div class="step-content">
-              <h4>Cobra Pose — 5 breaths, 3 rounds</h4>
-              <p>Open the front body, strengthen the back extensors, counter desk posture.</p>
+              <h4>Cobra Pose – 5 breaths, 3 rounds</h4>
+              <p>Lower slowly between rounds. Focus on opening the chest.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">6</div>
             <div class="step-content">
-              <h4>Child's Pose — 2 full minutes</h4>
-              <p>Rest, integrate, breathe. Let the practice settle into your body.</p>
+              <h4>Child's Pose – 2 minutes</h4>
+              <p>Rest completely. Let your breath deepen naturally.</p>
             </div>
           </div>
         </div>
-        <div class="prompt-card mt-4">
-          <span class="prompt-label">AI Yoga Coach Prompt</span>
-          <p>Act as an experienced yoga teacher. I am a beginner with [describe any injuries or limitations]. I have 20 minutes for practice. Design a yoga sequence for me using only floor-based and standing poses. Explain each pose, provide alignment cues, and suggest modifications. Include breathing guidance throughout.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED AI PROMPT -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Yoga Coach</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“Act as an experienced yoga teacher. I am a beginner with [any injuries or limitations]. I have 20 minutes. Create a gentle sequence using only floor‑based and standing poses. Explain each pose with alignment cues and modifications. Include breathing guidance.”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
         </div>
+        <p class="text-secondary">Use this with ChatGPT, Claude, or any AI assistant to receive a personalized practice tailored to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Share Your Practice</span>
+        <h2>Join the Movement</h2>
+        <p>Our private Facebook group is a space to share your yoga journey, ask questions, and connect with fellow practitioners. No judgment, just support.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -237,11 +303,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function (used by the gold button)
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="../js/main.js"></script>
