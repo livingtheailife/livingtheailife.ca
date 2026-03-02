@@ -3,12 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Tools for wellness — reviews of ChatGPT, Oura Ring, Whoop, Levels Health CGM, and an AI prompt library for health optimization.">
+  <meta name="description" content="AI tools for wellness – honest reviews of wearables, chatbots, and health apps, plus a library of powerful prompts for ChatGPT, Claude, and more.">
   <title>AI Tools | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+    .tool-card {
+      background: var(--surface-light);
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .tool-card:hover {
+      border-color: var(--lavender);
+      transform: translateY(-2px);
+    }
+    .tool-header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .tool-icon {
+      font-size: 2.5rem;
+      background: var(--surface);
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .tool-title {
+      margin: 0;
+      color: var(--lavender);
+    }
+    .tool-rating {
+      display: inline-block;
+      background: var(--surface);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+    .prompt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,7 +104,6 @@
         </div>
       </li>
       <li class="nav-item"><a href="/ai-tools.html" class="nav-link active">AI Tools</a></li>
-      <li class="nav-item"><a href="/blog/index.html" class="nav-link">Blog</a></li>
       <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
     </ul>
     <div class="nav-actions">
@@ -48,7 +118,6 @@
   <span class="mobile-section-label">Navigation</span>
   <a href="/index.html">Home</a>
   <a href="/ai-tools.html">AI Tools</a>
-  <a href="/blog/index.html">Blog</a>
   <a href="/about.html">About</a>
   <a href="/contact.html">Contact</a>
   <hr>
@@ -63,176 +132,243 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Tools of the Trade</span>
       <h1>AI Tools for <span class="gradient-text">Conscious Living</span></h1>
-      <p>Honest reviews and practical guidance on the AI-powered tools and wearables that are genuinely worth your time and money.</p>
+      <p class="lead">Honest, experience‑based reviews of the wearables and apps that actually move the needle. No fluff, no sponsorships – just what works.</p>
     </div>
   </section>
 
-  <!-- TOOL REVIEWS -->
+  <!-- INTRODUCTION -->
   <section class="section">
     <div class="container">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
+        <span class="eyebrow">Why Tools Matter</span>
+        <h2>Ancient Principles, Modern Instruments</h2>
+        <p>The ancients had their own technologies – the sun dial, the water clock, the chanting bowl. They used them to measure what mattered. Today we have tools that can track our sleep, our heart rate variability, our glucose, and our thoughts. Used wisely, they are not distractions but extensions of our awareness.</p>
+        <p>On this page you'll find honest reviews of the tools we've personally tested for at least 30 days, plus a growing library of AI prompts that turn chatbots into wellness coaches, meal planners, and meditation guides. All of it is designed to help you live with more clarity, vitality, and connection.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <p><strong>Our promise:</strong> Every review is independent. If a tool is here, it's because it genuinely supports the integration of ancient wisdom and modern technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOL REVIEWS (REWRITTEN) -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
       <div class="section-header fade-up">
-        <span class="eyebrow">Reviewed &amp; Tested</span>
-        <h2>Our Tool Reviews</h2>
-        <p>Every tool reviewed here has been tested personally by our community for a minimum of 30 days. No sponsored fluff — just honest assessments.</p>
+        <span class="eyebrow">Tested & Trusted</span>
+        <h2>Tool Reviews</h2>
+        <p>Each tool has been used by our community for at least a month. Here's what we found.</p>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:24px;">
-
-        <div class="tool-card fade-up">
-          <div class="tool-icon-wrap">🤖</div>
-          <div class="tool-body">
-            <h3>ChatGPT for Wellness</h3>
-            <div class="tool-rating">★★★★★ &nbsp;<span style="color:var(--text-muted);">5/5 — Essential</span></div>
-            <div class="tool-tags">
+      <!-- ChatGPT -->
+      <div class="tool-card fade-up">
+        <div class="tool-header">
+          <div class="tool-icon">🤖</div>
+          <div>
+            <h3 class="tool-title">ChatGPT – Your Wellness Co‑pilot</h3>
+            <div>
+              <span class="tool-rating">★★★★★ 5/5</span>
               <span class="pill pill-lavender">Mind</span>
-              <span class="pill pill-sage">Free Tier Available</span>
+              <span class="pill pill-sage">Free Tier</span>
             </div>
-            <p>ChatGPT has become the Swiss Army knife of personal wellness. When given the right prompts, it functions as a journaling coach, affirmation generator, meal planner, workout designer, and cognitive behavioral therapy (CBT) assistant. The key is knowing how to prompt it.</p>
-            <p>We've built an entire prompt library (see below) specifically for wellness use cases. Our community members have used it to design personalized morning routines, work through limiting beliefs via Socratic dialogue, and create custom meditation scripts based on their specific anxiety triggers.</p>
-            <p><strong>Best for:</strong> Journaling, affirmations, meal planning, habit building, CBT-style reflection, creative visualization scripts.</p>
-            <a href="/mind/positive-affirmations.html" class="btn btn-outline btn-sm">See AI Affirmation Prompts</a>
           </div>
         </div>
+        <p>ChatGPT, when prompted skillfully, becomes a Socratic questioner, a CBT journal, a meal designer, and a meditation script writer – all in one. The key is knowing how to ask. We've built a library of prompts (below) that turn it into a personalised wellness guide.</p>
+        <p><strong>What we love:</strong> It never judges, remembers context within a session, and adapts to your language. It's like having a therapist, nutritionist, and philosopher on call 24/7 – for free.</p>
+        <p><strong>Best for:</strong> Reframing limiting beliefs, generating affirmations, designing daily rituals, exploring philosophical questions.</p>
+      </div>
 
-        <div class="tool-card fade-up">
-          <div class="tool-icon-wrap">💍</div>
-          <div class="tool-body">
-            <h3>Oura Ring (Gen 3)</h3>
-            <div class="tool-rating">★★★★★ &nbsp;<span style="color:var(--text-muted);">5/5 — Life-Changing</span></div>
-            <div class="tool-tags">
+      <!-- Oura Ring -->
+      <div class="tool-card fade-up">
+        <div class="tool-header">
+          <div class="tool-icon">💍</div>
+          <div>
+            <h3 class="tool-title">Oura Ring Gen 3 – Sleep & Recovery Oracle</h3>
+            <div>
+              <span class="tool-rating">★★★★★ 5/5</span>
               <span class="pill pill-sage">Body</span>
-              <span class="pill pill-gold">$299 + Subscription</span>
+              <span class="pill pill-gold">$299 + subscription</span>
             </div>
-            <p>The Oura Ring is arguably the most accurate consumer wearable for sleep tracking and HRV (Heart Rate Variability) measurement. After 90 days of continuous use, the data revealed something no amount of self-assessment could have: our founder's cortisol spike pattern (visible through HRV dips) was directly correlated with afternoon coffee consumption — not work stress, as assumed.</p>
-            <p>The AI insights dashboard has improved significantly with each update. It now provides personalized readiness scores that genuinely predict performance capacity. It even integrates with the Oura x Guiding Light meditation feature.</p>
-            <p><strong>Best for:</strong> Sleep optimization, HRV tracking, recovery monitoring, menstrual cycle insights, long-term trend analysis.</p>
-            <p><strong>Limitation:</strong> Step counts are less accurate than wrist-worn alternatives. The $5.99/month subscription is required for AI insights.</p>
           </div>
         </div>
+        <p>The Oura Ring is the most accurate sleep tracker we've used. It measures heart rate variability (HRV), body temperature, and movement with medical‑grade precision. The AI insights – your Readiness Score, Sleep Score, and Activity Score – provide a daily snapshot of your recovery that feels almost psychic.</p>
+        <p><strong>Real‑world example:</strong> One community member discovered that her afternoon coffee, not work stress, was causing her HRV to tank. She swapped to herbal tea and her readiness scores improved by 20% in two weeks.</p>
+        <p><strong>Best for:</strong> Sleep optimisation, recovery monitoring, understanding circadian rhythms.</p>
+        <p><strong>Note:</strong> The subscription ($5.99/month) unlocks the AI‑powered insights, which we consider essential.</p>
+      </div>
 
-        <div class="tool-card fade-up">
-          <div class="tool-icon-wrap">💪</div>
-          <div class="tool-body">
-            <h3>Whoop 4.0</h3>
-            <div class="tool-rating">★★★★☆ &nbsp;<span style="color:var(--text-muted);">4/5 — Excellent for Athletes</span></div>
-            <div class="tool-tags">
+      <!-- Whoop 4.0 -->
+      <div class="tool-card fade-up">
+        <div class="tool-header">
+          <div class="tool-icon">💪</div>
+          <div>
+            <h3 class="tool-title">Whoop 4.0 – The Athlete's Dashboard</h3>
+            <div>
+              <span class="tool-rating">★★★★☆ 4/5</span>
               <span class="pill pill-sage">Body</span>
-              <span class="pill pill-gold">Subscription-based</span>
+              <span class="pill pill-gold">Subscription‑based</span>
             </div>
-            <p>Whoop is the athlete's biometric companion. Where Oura excels at sleep science, Whoop goes deeper on strain, recovery, and exertion data. The "strain" score helps you know exactly when to push hard and when your body needs a rest day — a kind of wisdom the ancients built into seasons and rituals, now quantified in real time.</p>
-            <p>The AI coaching feature sends morning insights like a personalized trainer, factoring in your sleep performance, HRV, and previous day's exertion. One community member with autoimmune issues used Whoop data to identify that high-intensity workouts during low-HRV periods triggered flares — information that transformed her training approach.</p>
-            <p><strong>Best for:</strong> Athletic performance, recovery optimization, understanding the relationship between training load and wellbeing.</p>
           </div>
         </div>
+        <p>Whoop focuses on strain and recovery. It tells you exactly how hard to push today based on your sleep and HRV. For athletes, this is gold. For anyone trying to balance high‑performance work with rest, it's a revelation.</p>
+        <p><strong>Insight:</strong> A member with autoimmune challenges used Whoop to see that intense workouts on low‑HRV days triggered flares. She now tailors her exercise to her readiness – an approach ancient traditions called "living in rhythm."</p>
+        <p><strong>Best for:</strong> Athletes, fitness enthusiasts, anyone wanting to optimise training load.</p>
+        <p><strong>Limitation:</strong> No built‑in screen; you use the app. Some prefer the ring form factor of Oura.</p>
+      </div>
 
-        <div class="tool-card fade-up">
-          <div class="tool-icon-wrap">📊</div>
-          <div class="tool-body">
-            <h3>Levels Health (CGM)</h3>
-            <div class="tool-rating">★★★★☆ &nbsp;<span style="color:var(--text-muted);">4/5 — Eye-Opening</span></div>
-            <div class="tool-tags">
+      <!-- Levels Health (CGM) -->
+      <div class="tool-card fade-up">
+        <div class="tool-header">
+          <div class="tool-icon">📊</div>
+          <div>
+            <h3 class="tool-title">Levels Health – Metabolic Mirror</h3>
+            <div>
+              <span class="tool-rating">★★★★★ 5/5</span>
               <span class="pill pill-sage">Body</span>
               <span class="pill pill-lavender">Inputs</span>
               <span class="pill pill-gold">Premium</span>
             </div>
-            <p>Levels pairs a continuous glucose monitor (CGM) with an AI app that shows how every meal, workout, stress event, and sleep pattern affects your blood sugar in real time. For anyone interested in metabolic health, this is a revelation.</p>
-            <p>Ancient dietary wisdom — eating close to nature, avoiding processed foods, meal timing aligned with circadian rhythms — is now visible in your blood sugar curves. When our founder ate a traditional Ayurvedic meal (khichdi with ghee) versus a "healthy" modern snack bar, the glucose response told a clear story. The ancient recipe caused half the spike.</p>
-            <p><strong>Best for:</strong> Understanding personal metabolic responses to food, optimizing meal timing, athletic performance nutrition, weight management.</p>
           </div>
         </div>
+        <p>Levels pairs a continuous glucose monitor (CGM) with an AI‑powered app that shows how every meal, snack, and lifestyle factor affects your blood sugar. The result is a personalised map of your metabolism.</p>
+        <p><strong>Ancient wisdom meets data:</strong> When our founder ate an Ayurvedic meal (khichdi with ghee) versus a "healthy" granola bar, the glucose curves told a clear story: the ancient recipe caused half the spike. Seeing is believing.</p>
+        <p><strong>Best for:</strong> Understanding personal food responses, stabilising energy, weight management, preventing metabolic disease.</p>
+      </div>
 
+      <!-- Lumen (Metabolic Flexibility) -->
+      <div class="tool-card fade-up">
+        <div class="tool-header">
+          <div class="tool-icon">🌬️</div>
+          <div>
+            <h3 class="tool-title">Lumen – Breath‑Based Metabolism Tracker</h3>
+            <div>
+              <span class="tool-rating">★★★★☆ 4/5</span>
+              <span class="pill pill-sage">Body</span>
+              <span class="pill pill-gold">$249</span>
+            </div>
+          </div>
+        </div>
+        <p>Lumen measures your CO2 concentration to determine whether you're burning fat or carbs. It then gives you daily nutrition guidance to improve metabolic flexibility – the ability to switch between fuel sources.</p>
+        <p><strong>Why it matters:</strong> Ancient humans naturally cycled between feast and fast. Lumen helps you recreate that metabolic agility in a world of constant food availability.</p>
+        <p><strong>Best for:</strong> Metabolic health, weight management, athletic performance.</p>
       </div>
     </div>
   </section>
 
-  <!-- PROMPT LIBRARY -->
-  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <!-- AI PROMPT LIBRARY (WITH COPY BUTTONS) -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-up">
         <span class="eyebrow">AI Prompt Library</span>
-        <h2>Wellness Prompts for ChatGPT</h2>
-        <p>Copy these prompts directly into ChatGPT, Claude, or any AI assistant to unlock powerful wellness support.</p>
+        <h2>Powerful Prompts for Your Wellness Co‑pilot</h2>
+        <p>Copy and paste these into ChatGPT, Claude, or any AI assistant. Each one is designed to turn the AI into a specialised wellness guide.</p>
       </div>
-      <div class="grid-2" style="gap:20px;">
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Morning Mindset</span>
-          <p>Act as a Stoic philosopher and compassionate life coach. I want to start my day with clarity and purpose. Ask me three questions about my values and goals for today, then generate a personalized morning affirmation based on my answers. Keep it grounded, not fluffy.</p>
+
+      <div class="prompt-grid">
+        <div class="card fade-up">
+          <span class="card-icon">🌅</span>
+          <h3>Morning Clarity Ritual</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“Act as a Stoic philosopher and mindfulness coach. Guide me through a 5‑minute morning reflection to set intentions for the day. Ask me three questions about my values and what I want to embody, then generate a personalised affirmation based on my answers.”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Act as a Stoic philosopher and mindfulness coach. Guide me through a 5‑minute morning reflection to set intentions for the day. Ask me three questions about my values and what I want to embody, then generate a personalised affirmation based on my answers.')">Copy Prompt</button>
         </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Evening Reflection</span>
-          <p>Guide me through a structured evening reflection using the Stoic practice of negative visualization and gratitude. Ask me what I accomplished today, what I could have done better, and what I am grateful for. Then summarize my reflection and suggest one focus for tomorrow.</p>
+
+        <div class="card fade-up">
+          <span class="card-icon">🌙</span>
+          <h3>Evening Reflection & Gratitude</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“Lead me through an evening reflection using Stoic principles. Ask me what I did well today, what I could improve, and what I'm grateful for. Then give me a short insight to carry into tomorrow.”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Lead me through an evening reflection using Stoic principles. Ask me what I did well today, what I could improve, and what I\'m grateful for. Then give me a short insight to carry into tomorrow.')">Copy Prompt</button>
         </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Meal Planning</span>
-          <p>Create a 7-day anti-inflammatory meal plan for me based on Mediterranean and Ayurvedic principles. I'm allergic to [X]. Include breakfast, lunch, dinner, and one snack per day. For each meal, briefly explain its primary health benefit.</p>
+
+        <div class="card fade-up">
+          <span class="card-icon">🧠</span>
+          <h3>Reframe a Limiting Belief</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“Act as a cognitive behavioural therapist. I'm going to share a limiting belief I hold about myself. Ask me Socratic questions to challenge it, help me find counter‑evidence, and suggest a more empowering belief. My belief is: [write it here].”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Act as a cognitive behavioural therapist. I\'m going to share a limiting belief I hold about myself. Ask me Socratic questions to challenge it, help me find counter‑evidence, and suggest a more empowering belief. My belief is: [write it here].')">Copy Prompt</button>
         </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Breathwork Design</span>
-          <p>Design a personalized 10-minute breathwork sequence for reducing anxiety and entering a focused state. Explain each phase, how long to hold each part of the breath, and the physiological reason it helps. Format it so I can follow it in real time.</p>
+
+        <div class="card fade-up">
+          <span class="card-icon">🍽️</span>
+          <h3>Personalised Meal Plan</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“Create a 7‑day anti‑inflammatory meal plan rooted in Mediterranean and Ayurvedic principles. I avoid [allergies]. Include breakfast, lunch, dinner, and one snack. For each meal, explain its primary health benefit.”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Create a 7‑day anti‑inflammatory meal plan rooted in Mediterranean and Ayurvedic principles. I avoid [allergies]. Include breakfast, lunch, dinner, and one snack. For each meal, explain its primary health benefit.')">Copy Prompt</button>
         </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Limiting Belief Work</span>
-          <p>Act as a CBT therapist. I'm going to share a limiting belief I have about myself. Ask me Socratic questions to challenge the belief, find counter-evidence, and help me reframe it into an empowering alternative perspective. My belief: [insert belief].</p>
+
+        <div class="card fade-up">
+          <span class="card-icon">🧘</span>
+          <h3>Custom Meditation Script</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“Write a 10‑minute guided meditation for [deep sleep / anxiety relief / focus / compassion]. Use a warm, calm voice. Begin with grounding, then lead into the theme, and close gently.”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Write a 10‑minute guided meditation for [deep sleep / anxiety relief / focus / compassion]. Use a warm, calm voice. Begin with grounding, then lead into the theme, and close gently.')">Copy Prompt</button>
         </div>
-        <div class="prompt-card fade-up">
-          <span class="prompt-label">Meditation Script</span>
-          <p>Write a 10-minute guided meditation script for body scan relaxation. Use a calm, unhurried tone. Begin with three deep breaths, move systematically from feet to crown, include a visualization of healing light, and end with a gentle return to waking awareness.</p>
+
+        <div class="card fade-up">
+          <span class="card-icon">💪</span>
+          <h3>Workout Routine Designer</h3>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:12px; margin:1rem 0; font-size:0.9rem;">
+            <p style="font-style:italic;">“I have [30 minutes] and access to [minimal equipment / full gym]. Design a functional workout that builds strength and mobility. Include warm‑up, main movements, and cool‑down. Explain why each exercise is included.”</p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I have [30 minutes] and access to [minimal equipment / full gym]. Design a functional workout that builds strength and mobility. Include warm‑up, main movements, and cool‑down. Explain why each exercise is included.')">Copy Prompt</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AI HEALTH DASHBOARD CONCEPT -->
+  <!-- DAILY AI RITUAL -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>5‑Minute AI Check‑In</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Open your AI assistant</strong> – ChatGPT, Claude, or any other.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Paste one prompt</strong> from the library above – let intuition guide you.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Engage for 3 minutes</strong> – answer its questions, reflect on its insights.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Write down one takeaway</strong> in a journal or notes app.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Ancient wisdom:</strong> The Delphic oracle was a form of AI – a human channel delivering insights from the gods. Today, our AI can serve a similar role: a mirror for self‑inquiry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
   <section class="section">
     <div class="container">
-      <div class="grid-2" style="gap:56px; align-items:center;">
-        <div class="fade-up">
-          <span class="eyebrow">Coming Soon</span>
-          <h2>The AI Health Dashboard</h2>
-          <p>We're building a concept dashboard that aggregates data from Oura, Whoop, Levels, and your AI journaling sessions into one unified wellbeing score — the Vitality Index.</p>
-          <p>Imagine waking up each morning to a single number that synthesizes your sleep quality, HRV, glucose stability, morning mood, and movement data into an actionable daily recommendation. That's the vision.</p>
-          <div class="step-list mt-3">
-            <div class="step-item">
-              <div class="step-num">1</div>
-              <div class="step-content">
-                <h4>Connect Your Devices</h4>
-                <p>Link Oura, Whoop, or any HRV-capable wearable via secure API.</p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">2</div>
-              <div class="step-content">
-                <h4>Log Your Inputs</h4>
-                <p>Track meals, supplements, sleep environment, and mood each day.</p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">3</div>
-              <div class="step-content">
-                <h4>Receive AI Insights</h4>
-                <p>AI analyzes patterns across all inputs and surfaces personalized recommendations rooted in ancient wellness principles.</p>
-              </div>
-            </div>
-          </div>
-          <a href="/community.html" class="btn btn-gold mt-4">Join the Waitlist</a>
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for Instant Clarity</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“I'm feeling scattered and need clarity. Ask me three powerful questions that will help me identify what truly matters right now.”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
         </div>
-        <div class="fade-up">
-          <div class="card" style="text-align:center; padding:48px;">
-            <div style="font-size:4rem; margin-bottom:24px;">🧬</div>
-            <h3>Your Vitality Index</h3>
-            <div style="font-family:var(--font-serif); font-size:5rem; font-weight:700; background:linear-gradient(135deg,var(--lavender),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin:16px 0;">87</div>
-            <p style="margin-bottom:20px;">Based on last night's 7.4h sleep, HRV of 68ms, stable glucose, and 3 mindfulness sessions this week.</p>
-            <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-              <div><strong class="text-sage">Sleep</strong><br><span style="font-size:1.3rem;">92</span></div>
-              <div><strong class="text-lavender">Mind</strong><br><span style="font-size:1.3rem;">85</span></div>
-              <div><strong class="text-gold">Body</strong><br><span style="font-size:1.3rem;">79</span></div>
-            </div>
-          </div>
-        </div>
+        <p class="text-secondary">Use this anytime you need to cut through mental noise.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Share Your Tools</span>
+        <h2>Join the Tool‑Testing Circle</h2>
+        <p>Our private Facebook group is where members share new tools, swap prompts, and discuss what's actually working. Come help us discover the next essential wellness technology.</p>
+        <a href="/community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -242,11 +378,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function for gold button
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="/js/main.js"></script>
