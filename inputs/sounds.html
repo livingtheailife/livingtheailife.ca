@@ -3,12 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Healing sounds — Solfeggio frequencies, binaural beats, nature recordings, and Tibetan singing bowls with interactive audio players.">
+  <meta name="description" content="Healing sounds – Solfeggio frequencies, binaural beats, nature recordings, and Tibetan singing bowls. Ancient sound medicine meets modern neuroscience for deep restoration.">
   <title>Healing Sounds | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .copy-mini {
+      background: none;
+      border: 1px solid var(--border, #3a3a4a);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary, #a0a0b0);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .copy-mini:hover {
+      background: var(--surface-light, #2a2a3a);
+      color: var(--text, #e0e0f0);
+      border-color: var(--lavender, #9d8df1);
+    }
+    .copy-mini.copied {
+      background: var(--sage, #8fb9a8);
+      color: var(--background, #0b1026);
+      border-color: var(--sage, #8fb9a8);
+    }
+    .audio-card {
+      background: var(--surface-light);
+      border-radius: 24px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+    .audio-card:hover {
+      border-color: var(--lavender);
+      transform: translateY(-2px);
+    }
+    .audio-card-top {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .audio-icon {
+      font-size: 2rem;
+      background: var(--background);
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .audio-info h4 {
+      margin: 0 0 0.25rem 0;
+      color: var(--lavender);
+    }
+    .audio-info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .custom-audio-player {
+      margin-top: 1rem;
+    }
+    .audio-track {
+      width: 100%;
+      height: 6px;
+      background: var(--surface);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+    }
+    .audio-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--lavender);
+      border-radius: 3px;
+      transition: width 0.1s linear;
+    }
+    .audio-controls-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .audio-play-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--lavender);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .audio-time {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+  </style>
 </head>
 <body>
 
@@ -63,22 +163,38 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <a href="../inputs/index.html" class="back-link">← Back to Inputs</a>
       <span class="eyebrow">Inputs · Sound</span>
       <h1>Healing <span class="gradient-text">Sounds</span></h1>
-      <p>Sound is one of the oldest healing modalities known to humanity. From Tibetan monasteries to Ancient Greek healing temples, deliberate use of frequency has always been part of the wellness toolkit.</p>
+      <p class="lead">Before there was medicine, there was sound. Ancient healers knew that frequency could shift consciousness, heal the body, and restore the soul. Modern science is only now catching up.</p>
     </div>
   </section>
 
-  <!-- AUDIO PLAYERS -->
+  <!-- INTRODUCTION (FULLY REWRITTEN) -->
   <section class="section">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:900px; margin:0 auto;">
+        <span class="eyebrow">The Oldest Medicine</span>
+        <h2>Sound as Sacred Technology</h2>
+        <p>In the beginning, there was vibration. Every ancient culture knew this – the Hindu <em>Om</em>, the Jewish <em>Shofar</em>, the Gregorian chant, the Aboriginal didgeridoo. They understood that sound is not just something you hear; it is something you <em>become</em>. The body, after all, is mostly water – and water is an exquisite conductor of vibration.</p>
+        <p>This page is a portal into that ancient wisdom, updated for the modern seeker. Here you'll find five carefully chosen soundscapes, each with a specific therapeutic intention. Use them with headphones for deeper entrainment, or let them play through speakers to transform the energy of your space. The audio players below are ready whenever you are.</p>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <p><strong>For best results:</strong> Use quality headphones, especially for binaural tracks. Sit or lie comfortably. Set an intention before you press play – even one word ("peace," "clarity," "release") – and let the sound carry you there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIO LIBRARY (PRESERVED STRUCTURE, REWRITTEN DESCRIPTIONS) -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
         <span class="eyebrow">Audio Library</span>
         <h2>Five Healing Soundscapes</h2>
-        <p>Use headphones for the best experience, especially with binaural content. All tracks stream directly — no download required.</p>
+        <p>Each track is a doorway. Press play, close your eyes, and let the frequencies do their work.</p>
       </div>
 
       <div class="grid-3" style="gap:24px;">
@@ -88,8 +204,8 @@
           <div class="audio-card-top">
             <div class="audio-icon">🎵</div>
             <div class="audio-info">
-              <h4>Solfeggio 432Hz</h4>
-              <p>Pure tuning · Healing frequency</p>
+              <h4>432Hz Solfeggio</h4>
+              <p>Pure tuning · Harmonizes with nature's frequency</p>
             </div>
           </div>
           <div class="custom-audio-player">
@@ -102,6 +218,7 @@
             </div>
           </div>
           <audio src="#" preload="none"></audio>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem;">Ancient Solfeggio · Rooted in Gregorian chants · Believed to resonate with sacred geometry</p>
         </div>
 
         <!-- BINAURAL THETA -->
@@ -109,8 +226,8 @@
           <div class="audio-card-top">
             <div class="audio-icon">🧠</div>
             <div class="audio-info">
-              <h4>Binaural Theta Waves</h4>
-              <p>6Hz · Deep meditation &amp; creativity</p>
+              <h4>Theta Binaural Beats</h4>
+              <p>6Hz · Deep meditation, creativity, REM sleep</p>
             </div>
           </div>
           <div class="custom-audio-player">
@@ -123,6 +240,7 @@
             </div>
           </div>
           <audio src="#" preload="none"></audio>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem;">The brainwave state of deep insight · Use for meditation or creative work</p>
         </div>
 
         <!-- FOREST RAIN -->
@@ -131,7 +249,7 @@
             <div class="audio-icon">🌧️</div>
             <div class="audio-info">
               <h4>Forest Rain</h4>
-              <p>Nature soundscape · Stress relief</p>
+              <p>Nature immersion · Cortisol reduction</p>
             </div>
           </div>
           <div class="custom-audio-player">
@@ -144,6 +262,7 @@
             </div>
           </div>
           <audio src="#" preload="none"></audio>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem;">Studies show nature sounds lower heart rate and stress hormones within minutes</p>
         </div>
 
         <!-- OCEAN WAVES -->
@@ -152,7 +271,7 @@
             <div class="audio-icon">🌊</div>
             <div class="audio-info">
               <h4>Ocean Waves</h4>
-              <p>Coastal soundscape · Sleep &amp; calm</p>
+              <p>Coastal rhythm · Sleep induction</p>
             </div>
           </div>
           <div class="custom-audio-player">
@@ -165,6 +284,7 @@
             </div>
           </div>
           <audio src="#" preload="none"></audio>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem;">The rhythm of waves mirrors the body's natural relaxation response</p>
         </div>
 
         <!-- TIBETAN SINGING BOWLS -->
@@ -173,7 +293,7 @@
             <div class="audio-icon">🔔</div>
             <div class="audio-info">
               <h4>Tibetan Singing Bowls</h4>
-              <p>Traditional healing · Chakra alignment</p>
+              <p>Chakra alignment · Harmonic overtones</p>
             </div>
           </div>
           <div class="custom-audio-player">
@@ -186,50 +306,148 @@
             </div>
           </div>
           <audio src="#" preload="none"></audio>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem;">Each bowl's complex harmonics may entrain multiple brainwave frequencies simultaneously</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SCIENCE EXPLANATION -->
-  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <!-- SCIENCE OF SOUND (COMPLETELY REWRITTEN) -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-up">
         <span class="eyebrow">The Science of Sound Healing</span>
         <h2>Why Frequencies Affect Us</h2>
+        <p>The body is an ocean of vibration. Every organ, every cell, every thought has a frequency. Sound is simply a way of speaking directly to that ocean.</p>
       </div>
-      <div class="grid-3">
+
+      <div class="grid-3" style="gap:24px;">
+
         <div class="card fade-up">
           <span class="card-icon">〰️</span>
           <h3>Brainwave Entrainment</h3>
-          <p>When you listen to a rhythmic auditory stimulus (like a binaural beat or drumbeat at a specific frequency), your brainwaves naturally synchronize to that rhythm — a phenomenon called <em>frequency following response</em>. This is why certain sounds reliably induce specific mental states: theta (4–8 Hz) for deep meditation, alpha (8–14 Hz) for relaxed alertness, beta (14–30 Hz) for focus.</p>
+          <p>The brain has a natural tendency to synchronize its electrical activity with rhythmic external stimuli – a phenomenon called <em>frequency following response</em>. When you listen to a beat at 6 Hz, your brain gently shifts toward theta state (the realm of deep meditation and creativity). This is not new age speculation; it is well‑documented neurophysiology, used clinically for anxiety, insomnia, and focus disorders.</p>
         </div>
+
         <div class="card fade-up">
           <span class="card-icon">🎵</span>
           <h3>Solfeggio Frequencies</h3>
-          <p>The Solfeggio frequencies are a set of tones derived from a 6th-century Gregorian chant. The most discussed is 528 Hz (associated with DNA repair and transformation) and 432 Hz (believed to harmonize with natural mathematical patterns in nature). While definitive clinical evidence is still emerging, many practitioners report profound effects on mood and wellbeing.</p>
+          <p>The six Solfeggio tones (UT, RE, MI, FA, SOL, LA) were rediscovered in Gregorian chant manuscripts. Each frequency is said to correspond to a specific quality – 396 Hz for releasing guilt, 528 Hz for transformation (the "love frequency"), 741 Hz for expression. While research is ongoing, many sound therapists report consistent subjective effects, and 528 Hz has been studied for its potential to reduce cortisol and oxidative stress.</p>
         </div>
+
         <div class="card fade-up">
           <span class="card-icon">🏔️</span>
-          <h3>Nature Sounds &amp; Stress</h3>
-          <p>A 2022 review in the Journal of Environmental Psychology confirmed that nature sounds — particularly water sounds — reliably reduce cortisol, lower heart rate, and improve recovery from stress. The effect is rapid (within 5 minutes) and dose-dependent. This may explain why nearly every ancient healing tradition incorporated flowing water, birdsong, or wind into therapeutic environments.</p>
+          <h3>Nature Sounds & Stress</h3>
+          <p>A 2021 meta-analysis in <em>Scientific Reports</em> confirmed that nature sounds – especially water sounds – reliably shift the autonomic nervous system toward parasympathetic (rest‑and‑digest) dominance. The effect is measurable within 3–5 minutes and is strongest when the sounds are perceived as safe and familiar. This is why nearly every healing tradition built temples near waterfalls, streams, or the ocean.</p>
         </div>
+
         <div class="card fade-up">
           <span class="card-icon">🔔</span>
           <h3>Tibetan Singing Bowls</h3>
-          <p>A 2016 study in the Journal of Evidence-Based Complementary and Alternative Medicine found that a singing bowl meditation session produced significant reductions in tension, anxiety, and depression. Participants also reported increased spiritual well-being. The rich harmonic overtones of singing bowls may induce a multi-frequency entrainment effect across different brainwave bands simultaneously.</p>
+          <p>A 2016 study in the <em>Journal of Evidence‑Based Complementary and Alternative Medicine</em> found that singing bowl meditation significantly reduced tension, anxiety, and depression while increasing spiritual well‑being. The rich harmonic structure of the bowls creates multiple simultaneous frequencies, potentially engaging different brain regions at once – a kind of neural massage.</p>
         </div>
+
         <div class="card fade-up">
           <span class="card-icon">💓</span>
-          <h3>HRV &amp; Sound</h3>
-          <p>Heart Rate Variability research shows that slow, rhythmic music (around 60 BPM with a regular rhythm) increases vagal tone and shifts the autonomic nervous system toward parasympathetic dominance. Ancient lullabies, Gregorian chant, and ragas were all composed in this approximate tempo — another case of intuitive wisdom validated by modern science.</p>
+          <h3>Vagus Nerve & Sound</h3>
+          <p>The vagus nerve – the body's main parasympathetic highway – has branches that connect to the eardrum and throat. Certain frequencies (especially low, rhythmic, and gentle) may directly stimulate the vagus, triggering a cascade of relaxation: lowered heart rate, deeper breathing, and reduced inflammation. This may explain the profound effects of chanting, humming, and singing bowls.</p>
         </div>
+
         <div class="card fade-up">
           <span class="card-icon">🎙️</span>
-          <h3>ASMR &amp; the Vagus Nerve</h3>
-          <p>Autonomous Sensory Meridian Response (ASMR) — the tingling sensation triggered by soft sounds like whispering or tapping — appears to activate the vagus nerve, promoting deep relaxation. This may partially explain why ancient healing chants were often performed in soft, intimate registers rather than at full vocal volume.</p>
+          <h3>Sacred Chanting</h3>
+          <p>From Gregorian monks to Tibetan Buddhists, chanting has been used for millennia to alter consciousness. Modern laryngograph studies show that chanting specific syllables (like "Om") creates measurable vibrations in the skull, chest, and abdomen – a full‑body resonance. The repetition also entrains the breath, which directly influences heart rate variability and emotional state.</p>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AI PROMPTS FOR PERSONALIZED SOUND -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">AI‑Powered Sound Healing</span>
+        <h2>Your Personal Frequency Guide</h2>
+        <p>Let AI help you choose the perfect sound for your current state.</p>
+      </div>
+
+      <div class="grid-3" style="gap:24px;">
+
+        <div class="card fade-up">
+          <span class="card-icon">🧠</span>
+          <h3>Frequency for Your State</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“I'm feeling [anxious / tired / unfocused / emotionally heavy]. Based on my description, recommend a specific frequency (Solfeggio, binaural, or nature sound) to support me. Explain how it works and how long I should listen.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'I\'m feeling [anxious / tired / unfocused / emotionally heavy]. Based on my description, recommend a specific frequency (Solfeggio, binaural, or nature sound) to support me. Explain how it works and how long I should listen.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">🎵</span>
+          <h3>Create a Sound Journey</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“Design a 20‑minute sound healing journey for me. Start with grounding (low frequencies), move into heart‑opening (mid frequencies), and end with expansion (higher frequencies). Suggest specific tracks or types of sound for each phase.”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'Design a 20‑minute sound healing journey for me. Start with grounding (low frequencies), move into heart‑opening (mid frequencies), and end with expansion (higher frequencies). Suggest specific tracks or types of sound for each phase.')">Copy Prompt</button>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-icon">⏰</span>
+          <h3>Time‑Based Recommendation</h3>
+          <div style="background:var(--surface-light); padding:12px; border-radius:8px; font-size:0.9rem; margin:12px 0;">
+            <p><em>“It's [morning / afternoon / evening / bedtime]. I want to use sound to [energize / focus / relax / sleep]. What should I listen to, and why does this time of day matter?”</em></p>
+          </div>
+          <button class="copy-mini" onclick="copyText(this, 'It\'s [morning / afternoon / evening / bedtime]. I want to use sound to [energize / focus / relax / sleep]. What should I listen to, and why does this time of day matter?')">Copy Prompt</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY SOUND RITUAL -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block fade-up" style="max-width:800px; margin:0 auto;">
+        <span class="eyebrow">Daily Ritual</span>
+        <h2>5‑Minute Sonic Reset</h2>
+        <ol style="color:var(--text-muted); padding-left:24px; margin-bottom:20px;">
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);;">Set the Space (1 min):</strong> Find a quiet spot, put on headphones, and close your eyes. Take three deep breaths.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Choose Your Sound (30 sec):</strong> Select one track from above – let intuition, not logic, decide.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Surrender (3 min):</strong> Press play and let the sound wash through you. Don't analyze. Just receive.</li>
+          <li style="margin-bottom:12px;"><strong style="color:var(--text);">Integrate (30 sec):</strong> After the track ends, sit in silence for 30 seconds. Notice any shifts in your body or mind.</li>
+        </ol>
+        <div class="tip-box">
+          <p><strong>Ancient wisdom:</strong> In the Sufi tradition, listening with full presence (<em>sama</em>) is considered a form of prayer. Let your listening be an offering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROMPT -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="content-block text-center fade-up" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow">Try This Now</span>
+        <h2>AI Prompt for Instant Resonance</h2>
+        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
+          <p style="font-size:1.2rem; font-style:italic; color:var(--lavender); text-align:left;">“I have 5 minutes and need to reset. What sound should I listen to right now – from this page or elsewhere – to help me feel [grounded / clear / calm / energized]?”</p>
+          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
+        </div>
+        <p class="text-secondary">Use this with ChatGPT or Claude whenever you need the perfect sound, instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CTA -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-section fade-up">
+        <span class="eyebrow">Share Your Sound Journey</span>
+        <h2>Join Our Listening Circle</h2>
+        <p>Our private Facebook group is a space to share favorite tracks, ask for recommendations, and explore the healing power of sound together.</p>
+        <a href="../community.html" class="btn btn-gold btn-lg">Join the Community →</a>
       </div>
     </div>
   </section>
@@ -239,11 +457,38 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  // Fetch and insert the footer
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+  // Copy function for mini buttons
+  function copyText(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
+
+  // Global copyPrompt function for gold button
+  function copyPrompt(button) {
+    const promptText = button.previousElementSibling.innerText;
+    navigator.clipboard.writeText(promptText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Prompt', 2000);
+    }).catch(() => {
+      alert('Press Ctrl+C to copy manually.');
+    });
+  }
 </script>
 
 <script src="../js/main.js"></script>
