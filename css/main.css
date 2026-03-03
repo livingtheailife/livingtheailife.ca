@@ -1187,3 +1187,7 @@ input::placeholder, textarea::placeholder { color: var(--text-muted); }
   transition: color var(--transition);
 }
 .back-link:hover { color: var(--lavender); }
+/* Fix mobile menu button text color */
+.nav-mobile .btn-gold {
+  color: var(--background, #0b1026) !important;
+}
