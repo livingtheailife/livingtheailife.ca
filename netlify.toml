@@ -25,11 +25,6 @@
   status = 301
 
 [[redirects]]
-  from = "/blog"
-  to = "/blog/"
-  status = 301
-
-[[redirects]]
   from = "/ai-tools"
   to = "/ai-tools/"
   status = 301
