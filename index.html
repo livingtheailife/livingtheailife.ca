@@ -3,37 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Living the AI Life — bridging ancient wisdom with modern artificial intelligence for mind, body, and spirit optimization.">
-  <title>Living the AI Life | Ancient Wisdom, Amplified by AI</title>
+  <meta name="description" content="AI for Self-Improvement — the ultimate guide to using artificial intelligence as your personal growth catalyst. Prompt libraries, tutorials, and tools to accelerate transformation.">
+  <title>AI for Self-Improvement | Living the AI Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <style>
-    /* Ensure hero content is centered */
-    .home-hero .hero-content {
+
+    /* ── Pillar accent colour ── */
+    :root {
+      --ai-accent: #7eb8f7;   /* electric sky-blue */
+      --ai-glow:   #3a7bd5;
+    }
+
+    /* ── Hero ── */
+    .ai-hero {
+      position: relative;
+      padding: 7rem 0 5rem;
+      overflow: hidden;
       text-align: center;
+    }
+    .ai-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(62,123,213,.30) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 80%,  rgba(126,184,247,.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .ai-hero .eyebrow { color: var(--ai-accent); }
+    .ai-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.1; }
+    .ai-hero .gradient-text {
+      background: linear-gradient(135deg, var(--ai-accent) 0%, var(--lavender) 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ai-hero .lead { max-width: 700px; margin: 1.4rem auto 0; }
+
+    /* ── "Why It's the Pinnacle" banner ── */
+    .pinnacle-banner {
+      background: linear-gradient(135deg, rgba(62,123,213,.18) 0%, rgba(157,141,241,.14) 100%);
+      border: 1px solid rgba(126,184,247,.25);
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      margin: 3rem auto 0;
       max-width: 900px;
-      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
     }
-    .home-hero h1 {
+    .pinnacle-item { text-align: center; }
+    .pinnacle-item .p-icon {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: .6rem;
+    }
+    .pinnacle-item h4 { color: var(--ai-accent); margin-bottom: .4rem; font-size: 1rem; }
+    .pinnacle-item p  { color: var(--text-muted); font-size: .88rem; line-height: 1.5; margin: 0; }
+
+    /* ── Section tabs / category filter ── */
+    .tab-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-bottom: 2.2rem;
+    }
+    .tab-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: .45rem 1.1rem;
+      font-size: .88rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--ai-accent);
+      color: #0b1026;
+      border-color: var(--ai-accent);
+      font-weight: 600;
+    }
+
+    /* ── Prompt cards ── */
+    .prompt-section { display: none; }
+    .prompt-section.active { display: block; }
+
+    .prompt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.4rem;
+      margin-top: 1.5rem;
+    }
+    .prompt-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.6rem;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .prompt-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--ai-accent), var(--lavender));
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .prompt-card:hover { border-color: var(--ai-accent); transform: translateY(-3px); }
+    .prompt-card:hover::before { opacity: 1; }
+    .prompt-card h4 { color: var(--lavender); margin-bottom: .5rem; font-size: 1rem; }
+    .prompt-card .prompt-text {
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: .92rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      background: var(--surface);
+      border-radius: 12px;
+      padding: .9rem 1rem;
+      border-left: 3px solid var(--ai-accent);
+    }
+    .prompt-card .prompt-use {
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .4rem .9rem;
+      font-size: .82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+    }
+    .copy-btn:hover  { background: var(--surface); color: var(--ai-accent); border-color: var(--ai-accent); }
+    .copy-btn.copied { background: var(--sage); color: #0b1026; border-color: var(--sage); }
+
+    /* ── Tutorial cards ── */
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.6rem;
+    }
+    .tutorial-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      transition: all .25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .tutorial-card:hover { border-color: var(--ai-accent); transform: translateY(-4px); }
+    .tutorial-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+    .tutorial-card h3 { color: var(--ai-accent); font-size: 1.05rem; margin-bottom: .6rem; }
+    .tutorial-card p  { color: var(--text-secondary); font-size: .9rem; line-height: 1.6; flex: 1; }
+    .tutorial-card .difficulty {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: .78rem;
+      padding: .2rem .7rem;
+      border-radius: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .difficulty.beginner { color: var(--sage);    border-color: var(--sage);    background: rgba(126,200,160,.08); }
+    .difficulty.inter    { color: var(--gold);    border-color: var(--gold);    background: rgba(201,168,76,.08);  }
+    .difficulty.advanced { color: var(--lavender);border-color: var(--lavender);background: rgba(157,141,241,.08);}
+
+    /* ── Framework steps ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.4rem;
+      counter-reset: step-counter;
+    }
+    .step-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.8rem;
+      position: relative;
+      counter-increment: step-counter;
+      transition: all .2s;
+    }
+    .step-card:hover { border-color: var(--ai-accent); }
+    .step-card::before {
+      content: counter(step-counter, decimal-leading-zero);
+      position: absolute;
+      top: 1.4rem; right: 1.4rem;
+      font-size: 2.2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      color: rgba(126,184,247,.18);
+      line-height: 1;
+    }
+    .step-card h4 { color: var(--ai-accent); margin-bottom: .5rem; }
+    .step-card p  { color: var(--text-secondary); font-size: .9rem; line-height: 1.6; margin: 0; }
+
+    /* ── Pillar integrations ── */
+    .integration-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+    .integration-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      transition: all .2s;
+    }
+    .integration-card:hover { border-color: var(--ai-accent); transform: translateY(-2px); }
+    .integration-card .int-header { display: flex; align-items: center; gap: .6rem; margin-bottom: .6rem; }
+    .integration-card .int-icon   { font-size: 1.6rem; }
+    .integration-card h4          { color: var(--lavender); font-size: .95rem; margin: 0; }
+    .integration-card p           { color: var(--text-muted); font-size: .85rem; line-height: 1.5; margin: 0 0 .8rem; }
+    .integration-card a           { font-size: .82rem; color: var(--ai-accent); text-decoration: none; }
+    .integration-card a:hover     { text-decoration: underline; }
+
+    /* ── Weekly challenge ── */
+    .challenge-box {
+      background: linear-gradient(135deg, rgba(62,123,213,.15) 0%, rgba(201,168,76,.08) 100%);
+      border: 1px solid rgba(126,184,247,.3);
+      border-radius: 28px;
+      padding: 3rem;
       text-align: center;
-      line-height: 1.2;
+      position: relative;
+      overflow: hidden;
     }
-    .home-hero .hero-description {
-      margin-left: auto;
-      margin-right: auto;
+    .challenge-box::after {
+      content: '⚡';
+      position: absolute;
+      font-size: 12rem;
+      opacity: .04;
+      right: -1rem;
+      top: -2rem;
+      pointer-events: none;
     }
-    .home-hero .hero-btn-row {
+    .challenge-box h2 { color: var(--ai-accent); }
+    .challenge-prompt {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      font-style: italic;
+      color: var(--lavender);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      border-left: 4px solid var(--gold);
+    }
+
+    /* ── Viral share strip ── */
+    .share-strip {
+      display: flex;
+      align-items: center;
       justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1.2rem 2rem;
+      background: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      margin-top: 1.5rem;
     }
-    .home-hero .hero-stats {
-      justify-content: center;
+    .share-strip span { color: var(--text-muted); font-size: .9rem; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .4rem 1rem;
+      border-radius: 8px;
+      font-size: .85rem;
+      font-family: inherit;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface-light);
+      color: var(--text-secondary);
+      transition: all .2s;
+      text-decoration: none;
+    }
+    .share-btn:hover { border-color: var(--ai-accent); color: var(--ai-accent); }
+
+    @media (max-width: 768px) {
+      .pinnacle-banner { padding: 1.8rem; }
+      .challenge-box   { padding: 2rem 1.4rem; }
     }
   </style>
 </head>
 <body>
 
+<!-- ── NAV ── -->
 <nav class="nav" id="main-nav">
   <div class="container nav-inner">
     <a href="/index.html" class="nav-logo">
@@ -41,7 +312,7 @@
       <span class="logo-sub">Ancient Wisdom · Modern Tech</span>
     </a>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="/index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
       <li class="nav-item has-dropdown">
         <a href="#" class="nav-link">The Method <span class="chevron">▾</span></a>
         <div class="dropdown">
@@ -51,6 +322,7 @@
             <a href="/body/index.html"><span class="icon">🌿</span> Body</a>
             <a href="/mindfulness/index.html"><span class="icon">🧘</span> Mindfulness</a>
             <a href="/inputs/index.html"><span class="icon">✨</span> Inputs</a>
+            <a href="/ai-self-improvement/index.html"><span class="icon">⚡</span> AI for Self-Improvement</a>
           </div>
         </div>
       </li>
@@ -77,125 +349,453 @@
   <a href="/body/index.html">🌿 Body</a>
   <a href="/mindfulness/index.html">🧘 Mindfulness</a>
   <a href="/inputs/index.html">✨ Inputs</a>
+  <a href="/ai-self-improvement/index.html">⚡ AI for Self-Improvement</a>
   <hr>
   <a href="/community.html" class="btn btn-gold">Join Community</a>
 </nav>
 
 <main>
 
-  <!-- HERO SECTION (FIXED CENTERING) -->
-  <section class="home-hero">
+  <!-- ── HERO ── -->
+  <section class="ai-hero">
     <div class="container">
-      <div class="hero-content fade-up">
-        <div class="hero-tag">✨ Where Ancient Meets Artificial</div>
-        <h1>Live Longer, Smarter, and<br><span class="gradient-text">More Vibrantly</span></h1>
-        <p class="hero-subhead">With AI by your side.</p>
-        <div class="hero-description">
-          Imagine having a personal wellness assistant who knows you intimately – your goals, your struggles, your biology – and who draws from the collective wisdom of ancient practices and cutting‑edge science. That's what "Living the AI Life" offers. We bridge the timeless with the futuristic to help you become the best version of yourself.
+      <span class="eyebrow">Pillar Five</span>
+      <h1>⚡ <span class="gradient-text">AI for Self-Improvement</span></h1>
+      <p class="lead">The ancient pillars tell you <em>what</em> to practice. This pillar shows you <em>how</em> to use artificial intelligence to practice it faster, deeper, and more personally than ever before.</p>
+      <div class="hero-btn-row" style="justify-content:center; margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="#prompt-library" class="btn btn-gold btn-lg">Explore Prompt Library</a>
+        <a href="#tutorials" class="btn btn-outline btn-lg">View Tutorials</a>
+      </div>
+
+      <!-- Why It's the Pinnacle -->
+      <div class="pinnacle-banner fade-up">
+        <div class="pinnacle-item">
+          <span class="p-icon">🔭</span>
+          <h4>The "How"</h4>
+          <p>Other pillars reveal what to practice. This one unlocks how to make every practice exponentially more effective and personal.</p>
         </div>
-        <div class="hero-btn-row">
-          <a href="/community.html" class="btn btn-gold btn-lg">Join Our Community</a>
-          <a href="/about.html" class="btn btn-outline btn-lg">Discover the Method</a>
+        <div class="pinnacle-item">
+          <span class="p-icon">🎯</span>
+          <h4>Your Differentiator</h4>
+          <p>Few sites teach you to use ChatGPT as a Stoic journal partner or Claude as a manifestation coach. This is your unique territory.</p>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>Brand New</strong>
-            <span>Community Starting Now</span>
-          </div>
-          <div class="hero-stat">
-            <strong>4</strong>
-            <span>Core Pillars</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Growing</strong>
-            <span>Daily</span>
-          </div>
+        <div class="pinnacle-item">
+          <span class="p-icon">🧲</span>
+          <h4>The Hook</h4>
+          <p>People are desperate to apply AI to real life. By teaching them, you become the trusted guide they've been searching for.</p>
+        </div>
+        <div class="pinnacle-item">
+          <span class="p-icon">🚀</span>
+          <h4>Viral by Design</h4>
+          <p>Great prompts spread like wildfire. Every prompt you share is a seed that can grow into thousands of new visitors.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUR PILLARS -->
-  <section class="section" style="background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <!-- ── THE FRAMEWORK ── -->
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="eyebrow">The Four Pillars</span>
-        <h2>The Method</h2>
-        <p>Every practice, tool, and article on this site flows from one of our four core pillars. Together, they form a complete system for human optimization.</p>
+        <span class="eyebrow">The Foundation</span>
+        <h2>The Art of Prompting Your Way to Growth</h2>
+        <p>Before diving into the libraries, understand the mindset shift. AI is not a search engine. It's a mirror, a sparring partner, and a creativity amplifier — when you know how to talk to it.</p>
       </div>
-      <div class="grid-4">
-        <div class="pillar-card mind fade-up">
-          <span class="pillar-icon">🧠</span>
-          <h3>Mind</h3>
-          <p>Cultivate unshakable confidence, master manifestation, and rewire your thinking with AI‑powered affirmations and mental wellness tools. Your mind is the ultimate frontier – let AI help you conquer it.</p>
-          <a href="/mind/index.html" class="btn btn-outline btn-sm">Explore Mind</a>
+      <div class="steps-grid fade-up">
+        <div class="step-card">
+          <h4>Give It a Role</h4>
+          <p>Start every growth prompt with "Act as a…" — Stoic philosopher, CBT therapist, life coach, nutritionist. The more specific the role, the more powerful the response.</p>
         </div>
-        <div class="pillar-card body fade-up">
-          <span class="pillar-icon">🌿</span>
-          <h3>Body</h3>
-          <p>From personalized yoga sequences to movement routines adapted to your body's needs, AI analyzes your progress and suggests optimizations. Move better, recover faster, feel stronger.</p>
-          <a href="/body/index.html" class="btn btn-outline btn-sm">Explore Body</a>
+        <div class="step-card">
+          <h4>Provide Context</h4>
+          <p>Share your goals, struggles, and constraints. The more the AI knows about you, the more personal and actionable its guidance becomes. Treat it like a real conversation.</p>
         </div>
-        <div class="pillar-card mindful fade-up">
-          <span class="pillar-icon">🧘</span>
-          <h3>Mindfulness</h3>
-          <p>Breathe, meditate, and relax with guided sessions that evolve with you. AI learns what calms you and delivers the perfect practice – whether you have 2 minutes or 2 hours.</p>
-          <a href="/mindfulness/index.html" class="btn btn-outline btn-sm">Explore Mindfulness</a>
+        <div class="step-card">
+          <h4>Ask for Challenges</h4>
+          <p>Don't just ask for information — ask to be questioned, challenged, and pushed. "Question my assumptions" or "Find the flaw in my thinking" unlocks real growth.</p>
         </div>
-        <div class="pillar-card inputs fade-up">
-          <span class="pillar-icon">✨</span>
-          <h3>Inputs</h3>
-          <p>What you consume – food, sound, music – shapes your reality. Let AI curate your nutrition, recommend healing frequencies, and build playlists that elevate your mood and focus.</p>
-          <a href="/inputs/index.html" class="btn btn-outline btn-sm">Explore Inputs</a>
+        <div class="step-card">
+          <h4>Iterate and Deepen</h4>
+          <p>The magic happens in the follow-up. Respond to what AI gives you. Push back. Ask it to go deeper. A 10-message exchange is worth 10 generic prompts.</p>
+        </div>
+        <div class="step-card">
+          <h4>Build a Memory</h4>
+          <p>Create a "Personal Context Document" — your goals, values, challenges — and paste it at the start of each session. Instant personalisation, every time.</p>
+        </div>
+        <div class="step-card">
+          <h4>Save What Works</h4>
+          <p>Keep a prompt journal. When a prompt produces a breakthrough, save it. Your personal library of prompts becomes one of your most valuable growth assets.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED AI PROMPT OF THE WEEK -->
+  <!-- ── PROMPT LIBRARY ── -->
+  <section class="section" id="prompt-library">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">50+ Prompts & Growing</span>
+        <h2>The Prompt Library</h2>
+        <p>Organised by life domain. Copy any prompt and paste it directly into ChatGPT, Claude, or any AI assistant. Fill in the <em>[brackets]</em> with your details.</p>
+      </div>
+
+      <!-- Tab filter -->
+      <div class="tab-row">
+        <button class="tab-btn active" onclick="switchTab('mindset')">🧠 Mindset</button>
+        <button class="tab-btn" onclick="switchTab('body')">🌿 Body</button>
+        <button class="tab-btn" onclick="switchTab('mindfulness')">🧘 Mindfulness</button>
+        <button class="tab-btn" onclick="switchTab('purpose')">🎯 Life Purpose</button>
+        <button class="tab-btn" onclick="switchTab('relationships')">🤝 Relationships</button>
+        <button class="tab-btn" onclick="switchTab('productivity')">⚡ Productivity</button>
+      </div>
+
+      <!-- MINDSET -->
+      <div class="prompt-section active" id="tab-mindset">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>The Socratic Questioner</h4>
+            <div class="prompt-text">"Act as a Socratic philosopher. I believe [limiting belief]. Question me relentlessly to expose the flaws in this belief and help me arrive at a more empowering truth."</div>
+            <p class="prompt-use">💡 Best for: Breaking through self-limiting beliefs</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Act as a Socratic philosopher. I believe [limiting belief]. Question me relentlessly to expose the flaws in this belief and help me arrive at a more empowering truth.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Gratitude Amplifier</h4>
+            <div class="prompt-text">"I want to practice gratitude. Ask me five deep questions that uncover hidden blessings in my day, then help me write a gratitude list in my own voice."</div>
+            <p class="prompt-use">💡 Best for: Daily gratitude practice, shifting perspective</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I want to practice gratitude. Ask me five deep questions that uncover hidden blessings in my day, then help me write a gratitude list in my own voice.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Future Self Visualization</h4>
+            <div class="prompt-text">"Guide me through a vivid 5-minute visualization of my ideal future self in [timeframe]. Describe the scene, my emotions, my environment, and my accomplishments. Then ask what three steps I can take today to move toward that vision."</div>
+            <p class="prompt-use">💡 Best for: Goal-setting, motivation, manifestation</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Guide me through a vivid 5-minute visualization of my ideal future self in [timeframe]. Describe the scene, my emotions, my environment, and my accomplishments. Then ask what three steps I can take today to move toward that vision.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>The Stoic Journal</h4>
+            <div class="prompt-text">"Act as Marcus Aurelius. I'm facing [challenge]. Respond to me in the style of Meditations — direct, philosophical, and compassionate. Then ask me what a virtuous person would do in my situation."</div>
+            <p class="prompt-use">💡 Best for: Navigating challenges with ancient wisdom</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Act as Marcus Aurelius. I\'m facing [challenge]. Respond to me in the style of Meditations — direct, philosophical, and compassionate. Then ask me what a virtuous person would do in my situation.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Affirmation Architect</h4>
+            <div class="prompt-text">"I want to rewire my self-image around [goal or quality]. Create 10 powerful, present-tense affirmations that feel authentic to me, not generic. Make them emotionally resonant and specific to someone who is [brief description of yourself]."</div>
+            <p class="prompt-use">💡 Best for: Building new identity, confidence</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I want to rewire my self-image around [goal or quality]. Create 10 powerful, present-tense affirmations that feel authentic to me, not generic. Make them emotionally resonant and specific to someone who is [brief description of yourself].')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Shadow Work Guide</h4>
+            <div class="prompt-text">"Act as a Jungian therapist. Help me explore my shadow self. Ask me 5 questions about patterns or reactions in my life that frustrate me, then help me see what unacknowledged part of myself might be behind them."</div>
+            <p class="prompt-use">💡 Best for: Deep self-awareness, emotional healing</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Act as a Jungian therapist. Help me explore my shadow self. Ask me 5 questions about patterns or reactions in my life that frustrate me, then help me see what unacknowledged part of myself might be behind them.')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="prompt-section" id="tab-body">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>Custom Yoga Sequence</h4>
+            <div class="prompt-text">"Design a 20-minute yoga sequence for someone who is [fitness level] and wants to [goal: open hips / build strength / wind down for sleep]. Include pose names, duration, and transition cues."</div>
+            <p class="prompt-use">💡 Best for: Personalised home practice</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Design a 20-minute yoga sequence for someone who is [fitness level] and wants to [goal: open hips / build strength / wind down for sleep]. Include pose names, duration, and transition cues.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Recovery Optimizer</h4>
+            <div class="prompt-text">"My HRV today is [number] and I slept [hours]. My readiness score is [score]. Based on this data, recommend whether I should train hard, go easy, or rest today — and explain the science behind your recommendation."</div>
+            <p class="prompt-use">💡 Best for: Biometric-informed training decisions</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'My HRV today is [number] and I slept [hours]. My readiness score is [score]. Based on this data, recommend whether I should train hard, go easy, or rest today — and explain the science behind your recommendation.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Ancient Movement Wisdom</h4>
+            <div class="prompt-text">"What did [Stoics / ancient Greeks / Ayurvedic tradition] believe about the relationship between physical movement and mental health? Summarise the key principles, then suggest 3 daily movement practices based on that wisdom."</div>
+            <p class="prompt-use">💡 Best for: Connecting movement to philosophy</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'What did [Stoics / ancient Greeks / Ayurvedic tradition] believe about the relationship between physical movement and mental health? Summarise the key principles, then suggest 3 daily movement practices based on that wisdom.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Body Scan Debrief</h4>
+            <div class="prompt-text">"I just finished a body scan and noticed [sensations / areas of tension]. Act as a somatic therapist and help me understand what these physical sensations might be communicating emotionally. Then suggest one movement or breath practice to address it."</div>
+            <p class="prompt-use">💡 Best for: Mind-body connection, somatic healing</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I just finished a body scan and noticed [sensations / areas of tension]. Act as a somatic therapist and help me understand what these physical sensations might be communicating emotionally. Then suggest one movement or breath practice to address it.')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MINDFULNESS -->
+      <div class="prompt-section" id="tab-mindfulness">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>Guided Meditation Script</h4>
+            <div class="prompt-text">"Write a 10-minute guided meditation script for someone who is feeling [emotion] and wants to feel [desired state]. Use nature imagery, slow pacing, and breathing cues. End with an intention-setting moment."</div>
+            <p class="prompt-use">💡 Best for: Custom meditations for any state</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Write a 10-minute guided meditation script for someone who is feeling [emotion] and wants to feel [desired state]. Use nature imagery, slow pacing, and breathing cues. End with an intention-setting moment.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Breathwork Prescription</h4>
+            <div class="prompt-text">"I'm experiencing [anxiety / low energy / racing thoughts / poor sleep]. Recommend the single best breathwork technique for my situation, explain the neuroscience behind why it works, and give me step-by-step instructions."</div>
+            <p class="prompt-use">💡 Best for: Targeted breathwork selection</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I\'m experiencing [anxiety / low energy / racing thoughts / poor sleep]. Recommend the single best breathwork technique for my situation, explain the neuroscience behind why it works, and give me step-by-step instructions.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Zen Koan Contemplation</h4>
+            <div class="prompt-text">"Give me a Zen koan appropriate for someone focused on [theme: ego dissolution / presence / impermanence]. Then guide me through a 5-minute contemplation exercise and ask me what arises."</div>
+            <p class="prompt-use">💡 Best for: Deep mindfulness, non-dual awareness</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Give me a Zen koan appropriate for someone focused on [theme: ego dissolution / presence / impermanence]. Then guide me through a 5-minute contemplation exercise and ask me what arises.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Evening Wind-Down Ritual</h4>
+            <div class="prompt-text">"Design a 15-minute evening wind-down ritual that incorporates mindfulness, gentle movement, and reflection. Base it on [Ayurvedic / Buddhist / Stoic] evening traditions and adapt it for a modern person who [constraint: has kids / works late / is stressed]."</div>
+            <p class="prompt-use">💡 Best for: Sleep hygiene, evening practice</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Design a 15-minute evening wind-down ritual that incorporates mindfulness, gentle movement, and reflection. Base it on [Ayurvedic / Buddhist / Stoic] evening traditions and adapt it for a modern person who [constraint: has kids / works late / is stressed].')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PURPOSE -->
+      <div class="prompt-section" id="tab-purpose">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>Ikigai Excavator</h4>
+            <div class="prompt-text">"Help me explore my Ikigai — the intersection of what I love, what I'm good at, what the world needs, and what I can be paid for. Ask me one question at a time in each category, then synthesise my answers into a clear Ikigai statement."</div>
+            <p class="prompt-use">💡 Best for: Finding life purpose, career clarity</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Help me explore my Ikigai — the intersection of what I love, what I\'m good at, what the world needs, and what I can be paid for. Ask me one question at a time in each category, then synthesise my answers into a clear Ikigai statement.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>The 80-Year-Old Test</h4>
+            <div class="prompt-text">"Act as my 80-year-old self looking back on my life. I'm currently facing this decision: [decision]. What do you wish I had done? What would have mattered? What would have been a waste of time? Be brutally honest."</div>
+            <p class="prompt-use">💡 Best for: Big life decisions, regret minimisation</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Act as my 80-year-old self looking back on my life. I\'m currently facing this decision: [decision]. What do you wish I had done? What would have mattered? What would have been a waste of time? Be brutally honest.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Personal Values Audit</h4>
+            <div class="prompt-text">"Help me clarify my top 5 core values. Ask me a series of questions about moments when I felt most alive, most frustrated, and most proud. Then identify the values underlying each response and help me rank them."</div>
+            <p class="prompt-use">💡 Best for: Values clarification, authentic living</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Help me clarify my top 5 core values. Ask me a series of questions about moments when I felt most alive, most frustrated, and most proud. Then identify the values underlying each response and help me rank them.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>The Aristotle Goal Audit</h4>
+            <div class="prompt-text">"I want to achieve [goal]. Act as Aristotle and help me examine whether this goal leads to eudaimonia — true flourishing. Is this goal aligned with my deepest nature? What virtues will it require and develop? What obstacles should I anticipate?"</div>
+            <p class="prompt-use">💡 Best for: Goal alignment with deeper values</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I want to achieve [goal]. Act as Aristotle and help me examine whether this goal leads to eudaimonia — true flourishing. Is this goal aligned with my deepest nature? What virtues will it require and develop? What obstacles should I anticipate?')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RELATIONSHIPS -->
+      <div class="prompt-section" id="tab-relationships">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>Empathy Expander</h4>
+            <div class="prompt-text">"I'm in conflict with [person] over [situation]. Help me see this situation completely from their perspective. What might they be feeling, fearing, and needing? Then help me craft a response that acknowledges their experience first."</div>
+            <p class="prompt-use">💡 Best for: Conflict resolution, empathy building</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I\'m in conflict with [person] over [situation]. Help me see this situation completely from their perspective. What might they be feeling, fearing, and needing? Then help me craft a response that acknowledges their experience first.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Communication Coach</h4>
+            <div class="prompt-text">"I need to have a difficult conversation with [person] about [topic]. Coach me using Nonviolent Communication (NVC). Help me identify my observations, feelings, needs, and requests. Then roleplay as the other person so I can practice."</div>
+            <p class="prompt-use">💡 Best for: Difficult conversations, NVC practice</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I need to have a difficult conversation with [person] about [topic]. Coach me using Nonviolent Communication (NVC). Help me identify my observations, feelings, needs, and requests. Then roleplay as the other person so I can practice.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Love Languages Decoder</h4>
+            <div class="prompt-text">"Based on the 5 Love Languages framework, help me identify my primary love language by asking me 8 scenario-based questions. Then suggest 3 specific ways I can express love in my partner's / friend's / family member's language."</div>
+            <p class="prompt-use">💡 Best for: Deepening relationships, reducing friction</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Based on the 5 Love Languages framework, help me identify my primary love language by asking me 8 scenario-based questions. Then suggest 3 specific ways I can express love in my partner\'s / friend\'s / family member\'s language.')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRODUCTIVITY -->
+      <div class="prompt-section" id="tab-productivity">
+        <div class="prompt-grid">
+
+          <div class="prompt-card fade-up">
+            <h4>The Energy Audit</h4>
+            <div class="prompt-text">"Help me conduct an energy audit of my week. I'll list my main activities. For each one, ask me whether it gives or drains energy, then help me redesign my schedule to protect my most energising activities and minimise energy vampires."</div>
+            <p class="prompt-use">💡 Best for: Sustainable productivity, burnout prevention</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Help me conduct an energy audit of my week. I\'ll list my main activities. For each one, ask me whether it gives or drains energy, then help me redesign my schedule to protect my most energising activities and minimise energy vampires.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Deep Work Designer</h4>
+            <div class="prompt-text">"I want to build a deep work practice inspired by Cal Newport's philosophy and ancient monastic schedules. My constraints are [work hours / family obligations]. Design a realistic daily deep work block schedule and suggest 3 environment changes to make distraction less likely."</div>
+            <p class="prompt-use">💡 Best for: Focus, creative output, flow states</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I want to build a deep work practice inspired by Cal Newport\'s philosophy and ancient monastic schedules. My constraints are [work hours / family obligations]. Design a realistic daily deep work block schedule and suggest 3 environment changes to make distraction less likely.')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Decision Detox</h4>
+            <div class="prompt-text">"I'm overwhelmed by decisions around [area of life]. Use the Eisenhower Matrix, Stoic dichotomy of control, and Warren Buffett's 25/5 rule to help me ruthlessly prioritise. What should I eliminate, delegate, or do first?"</div>
+            <p class="prompt-use">💡 Best for: Overwhelm, decision fatigue, clarity</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'I\'m overwhelmed by decisions around [area of life]. Use the Eisenhower Matrix, Stoic dichotomy of control, and Warren Buffett\'s 25/5 rule to help me ruthlessly prioritise. What should I eliminate, delegate, or do first?')">Copy Prompt</button>
+          </div>
+
+          <div class="prompt-card fade-up">
+            <h4>Morning Ritual Builder</h4>
+            <div class="prompt-text">"Design a morning ritual for me using wisdom from Stoicism, Ayurveda, and modern performance science. I have [X minutes] and my biggest challenge is [challenge]. Prioritise practices with the highest return on time invested."</div>
+            <p class="prompt-use">💡 Best for: Morning routine, peak performance</p>
+            <button class="copy-btn" onclick="copyPrompt(this, 'Design a morning ritual for me using wisdom from Stoicism, Ayurveda, and modern performance science. I have [X minutes] and my biggest challenge is [challenge]. Prioritise practices with the highest return on time invested.')">Copy Prompt</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Share strip -->
+      <div class="share-strip fade-up">
+        <span>Found a prompt that changed your life? Share it:</span>
+        <a class="share-btn" href="https://www.facebook.com/share/g/1B4ovwnHu1/" target="_blank">📘 Facebook Group</a>
+        <button class="share-btn" onclick="shareTwitter()">🐦 Share on X</button>
+        <button class="share-btn" onclick="copyPageUrl()">🔗 Copy Link</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TUTORIALS ── -->
+  <section class="section" id="tutorials" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="eyebrow">Go Deeper</span>
+        <h2>Tutorials & Deep Dives</h2>
+        <p>Step-by-step guides for turning AI from a novelty into a genuine growth partner.</p>
+      </div>
+      <div class="tutorial-grid">
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">🤖</div>
+          <h3>Build Your Personal AI Coach</h3>
+          <p>Create a custom GPT (or Claude Project) that knows your goals, values, health data, and biggest challenges. Never repeat your context again — your AI coach remembers everything.</p>
+          <span class="difficulty beginner">⬤ Beginner</span>
+        </div>
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">📔</div>
+          <h3>The Stoic AI Journal</h3>
+          <p>Use AI to practise the three core Stoic journaling exercises — the Morning Intentions, Evening Review, and Memento Mori reflection — reimagined for the age of artificial intelligence.</p>
+          <span class="difficulty beginner">⬤ Beginner</span>
+        </div>
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">🌌</div>
+          <h3>AI-Assisted Manifestation</h3>
+          <p>Combine law-of-attraction principles with AI-generated visualization scripts, identity affirmations, and obstacle pre-mortems. This is manifestation with evidence behind it.</p>
+          <span class="difficulty inter">⬤ Intermediate</span>
+        </div>
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">⚗️</div>
+          <h3>Prompt Engineering for Wellness</h3>
+          <p>Advanced techniques: role-play personas, chain-of-thought reasoning, multi-shot examples, and custom system prompts. For people ready to get truly extraordinary results from AI.</p>
+          <span class="difficulty advanced">⬤ Advanced</span>
+        </div>
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">🧬</div>
+          <h3>AI + Biometrics: The Integration</h3>
+          <p>Export your Oura or Whoop data, paste it into AI, and ask for personalised insights. Transform raw numbers into actionable ancient-meets-modern wellness prescriptions.</p>
+          <span class="difficulty inter">⬤ Intermediate</span>
+        </div>
+
+        <div class="tutorial-card fade-up">
+          <div class="tutorial-icon">🎭</div>
+          <h3>The AI Therapist Session</h3>
+          <p>A safe, structured framework for using AI to process emotions, explore cognitive distortions, and practice CBT techniques — with clear ethical guidelines on what AI can and cannot do.</p>
+          <span class="difficulty beginner">⬤ Beginner</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTEGRATION WITH OTHER PILLARS ── -->
   <section class="section">
     <div class="container">
-      <div class="content-block text-center fade-up" style="max-width:800px; margin:0 auto;">
-        <span class="eyebrow">Try This Now</span>
-        <h2>Featured AI Prompt of the Week</h2>
-        <div class="prompt-box" style="background:var(--surface-light); padding:2rem; border-radius:24px; border:1px solid var(--border); margin:2rem 0;">
-          <p style="font-size:1.3rem; font-style:italic; color:var(--lavender);">“Act as a holistic health coach. Based on my goals [insert your goal], what three daily habits would have the biggest impact on my energy and focus?”</p>
-          <button class="btn btn-gold" style="margin-top:1rem;" onclick="copyPrompt(this)">Copy Prompt</button>
-        </div>
-        <p class="text-secondary">Use this prompt with ChatGPT, Claude, or any AI assistant to get personalized wellness advice in seconds.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUILDING TRUST: HONEST MESSAGE ABOUT BEING NEW -->
-  <section class="section-sm" style="background:var(--surface);">
-    <div class="container">
       <div class="section-header fade-up">
-        <span class="eyebrow">Just Getting Started</span>
-        <h2>Your Stories Will Go Here</h2>
-        <p style="max-width:700px; margin:0 auto;">Living the AI Life is brand new – and that's exciting. You have the opportunity to be among the first to explore, practice, and share your journey. Real stories from real people like you will soon fill this space.</p>
+        <span class="eyebrow">The Connected System</span>
+        <h2>AI Amplifies Every Pillar</h2>
+        <p>This pillar doesn't stand alone. It supercharges every other practice on this site. Here's how AI and the four pillars work together.</p>
       </div>
-      <div style="text-align:center; padding:3rem; background:var(--background); border-radius:24px; border:1px dashed var(--border); max-width:600px; margin:2rem auto 0;">
-        <span style="font-size:3rem; display:block; margin-bottom:1rem;">✨</span>
-        <h3>Be the First</h3>
-        <p style="margin-bottom:1.5rem;">Join our community and share your experience. The first testimonial could be yours.</p>
-        <a href="/community.html" class="btn btn-gold">Join the Community</a>
+      <div class="integration-row fade-up">
+        <div class="integration-card">
+          <div class="int-header"><span class="int-icon">🧠</span><h4>Mind</h4></div>
+          <p>Use AI to generate personalised affirmations, run Socratic dialogues on limiting beliefs, and build a CBT-style journaling practice.</p>
+          <a href="/mind/index.html">Explore Mind →</a>
+        </div>
+        <div class="integration-card">
+          <div class="int-header"><span class="int-icon">🌿</span><h4>Body</h4></div>
+          <p>Let AI design your yoga sequences, interpret your biometric data, and craft a movement plan tailored to your recovery status each morning.</p>
+          <a href="/body/index.html">Explore Body →</a>
+        </div>
+        <div class="integration-card">
+          <div class="int-header"><span class="int-icon">🧘</span><h4>Mindfulness</h4></div>
+          <p>Ask AI to write custom meditation scripts, design breathwork protocols for your exact emotional state, and guide self-hypnosis inductions.</p>
+          <a href="/mindfulness/index.html">Explore Mindfulness →</a>
+        </div>
+        <div class="integration-card">
+          <div class="int-header"><span class="int-icon">✨</span><h4>Inputs</h4></div>
+          <p>Use AI for personalised meal planning, sound healing recommendations based on your mood, and music playlists engineered to shift your mental state.</p>
+          <a href="/inputs/index.html">Explore Inputs →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- COMMUNITY CTA -->
+  <!-- ── WEEKLY CHALLENGE ── -->
+  <section class="section-sm" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="challenge-box fade-up">
+        <span class="eyebrow">This Week's Challenge</span>
+        <h2>The 7-Day AI Coach Experiment</h2>
+        <p style="max-width:600px; margin:0 auto 1rem; color:var(--text-secondary);">Every Monday we drop a new AI challenge in our Facebook group. This week: build a personal context document and use it with your AI of choice for 7 days straight. Share your biggest insight.</p>
+        <div class="challenge-prompt">
+          "I want you to become my personal growth coach for the next 7 days. Here is my context: [paste your personal context document]. Each morning I'll check in with you. Start by asking me the three most important questions you need answered to coach me effectively."
+        </div>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="copyPrompt(this, 'I want you to become my personal growth coach for the next 7 days. Here is my context: [paste your personal context document]. Each morning I\'ll check in with you. Start by asking me the three most important questions you need answered to coach me effectively.')">Copy This Week's Prompt</button>
+          <a href="https://www.facebook.com/share/g/1B4ovwnHu1/" target="_blank" class="btn btn-outline">Share Your Results →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
   <section class="section-sm">
     <div class="container">
       <div class="cta-section fade-up">
-        <span class="eyebrow">Facebook Community</span>
-        <h2>Be Part of Something New</h2>
-        <p>We're building a global tribe of conscious optimizers who are using ancient wisdom and cutting-edge AI to transform their lives. Be there from the beginning – shape the conversation, share your discoveries, and grow with us.</p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="/community.html" class="btn btn-gold btn-lg">Join Our Facebook Group</a>
-          <a href="/about.html" class="btn btn-outline btn-lg">Learn More</a>
+        <span class="eyebrow">Join the Revolution</span>
+        <h2>Become an AI-Powered Human</h2>
+        <p>Join our community of conscious optimisers who are combining the world's oldest wisdom with the world's newest technology. New prompts, challenges, and tutorials every week.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="/community.html" class="btn btn-gold btn-lg">Join the Community</a>
+          <a href="/ai-tools.html" class="btn btn-outline btn-lg">Explore AI Tools</a>
         </div>
-        <p style="margin-top:20px; font-size:0.82rem;">Free to join. No spam. Just transformation.</p>
+        <p style="margin-top:1.2rem; font-size:.82rem; color:var(--text-muted);">Free to join. No spam. Just transformation.</p>
       </div>
     </div>
   </section>
@@ -203,15 +803,41 @@
 </main>
 
 <div id="footer-placeholder"></div>
-
 <script>
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  fetch('/footer.html')
+    .then(r => r.text())
+    .then(d => { document.getElementById('footer-placeholder').innerHTML = d; });
 </script>
 
 <script src="/js/main.js"></script>
+<script>
+  /* ── Tab switcher ── */
+  function switchTab(id) {
+    document.querySelectorAll('.prompt-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+  /* ── Copy prompt ── */
+  function copyPrompt(btn, text) {
+    const content = text || btn.closest('.prompt-card, .challenge-box')
+      ?.querySelector('.prompt-text, .challenge-prompt')?.innerText || '';
+    navigator.clipboard.writeText(content).then(() => {
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+
+  /* ── Share ── */
+  function shareTwitter() {
+    window.open('https://twitter.com/intent/tweet?text=Just+discovered+the+AI+for+Self-Improvement+prompt+library+on+%40livingtheailife+%E2%80%94+game+changing+%E2%9A%A1&url=' + encodeURIComponent(window.location.href), '_blank');
+  }
+  function copyPageUrl() {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied!'));
+  }
+</script>
 </body>
 </html>

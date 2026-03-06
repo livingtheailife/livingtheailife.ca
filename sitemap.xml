@@ -22,4 +22,9 @@
   <url><loc>https://livingtheailife.com/inputs/food.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://livingtheailife.com/inputs/sounds.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://livingtheailife.com/inputs/music.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://livingtheailife.ca/ai-self-improvement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

@@ -29,6 +29,12 @@
   to = "/ai-tools/"
   status = 301
 
+
+[[redirects]]
+  from = "/ai-self-improvement"
+  to = "/ai-self-improvement/"
+  status = 301
+
 # Security headers
 [[headers]]
   for = "/*"
